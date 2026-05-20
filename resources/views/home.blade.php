@@ -33,34 +33,7 @@
           </div>
         </div>
       </div>
-            <div class="swiper-slide">
-        <div class="slide-inner" style="background-image:url(assets/images/slide-01.jpg)">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8">
-                <div class="header-text">
-                  <h2>Transform Your <em>Vision </em> into Digital Success with<br> <em>Hawks Marketing</em></h2>
-                  <div class="div-dec"></div>
-                  <p> At Hawks Marketing, we combine years of experience with
-                      modern, data-driven strategies to deliver real, measurable
-                      results. Our full-service, customized approach ensures your
-                      brand stands out, grows sustainably, and achieves lasting
-                      success in the digital space.</p>
-                  <div class="buttons">
-                    {{-- <div class="green-button">
-                      <a href="#">Discover More</a>
-                    </div> --}}
-                    <div class="orange-button">
-                      <a href="{{ route('contact') }}">Contact Us</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
+
     </div>
     <div class="swiper-button-next swiper-button-white"></div>
     <div class="swiper-button-prev swiper-button-white"></div>
@@ -145,25 +118,22 @@
     </div>
   </section>
 
-  {{-- <section class="simple-cta">
+  <section class="simple-cta">
     <div class="container">
       <div class="row">
         <div class="col-lg-5">
-          <h4>Business <em>Solutions</em> and <strong>Personalized</strong> Marketing</h4>
+          <h4>Ready to <em>Accelerate</em> Your <strong>Digital Success?</strong></h4>
         </div>
         <div class="col-lg-7">
           <div class="buttons">
-            <div class="green-button">
-              <a href="#">Discover More</a>
-            </div>
             <div class="orange-button">
-              <a href="#">Contact Us</a>
+              <a href="{{ route('contact') }}">Get Started Today</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section> --}}
+  </section>
 
   <section class="about-us" id="about">
     <div class="container">
@@ -301,11 +271,10 @@
         </div>
         <div class="col-lg-4">
           <div class="right-content">
-            <h4>About Hawks Marketing</h4>
-            <p>Hawks Marketing comprises passionate digital experts committed to accelerating business growth globally. We've merged creativity, analytics, and strategy to enable brands to achieve quantifiable success. With knowledge across international markets, we strive to become the leading digital marketing agency.</p>
-            {{-- <div class="green-button">
-              <a href="about-us.html">Discover More</a>
-            </div> --}}
+            <h4>Our Approach</h4>
+            <p><strong>Data-Powered</strong> — Decisions backed by analytics and validated metrics, guaranteeing genuine ROI and continuous expansion.</p>
+            <p><strong>Client-Centered</strong> — Your audience, objectives, and marketplace at the heart of every strategy we craft.</p>
+            <p><strong>Results-Focused</strong> — Every interaction, view, and transaction contributes to tangible business results for your organization.</p>
           </div>
         </div>
       </div>

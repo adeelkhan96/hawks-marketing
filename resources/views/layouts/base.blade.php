@@ -5,8 +5,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Hawks Marketing — A results-driven digital marketing agency offering brand strategy, SEO, PPC, content creation, social media management, and custom web solutions.">
+    <meta name="author" content="Hawks Marketing">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <title>@yield('title')</title>

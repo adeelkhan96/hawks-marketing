@@ -1,6 +1,6 @@
 
 @extends('layouts.base')
-@section('title','Hawks Marketing')
+@section('title','About Us | Hawks Marketing')
 @section('content')
 
   <div class="page-heading">
@@ -16,78 +16,81 @@
     </div>
   </div>
 
-  <!-- ***** Main Banner Area End ***** -->
-
   <section class="top-section">
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
           <div class="left-image">
-            <img src="assets/images/about-left-image.jpg" alt="">
+            <img src="assets/images/about-left-image.jpg" alt="Hawks Marketing Team">
           </div>
         </div>
         <div class="col-lg-6 align-self-center">
           <div class="accordions is-first-expanded">
             <article class="accordion">
               <div class="accordion-head">
-                  <span>Mexant Financial Planning</span>
-                  <span class="icon">
-                      <i class="icon fa fa-chevron-right"></i>
-                  </span>
+                <span>About Hawks Marketing</span>
+                <span class="icon">
+                  <i class="icon fa fa-chevron-right"></i>
+                </span>
               </div>
               <div class="accordion-body">
-                  <div class="content">
-                      <p>You will see a bunch of free CSS templates when you search on Google. TemplateMo website is probably the best one because it is 100% free. 
-                      <br><br>We do not ask you anything in return. You are free to use our templates for any purpose.</p>
-                  </div>
+                <div class="content">
+                  <p>Our agile team of project coordinators, technology and analytics engineers, web and application designers/developers, digital planners, creative directors, media coordinators, and content specialists are dedicated to helping you achieve outstanding results for your business expansion.</p>
+                  <br>
+                  <p>Unlike other digital marketing organizations, we implement comprehensive and customized solutions distinctive to each customer's specific needs — through thorough research, a data-informed strategy-based methodology, and an unwavering commitment to delivering superior services.</p>
+                </div>
               </div>
-          </article>
-          <article class="accordion">
-            <div class="accordion-head">
-                <span>Mexant Crypto Investing</span>
+            </article>
+            <article class="accordion">
+              <div class="accordion-head">
+                <span>Our Mission &amp; Vision</span>
                 <span class="icon">
-                    <i class="icon fa fa-chevron-right"></i>
+                  <i class="icon fa fa-chevron-right"></i>
                 </span>
-            </div>
-            <div class="accordion-body">
+              </div>
+              <div class="accordion-body">
                 <div class="content">
-                    <p>Mexant HTML5 Template is available to download 100% free of charge. This CSS layout is based on Boostrap 5 framework. 
-                    <br><br>Anyone can edit and use this layout for all professional websites. Thank you for visiting TemplateMo website.</p>
+                  <p><strong>Our Mission</strong> — To advance data-informed solutions, moving beyond improvised approaches as we navigate the complexities of digital space while providing meaningful branding, marketing, and web solutions to businesses throughout the region.</p>
+                  <br>
+                  <p><strong>Our Vision</strong> — To become the premier marketing agency and distinguished provider of marketing and web solutions, with internal capabilities to implement the complete range of international marketing initiatives for any client.</p>
                 </div>
-            </div>
-          </article>
-          <article class="accordion">
-            <div class="accordion-head">
-                <span>Cryptocurrency Investments</span>
+              </div>
+            </article>
+            <article class="accordion">
+              <div class="accordion-head">
+                <span>Our Core Values</span>
                 <span class="icon">
-                    <i class="icon fa fa-chevron-right"></i>
+                  <i class="icon fa fa-chevron-right"></i>
                 </span>
-            </div>
-            <div class="accordion-body">
+              </div>
+              <div class="accordion-body">
                 <div class="content">
-                    <p>Ut dictum vehicula massa, ac pharetra leo tincidunt eu. Phasellus in tristique magna, ac gravida leo.<br><br>
-                    Integer sed lorem sapien. Ut viverra mauris sed lobortis commodo. Mauris scelerisque venenatis justo, sed interdum sem.</p>
+                  <p><strong>Collaboration</strong> — We advance consistent initiatives for client growth while building expertise within our team.</p>
+                  <br>
+                  <p><strong>Innovation</strong> — Our professionals develop unique solutions after comprehensive industry investigation.</p>
+                  <br>
+                  <p><strong>Integrity</strong> — Building trustworthy relationships with our stakeholders is our foremost priority.</p>
+                  <br>
+                  <p><strong>Excellence</strong> — We pursue brilliance by incorporating exceptional quality into every portfolio.</p>
                 </div>
-            </div>
-          </article>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </div>
-  </section>  
+  </section>
 
   <section class="simple-cta">
     <div class="container">
       <div class="row">
         <div class="col-lg-5">
-          <h4>Business <em>Solutions</em> and <strong>Crypto</strong> Investments</h4>
+          <h4>Ready to <em>Accelerate</em> Your <strong>Digital Success?</strong></h4>
         </div>
         <div class="col-lg-7">
           <div class="buttons">
-            <div class="green-button">
-              <a href="#">Discover More</a>
-            </div>
             <div class="orange-button">
-              <a href="#">Contact Us</a>
+              <a href="{{ route('contact') }}">Get Started Today</a>
             </div>
           </div>
         </div>
@@ -100,10 +103,10 @@
       <div class="row">
         <div class="col-lg-5">
           <div class="left-content">
-            <h4>Please tell us about your idea and how you want it to be</h4>
-            <p>If you need more HTML templates, you can try visiting TooCSS blog and Tooplate websites. You can get many good templates on those websites.<br><br>Nulla non placerat neque, a gravida elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi sed dolor condimentum tellus commodo volutpat non malesuada turpis.</p>
+            <h4>How We Transform Ideas into Achievements</h4>
+            <p>At Hawks Marketing, we keep you engaged from consultation through concept creation and execution. We comprehensively analyze everything regarding your business — incorporating innovation, creativity, and ongoing improvement to deliver premium digital marketing services.</p>
             <div class="green-button">
-              <a href="contact-us.html">Discover More</a>
+              <a href="{{ route('contact') }}">Contact Us</a>
             </div>
           </div>
         </div>
@@ -113,29 +116,29 @@
               <div class="col-lg-6">
                 <div class="item">
                   <em>01</em>
-                  <h4>First Step</h4>
-                  <p>Pellentesque ipsum elit, congue a sapien laoreet, pellentesque ultricies risus.</p>
+                  <h4>Discovery &amp; Concept</h4>
+                  <p>We gain deep understanding of your business and develop a clear concept statement essential to every subsequent stage.</p>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="item">
                   <em>02</em>
-                  <h4>Second Step</h4>
-                  <p>Pellentesque ipsum elit, congue a sapien laoreet, pellentesque ultricies risus.</p>
+                  <h4>Strategic Brand Building</h4>
+                  <p>Our media tactics build your brand credentials and establish a strong presence in your target marketplace.</p>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="item">
                   <em>03</em>
-                  <h4>Third Step</h4>
-                  <p>Pellentesque ipsum elit, congue a sapien laoreet, pellentesque ultricies risus.</p>
+                  <h4>Data-Informed Strategy</h4>
+                  <p>Analytics-driven insights form the foundation of a digital marketing strategy that converts traffic into revenue.</p>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="item">
                   <em>04</em>
-                  <h4>Fourth Step</h4>
-                  <p>Pellentesque ipsum elit, congue a sapien laoreet, pellentesque ultricies risus.</p>
+                  <h4>Results &amp; Optimization</h4>
+                  <p>We monitor KPIs, provide regular reports, and continuously optimize to ensure sustained growth and peak performance.</p>
                 </div>
               </div>
             </div>
@@ -182,62 +185,12 @@
     </div>
   </section>
 
- @endsection
- @section('js')
-
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-
-    <script src="assets/js/tabs.js"></script>
-    <script src="assets/js/swiper.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script>
-        var interleaveOffset = 0.5;
-
-      var swiperOptions = {
-        loop: true,
-        speed: 1000,
-        grabCursor: true,
-        watchSlidesProgress: true,
-        mousewheelControl: true,
-        keyboardControl: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        },
-        on: {
-          progress: function() {
-            var swiper = this;
-            for (var i = 0; i < swiper.slides.length; i++) {
-              var slideProgress = swiper.slides[i].progress;
-              var innerOffset = swiper.width * interleaveOffset;
-              var innerTranslate = slideProgress * innerOffset;
-              swiper.slides[i].querySelector(".slide-inner").style.transform =
-                "translate3d(" + innerTranslate + "px, 0, 0)";
-            }      
-          },
-          touchStart: function() {
-            var swiper = this;
-            for (var i = 0; i < swiper.slides.length; i++) {
-              swiper.slides[i].style.transition = "";
-            }
-          },
-          setTransition: function(speed) {
-            var swiper = this;
-            for (var i = 0; i < swiper.slides.length; i++) {
-              swiper.slides[i].style.transition = speed + "ms";
-              swiper.slides[i].querySelector(".slide-inner").style.transition =
-                speed + "ms";
-            }
-          }
-        }
-      };
-
-      var swiper = new Swiper(".swiper-container", swiperOptions);
-    </script>
+@endsection
+@section('js')
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/custom.js"></script>
 @endsection
