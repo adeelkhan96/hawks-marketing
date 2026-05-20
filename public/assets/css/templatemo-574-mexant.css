@@ -739,9 +739,10 @@ banner
 .slide-inner .header-text {
   position: absolute;
   width: 50%;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
 }
+
 
 .slide-inner .header-text h2 {
   position: relative;
@@ -753,6 +754,21 @@ banner
   visibility: visible;
   line-height: 70px;
   margin-bottom: 40px;
+}
+@media (max-width: 1366px) and (min-width: 900px) {
+ .slide-inner .header-text {
+      top: 60%;
+      width: 60%;
+  }
+  .slide-inner .header-text h2 {
+  
+  font-size: 35px;
+  
+  }
+  img{
+    width: 50%;
+  }
+
 }
 
 .slide-inner .header-text .div-dec {

@@ -2,7 +2,7 @@
   <header class="header-area header-sticky">
       <div class="container">
           <div class="row">
-              <div class="col-12">
+              <div class="col-md-12 col-sm-12 col-12">
                   <nav class="main-nav">
                       <!-- ***** Logo Start ***** -->
                       <a href="{{route('home')}}" class="logo">
@@ -23,7 +23,7 @@
                               </ul>
                           </li>
                           <li class="scroll-to-section"><a href="#testimonials">Testimonials</a></li>
-                          <li><a href="contact-us.html">Contact Support</a></li> 
+                          <li><a href="{{ route('contact') }}">Contact Support</a></li> 
                       </ul>        
                       <a class='menu-trigger'>
                           <span>Menu</span>

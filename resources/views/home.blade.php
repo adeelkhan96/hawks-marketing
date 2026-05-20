@@ -12,7 +12,7 @@
             <div class="row">
               <div class="col-lg-8">
                 <div class="header-text">
-                  <h2>Get <em>ready</em> for your business<br>&amp; upgrade <em>all aspects</em></h2>
+                  <h2>Transform Your <em>Vision </em> into Digital Success with<br> <em>Hawks Marketing</em></h2>
                   <div class="div-dec"></div>
                   <p> At Hawks Marketing, we combine years of experience with
                       modern, data-driven strategies to deliver real, measurable
@@ -20,11 +20,11 @@
                       brand stands out, grows sustainably, and achieves lasting
                       success in the digital space.</p>
                   <div class="buttons">
-                    <div class="green-button">
+                    {{-- <div class="green-button">
                       <a href="#">Discover More</a>
-                    </div>
+                    </div> --}}
                     <div class="orange-button">
-                      <a href="#">Contact Us</a>
+                      <a href="{{ route('contact') }}">Contact Us</a>
                     </div>
                   </div>
                 </div>
@@ -33,21 +33,25 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide">
-        <div class="slide-inner" style="background-image:url(assets/images/slide-02.jpg)">
+            <div class="swiper-slide">
+        <div class="slide-inner" style="background-image:url(assets/images/slide-01.jpg)">
           <div class="container">
             <div class="row">
               <div class="col-lg-8">
                 <div class="header-text">
-                  <h2><em>Digital</em> Currency for you <br>&amp; Best <em>Crypto</em> Tips</h2>
+                  <h2>Transform Your <em>Vision </em> into Digital Success with<br> <em>Hawks Marketing</em></h2>
                   <div class="div-dec"></div>
-                  <p>You will see a bunch of free CSS templates when you search on Google. TemplateMo website is probably the best one because it is 100% free. It does not ask you anything in return. You have a total freedom to use any template for any purpose.</p>
+                  <p> At Hawks Marketing, we combine years of experience with
+                      modern, data-driven strategies to deliver real, measurable
+                      results. Our full-service, customized approach ensures your
+                      brand stands out, grows sustainably, and achieves lasting
+                      success in the digital space.</p>
                   <div class="buttons">
-                    <div class="green-button">
+                    {{-- <div class="green-button">
                       <a href="#">Discover More</a>
-                    </div>
+                    </div> --}}
                     <div class="orange-button">
-                      <a href="#">Contact Us</a>
+                      <a href="{{ route('contact') }}">Contact Us</a>
                     </div>
                   </div>
                 </div>
@@ -56,29 +60,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide">
-        <div class="slide-inner" style="background-image:url(assets/images/slide-03.jpg)">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8">
-                <div class="header-text">
-                  <h2>Best One in Town<br>&amp; Crypto <em>Services</em></h2>
-                  <div class="div-dec"></div>
-                  <p>When you browse through different tags on TemplateMo website, you can see a variety of CSS templates which are responsive website designs for different individual needs. Please tell your friends about our website. Thank you.</p>
-                  <div class="buttons">
-                    <div class="green-button">
-                      <a href="#">Discover More</a>
-                    </div>
-                    <div class="orange-button">
-                      <a href="#">Contact Us</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    
     </div>
     <div class="swiper-button-next swiper-button-white"></div>
     <div class="swiper-button-prev swiper-button-white"></div>
@@ -89,32 +71,73 @@
   <section class="services" id="services">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6">
-          <div class="service-item">
-            <i class="fas fa-desktop"></i>
-            <h4>Digital Marketing</h4>
-            <p>Digital Marketing</p>
+                <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h6>SERVICES</h6>
+            <h4>Our Core Services</h4>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-sm-6 col-md-6">
           <div class="service-item">
-            <i class="fas fa-hashtag"></i>
-            <h4>Social Media Marketing & Managment</h4>
-            <p>Social Media Marketing & Managment</p>
+            <i class="fas fa-shop"></i>
+            <h4>Brand Strategy and Media Planning</h4>
+            <p>Building brands with data-driven strategic direction</p>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-sm-6 col-md-6">
+          <div class="service-item">
+            <i class="fas fa-camera"></i>
+            <h4>Digital Content Creation</h4>
+            <p>Creating engaging content that drives action</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-md-6">
+          <div class="service-item">
+            <i class="fas fa-compass-drafting"></i>
+            <h4>Visual Design </h4>
+            <p>Designing visuals that communicate your identity</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-md-6">
+          <div class="service-item">
+            <i class="fas fa-magnifying-glass"></i>
+            <h4>Search Engine Marketing</h4>
+            <p>Improving visibility through smart search strategies</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-md-6">
           <div class="service-item">
             <i class="fas fa-rectangle-ad"></i>
-            <h4>Meta & GoogleAds</h4>
-            <p>Meta & GoogleAds</p>
+            <h4>Pay-Per-Click Advertising</h4>
+            <p>Driving targeted traffic with paid campaigns</p>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-sm-6 col-md-6">
           <div class="service-item">
-            <i class="fas fa-user-tie"></i>
-            <h4>Influencer Marketing</h4>
-            <p>Influencer Marketing</p>
+            <i class="fas fa-code"></i>
+            <h4>Custom Website Solutions</h4>
+            <p>Websites tailored to your business goals</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-md-6">
+          <div class="service-item">
+            <i class="fas fa-hashtag"></i>
+            <h4>Social Platform Management</h4>
+            <p>Managing social presence for consistent growth</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-md-6">
+          <div class="service-item">
+            <i class="fas fa-at"></i>
+            <h4>Email Campaign Optimization</h4>
+            <p>Optimizing emails for higher engagement</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-md-6">
+          <div class="service-item">
+            <i class="fas fa-user-check"></i>
+            <h4>Conversion Enhancement</h4>
+            <p>Turning visitors into loyal customers</p>
           </div>
         </div>
 
@@ -122,7 +145,7 @@
     </div>
   </section>
 
-  <section class="simple-cta">
+  {{-- <section class="simple-cta">
     <div class="container">
       <div class="row">
         <div class="col-lg-5">
@@ -140,7 +163,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> --}}
 
   <section class="about-us" id="about">
     <div class="container">
@@ -152,7 +175,7 @@
           </div>
         </div>
         <div class="col-lg-8">
-          <div class="naccs">
+          {{-- <div class="naccs">
             <div class="tabs">
               <div class="row">
                 <div class="col-lg-12">
@@ -269,22 +292,27 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
+          <h2>Hawks Marketing - Results-Driven Digital Marketing Agency</h2>
+          <p style="margin-top: 2rem">With proven track record and industry expertise, Hawks Marketing ranks among the premier digital marketing agencies, empowering organizations with goal-oriented digital strategies. Our talented professionals understand your unique vision and develop customized marketing initiatives that deliver quantifiable growth.
+            We blend innovation, insights, and execution to enhance your brand's visibility and performance.
+            At Hawks Marketing, your growth is our mission—we succeed when you thrive.
+          </p>
         </div>
         <div class="col-lg-4">
           <div class="right-content">
-            <h4>Please tell us about your idea and how you want it to be</h4>
-            <p>You are allowed to use this template for your websites. You are <b>NOT allowed</b> to redistribute the template ZIP file on any other template websites.<br><br>Thank you for downloading and using our templates. Please tell your friends about our website.</p>
-            <div class="green-button">
+            <h4>About Hawks Marketing</h4>
+            <p>Hawks Marketing comprises passionate digital experts committed to accelerating business growth globally. We've merged creativity, analytics, and strategy to enable brands to achieve quantifiable success. With knowledge across international markets, we strive to become the leading digital marketing agency.</p>
+            {{-- <div class="green-button">
               <a href="about-us.html">Discover More</a>
-            </div>
+            </div> --}}
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="calculator">
+  {{-- <section class="calculator">
     <div class="container">
       <div class="row">
         <div class="col-lg-7">
@@ -339,7 +367,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> --}}
 
   <section class="testimonials" id="testimonials">
     <div class="container">
@@ -347,10 +375,10 @@
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading">
             <h6>Testimonials</h6>
-            <h4>What They Say</h4>
+            <h4>Coming Soon ...</h4>
           </div>
         </div>
-        <div class="col-lg-10 offset-lg-1">
+        {{-- <div class="col-lg-10 offset-lg-1">
           <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
             <div class="item">
               <i class="fa fa-quote-left"></i>
@@ -380,7 +408,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
       </div>
     </div>
   </section>
