@@ -1,0 +1,479 @@
+/* Hawks Marketing — Custom Styles */
+
+/* ---- Stats / Metrics Section ---- */
+.stats-section {
+  background: #212741;
+  padding: 60px 0;
+  margin-top: 0;
+}
+
+.stats-section .stat-item {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.stats-section .stat-item h2 {
+  font-size: 52px;
+  font-weight: 700;
+  color: #ff511a;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.stats-section .stat-item p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+/* ---- Intro Section (used on service pages) ---- */
+.intro-section {
+  margin-top: 120px;
+}
+
+.intro-section h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #212741;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.intro-section p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+/* ---- Intro Highlight Box ---- */
+.intro-highlight {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 30px 28px;
+  border-left: 4px solid #ff511a;
+  height: 100%;
+}
+
+.intro-highlight h5 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #212741;
+  margin-bottom: 18px;
+}
+
+.intro-highlight strong {
+  color: #ff511a;
+}
+
+/* ---- Platform Tags (Social Media page) ---- */
+.platform-tags {
+  margin-top: 8px;
+}
+
+.platform-tag {
+  display: inline-block;
+  background: #ff511a;
+  color: #fff;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 4px 3px;
+  letter-spacing: 0.3px;
+}
+
+/* ---- Feature Cards (Why Choose Us) ---- */
+.feature-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 28px 24px;
+  margin-bottom: 24px;
+  border-left: 4px solid #ff511a;
+  transition: all .3s ease;
+}
+
+.feature-card:hover {
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+}
+
+.feature-card i {
+  font-size: 26px;
+  color: #ff511a;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.feature-card h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212741;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* ---- Why Choose Section ---- */
+.why-choose-section {
+  margin-top: 120px;
+}
+
+.why-choose-section .section-heading {
+  margin-bottom: 50px;
+}
+
+/* ---- Service item hover ---- */
+.service-item {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+/* ---- Tech stack pills (Web Dev page) ---- */
+.tech-tag {
+  display: inline-block;
+  background: #212741;
+  color: #fff;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 4px 3px;
+}
+
+/* Remove missing header-bg.png 404 — the header uses solid colors anyway */
+.header-area {
+  background-image: none !important;
+}
+
+/* ---- Logo: fixed image size, consistent on all screens ---- */
+.header-area .main-nav .logo img {
+  height: 65px;
+  width: auto;
+  max-width: 220px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* Remove the theme's width: 160px that squeezes the logo when scrolled */
+.background-header .main-nav .logo,
+body:not(.has-hero) .header-area .main-nav .logo {
+  width: auto !important;
+}
+
+/* Lock logo link to 80px height everywhere */
+.header-area .main-nav .logo {
+  line-height: 80px !important;
+  height: 80px;
+  display: flex !important;
+  align-items: center;
+}
+
+/* Home hero only: restore tall expanded state before scroll */
+.has-hero .header-area:not(.background-header) .main-nav .logo {
+  height: 120px;
+  line-height: 120px !important;
+}
+
+/* ---- Navbar: always solid on non-hero pages ---- */
+body:not(.has-hero) .header-area {
+  background-color: #212741 !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18) !important;
+  height: 80px !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+body:not(.has-hero) .header-area .main-nav .nav {
+  margin-top: 18px !important;
+}
+
+@media (max-width: 767px) {
+  /* Keep dark bg on mobile for non-hero pages */
+  body:not(.has-hero) .header-area {
+    background-color: #212741 !important;
+    height: 80px !important;
+    padding: 0 15px;
+  }
+
+  /* Mobile dropdown offset matches our fixed 80px height */
+  body:not(.has-hero) .header-area.header-sticky .nav {
+    margin-top: 80px !important;
+  }
+
+  /* Logo always 80px on mobile */
+  .header-area .main-nav .logo,
+  .has-hero .header-area:not(.background-header) .main-nav .logo {
+    height: 80px !important;
+    line-height: 80px !important;
+  }
+
+  /* Hamburger icon color on dark bg */
+  body:not(.has-hero) .header-area .main-nav .menu-trigger span,
+  body:not(.has-hero) .header-area .main-nav .menu-trigger span:before,
+  body:not(.has-hero) .header-area .main-nav .menu-trigger span:after {
+    background-color: #fff;
+  }
+
+  /* Mobile nav items on dark bg */
+  body:not(.has-hero) .header-area .main-nav .nav li {
+    background: #212741;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  body:not(.has-hero) .header-area .main-nav .nav li a {
+    color: rgba(255,255,255,0.85) !important;
+  }
+
+  body:not(.has-hero) .header-area .main-nav .nav li a:hover,
+  body:not(.has-hero) .header-area .main-nav .nav li a.active {
+    color: #ff511a !important;
+  }
+}
+
+/* ---- Navbar clearance for pages without a hero banner ---- */
+.page-top-offset {
+  padding-top: 120px !important;
+}
+
+@media (max-width: 991px) {
+  .page-top-offset {
+    padding-top: 100px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .page-top-offset {
+    padding-top: 90px !important;
+  }
+}
+
+/* ---- Page heading subtitle ---- */
+.page-heading .page-subtitle {
+  color: rgba(255,255,255,0.85);
+  font-size: 15px;
+  max-width: 580px;
+  margin: 12px auto 0;
+  line-height: 1.7;
+}
+
+/* ---- Testimonials placeholder (empty state) ---- */
+.tp-placeholder-wrap {
+  background: #f0f2f7;
+  border-radius: 18px;
+  padding: 40px 24px 36px;
+  position: relative;
+}
+
+.tp-placeholder-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tp-placeholder-card {
+  flex: 1;
+  min-width: 220px;
+  max-width: 320px;
+  border-radius: 14px;
+  padding: 28px 22px 22px;
+  background: #ffffff;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.12);
+  filter: blur(3px);
+}
+
+.tp-stars { margin-bottom: 12px; }
+.tp-stars i { color: #ff511a; font-size: 13px; margin-right: 2px; }
+
+.tp-quote {
+  font-size: 14px;
+  font-style: italic;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.tp-name {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #212741;
+  margin-bottom: 3px;
+}
+
+.tp-role {
+  display: block;
+  font-size: 13px;
+  color: #43ba7f;
+  font-weight: 600;
+}
+
+.tp-badge-wrap { text-align: center; }
+
+.tp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1.5px solid #ffd5c8;
+  border-radius: 30px;
+  padding: 10px 22px;
+  font-size: 13px;
+  color: #ff511a;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 10px rgba(255,81,26,0.10);
+}
+
+/* ---- Testimonials placeholder cards (legacy) ---- */
+.testimonial-placeholder-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 36px 28px 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.08);
+  position: relative;
+  filter: blur(2.5px);
+  user-select: none;
+  pointer-events: none;
+}
+
+.testimonial-placeholder-card i {
+  color: #ff511a;
+  font-size: 14px;
+  margin: 0 1px 16px;
+}
+
+.testimonial-placeholder-card p {
+  font-size: 15px;
+  font-style: italic;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.testimonial-placeholder-card strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #212741;
+  margin-bottom: 4px;
+}
+
+.testimonial-placeholder-card span {
+  font-size: 13px;
+  color: #43ba7f;
+  font-weight: 600;
+}
+
+/* ---- Toast Notification ---- */
+.hawks-toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.14);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 300px;
+  max-width: 400px;
+  border-left: 4px solid #43ba7f;
+  transform: translateX(calc(100% + 40px));
+  opacity: 0;
+  transition: transform 0.45s cubic-bezier(0.34, 1.42, 0.64, 1), opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.hawks-toast.toast-show {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hawks-toast.toast-hide {
+  transform: translateX(calc(100% + 40px));
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hawks-toast-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  background: #f0faf5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #43ba7f;
+  font-size: 18px;
+}
+
+.hawks-toast-body {
+  flex: 1;
+}
+
+.hawks-toast-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #212741;
+  margin-bottom: 3px;
+}
+
+.hawks-toast-msg {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.5;
+}
+
+.hawks-toast-close {
+  background: none;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  color: #bbb;
+  font-size: 15px;
+  line-height: 1;
+  transition: color .2s;
+}
+
+.hawks-toast-close:hover {
+  color: #666;
+}
+
+.hawks-toast-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: #43ba7f;
+  border-radius: 0 0 0 14px;
+  width: 100%;
+  transform-origin: left;
+  animation: toastProgress 5s linear forwards;
+}
+
+@keyframes toastProgress {
+  from { transform: scaleX(1); }
+  to   { transform: scaleX(0); }
+}

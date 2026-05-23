@@ -1,30 +1,37 @@
 @extends('layouts.base')
 @section('title','Hawks Marketing')
+@section('body-class','has-hero')
+@php use App\Models\PageContent; @endphp
+
+
 @section('content')
 
 
   <!-- ***** Main Banner Area Start ***** -->
+  @php
+    $bannerSlides = \App\Models\BannerSlide::where('active', true)->orderBy('sort_order')->orderBy('id')->get();
+    $bannerCount  = $bannerSlides->count();
+    $defaultHeading = 'Transform Your <em>Vision</em> into Digital Success with <em>Hawks Marketing</em>';
+    $defaultSubtext = 'At Hawks Marketing, we combine years of experience with modern, data-driven strategies to deliver real, measurable results. Our full-service, customized approach ensures your brand stands out, grows sustainably, and achieves lasting success in the digital space.';
+    $defaultImage   = PageContent::getValue('home', 'banner', 'image', 'assets/images/slide-01.jpg');
+  @endphp
   <div class="swiper-container" id="top">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="slide-inner" style="background-image:url(assets/images/slide-01.jpg)">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8">
-                <div class="header-text">
-                  <h2>Transform Your <em>Vision </em> into Digital Success with<br> <em>Hawks Marketing</em></h2>
-                  <div class="div-dec"></div>
-                  <p> At Hawks Marketing, we combine years of experience with
-                      modern, data-driven strategies to deliver real, measurable
-                      results. Our full-service, customized approach ensures your
-                      brand stands out, grows sustainably, and achieves lasting
-                      success in the digital space.</p>
-                  <div class="buttons">
-                    {{-- <div class="green-button">
-                      <a href="#">Discover More</a>
-                    </div> --}}
-                    <div class="orange-button">
-                      <a href="{{ route('contact') }}">Contact Us</a>
+      @if($bannerCount > 0)
+        @foreach($bannerSlides as $slide)
+        <div class="swiper-slide">
+          <div class="slide-inner" style="background-image:url({{ asset($slide->image) }})">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="header-text">
+                    <h2>{!! $slide->heading ?: $defaultHeading !!}</h2>
+                    <div class="div-dec"></div>
+                    <p>{{ $slide->subtext ?: $defaultSubtext }}</p>
+                    <div class="buttons">
+                      <div class="orange-button">
+                        <a href="{{ route('contact') }}">Contact Us</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -32,13 +39,35 @@
             </div>
           </div>
         </div>
-      </div>
-
+        @endforeach
+      @else
+        <div class="swiper-slide">
+          <div class="slide-inner" style="background-image:url({{ asset($defaultImage) }})">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="header-text">
+                    <h2>{!! $defaultHeading !!}</h2>
+                    <div class="div-dec"></div>
+                    <p>{{ $defaultSubtext }}</p>
+                    <div class="buttons">
+                      <div class="orange-button">
+                        <a href="{{ route('contact') }}">Contact Us</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      @endif
     </div>
+    @if($bannerCount !== 1)
     <div class="swiper-button-next swiper-button-white"></div>
     <div class="swiper-button-prev swiper-button-white"></div>
+    @endif
   </div>
-
   <!-- ***** Main Banner Area End ***** -->
 
   <section class="services" id="services">
@@ -47,7 +76,7 @@
                 <div class="col-lg-6 offset-lg-3">
           <div class="section-heading">
             <h6>SERVICES</h6>
-            <h4>Our Core Services</h4>
+            <h4>{{ PageContent::getValue('home', 'services', 'heading', 'Our Core Services') }}</h4>
           </div>
         </div>
         <div class="col-lg-6 col-sm-6 col-md-6">
@@ -141,7 +170,7 @@
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading">
             <h6>About Us</h6>
-            <h4>Know Us Better</h4>
+            <h4>{{ PageContent::getValue('home', 'about', 'heading', 'Know Us Better') }}</h4>
           </div>
         </div>
         <div class="col-lg-8">
@@ -263,18 +292,15 @@
               </div>
             </div>
           </div> --}}
-          <h2>Hawks Marketing - Results-Driven Digital Marketing Agency</h2>
-          <p style="margin-top: 2rem">With proven track record and industry expertise, Hawks Marketing ranks among the premier digital marketing agencies, empowering organizations with goal-oriented digital strategies. Our talented professionals understand your unique vision and develop customized marketing initiatives that deliver quantifiable growth.
-            We blend innovation, insights, and execution to enhance your brand's visibility and performance.
-            At Hawks Marketing, your growth is our mission—we succeed when you thrive.
-          </p>
+          <h2>{{ PageContent::getValue('home', 'about', 'subheading', 'Hawks Marketing - Results-Driven Digital Marketing Agency') }}</h2>
+          <p style="margin-top: 2rem">{{ PageContent::getValue('home', 'about', 'body', 'With proven track record and industry expertise, Hawks Marketing ranks among the premier digital marketing agencies, empowering organizations with goal-oriented digital strategies. Our talented professionals understand your unique vision and develop customized marketing initiatives that deliver quantifiable growth. We blend innovation, insights, and execution to enhance your brand\'s visibility and performance. At Hawks Marketing, your growth is our mission—we succeed when you thrive.') }}</p>
         </div>
         <div class="col-lg-4">
           <div class="right-content">
-            <h4>Our Approach</h4>
-            <p><strong>Data-Powered</strong> — Decisions backed by analytics and validated metrics, guaranteeing genuine ROI and continuous expansion.</p>
-            <p><strong>Client-Centered</strong> — Your audience, objectives, and marketplace at the heart of every strategy we craft.</p>
-            <p><strong>Results-Focused</strong> — Every interaction, view, and transaction contributes to tangible business results for your organization.</p>
+            <h4>{{ PageContent::getValue('home', 'about', 'right_heading', 'Our Approach') }}</h4>
+            <p><strong>Data-Powered</strong> — {{ PageContent::getValue('home', 'about', 'data_powered', 'Decisions backed by analytics and validated metrics, guaranteeing genuine ROI and continuous expansion.') }}</p>
+            <p><strong>Client-Centered</strong> — {{ PageContent::getValue('home', 'about', 'client_centered', 'Your audience, objectives, and marketplace at the heart of every strategy we craft.') }}</p>
+            <p><strong>Results-Focused</strong> — {{ PageContent::getValue('home', 'about', 'results_focused', 'Every interaction, view, and transaction contributes to tangible business results for your organization.') }}</p>
           </div>
         </div>
       </div>
@@ -338,83 +364,91 @@
     </div>
   </section> --}}
 
-  <section class="testimonials" id="testimonials">
+  <section class="stats-section">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading">
-            <h6>Testimonials</h6>
-            <h4>Coming Soon ...</h4>
+      <div class="row text-center">
+        <div class="col-lg-3 col-sm-6">
+          <div class="stat-item">
+            <h2>50+</h2>
+            <p>Happy Clients</p>
           </div>
         </div>
-        {{-- <div class="col-lg-10 offset-lg-1">
-          <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
-            <div class="item">
-              <i class="fa fa-quote-left"></i>
-              <p>“Donec et nunc massa. Nullam non felis dignissim, dapibus turpis semper, vulputate lorem. Nam volutpat posuere tellus, in porttitor justo interdum nec. Aenean in dapibus risus, in euismod ligula. Aliquam vel scelerisque elit.”</p>
-              <h4>David Eigenberg</h4>
-              <span>CEO of Mexant</span>
-              <div class="right-image">
-                <img src="assets/images/testimonials-01.jpg" alt="">
-              </div>
-            </div>
-            <div class="item">
-              <i class="fa fa-quote-left"></i>
-              <p>“Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”</p>
-              <h4>Andrew Garfield</h4>
-              <span>CTO of Mexant</span>
-              <div class="right-image">
-                <img src="assets/images/testimonials-01.jpg" alt="">
-              </div>
-            </div>
-            <div class="item">
-              <i class="fa fa-quote-left"></i>
-              <p>“Ut dictum vehicula massa, ac pharetra leo tincidunt eu. Phasellus in tristique magna, ac gravida leo. Integer sed lorem sapien. Ut viverra mauris sed lobortis commodo.”</p>
-              <h4>George Lopez</h4>
-              <span>Crypto Manager</span>
-              <div class="right-image">
-                <img src="assets/images/testimonials-01.jpg" alt="">
-              </div>
-            </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="stat-item">
+            <h2>100+</h2>
+            <p>Projects Completed</p>
           </div>
-        </div> --}}
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="stat-item">
+            <h2>9+</h2>
+            <p>Core Services</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="stat-item">
+            <h2>5+</h2>
+            <p>Years Experience</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  @php $testimonials = \App\Models\Testimonial::where('active', true)->orderBy('sort_order')->orderBy('id')->get(); @endphp
+  @if($testimonials->isNotEmpty())
+  <section class=”testimonials” id=”testimonials”>
+    <div class=”container”>
+      <div class=”row”>
+        <div class=”col-lg-6 offset-lg-3”>
+          <div class=”section-heading”>
+            <h6>Testimonials</h6>
+            <h4>What Our Clients Say</h4>
+          </div>
+        </div>
+        <div class=”col-lg-10 offset-lg-1”>
+          <div class=”owl-testimonials owl-carousel” style=”position:relative; z-index:5;”>
+            @foreach($testimonials as $t)
+            <div class=”item”>
+              <i class=”fa fa-quote-left”></i>
+              <p>”{{ $t->message }}”</p>
+              <h4>{{ $t->name }}</h4>
+              <span>{{ $t->position }}</span>
+              @if($t->image)
+              <div class=”right-image”>
+                <img src=”{{ asset($t->image) }}” alt=”{{ $t->name }}”>
+              </div>
+              @endif
+            </div>
+            @endforeach
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  @endif
+
+  @php $companies = \App\Models\Company::where('active', true)->orderBy('sort_order')->orderBy('id')->get(); @endphp
   <section class="partners">
     <div class="container">
       <div class="row">
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
+        @if($companies->isNotEmpty())
+          @foreach($companies as $company)
+          <div class="col-lg-2 col-sm-4 col-6">
+            <div class="item">
+              <img src="{{ asset($company->logo) }}" alt="{{ $company->name }}">
+            </div>
           </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
+          @endforeach
+        @else
+          @for($i = 0; $i < 6; $i++)
+          <div class="col-lg-2 col-sm-4 col-6">
+            <div class="item">
+              <img src="{{ asset('assets/images/client-01.png') }}" alt="">
+            </div>
           </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
-          </div>
-        </div>
+          @endfor
+        @endif
       </div>
     </div>
   </section>
@@ -423,29 +457,30 @@
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
   @section('js')
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-
-    <script src="assets/js/tabs.js"></script>
-    <script src="assets/js/swiper.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope.min.js') }}"></script>
+    <script src="{{ asset('assets/js/owl-carousel.js') }}"></script>
+    <script src="{{ asset('assets/js/tabs.js') }}"></script>
+    <script src="{{ asset('assets/js/swiper.js') }}"></script>
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
     <script>
         var interleaveOffset = 0.5;
+        var bannerCount = {{ $bannerCount > 0 ? $bannerCount : 1 }};
+        var multiSlide  = bannerCount > 1;
 
       var swiperOptions = {
-        loop: true,
+        loop: multiSlide,
         speed: 1000,
-        grabCursor: true,
+        grabCursor: multiSlide,
         watchSlidesProgress: true,
-        mousewheelControl: true,
-        keyboardControl: true,
-        navigation: {
+        mousewheelControl: false,
+        keyboardControl: multiSlide,
+        autoplay: multiSlide ? { delay: 5000, disableOnInteraction: false } : false,
+        navigation: multiSlide ? {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
-        },
+        } : false,
         on: {
           progress: function() {
             var swiper = this;
@@ -455,7 +490,7 @@
               var innerTranslate = slideProgress * innerOffset;
               swiper.slides[i].querySelector(".slide-inner").style.transform =
                 "translate3d(" + innerTranslate + "px, 0, 0)";
-            }      
+            }
           },
           touchStart: function() {
             var swiper = this;
@@ -475,5 +510,19 @@
       };
 
       var swiper = new Swiper(".swiper-container", swiperOptions);
+
+      // Testimonials carousel
+      if ($('.owl-testimonials').length) {
+        $('.owl-testimonials').owlCarousel({
+          items: 1,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 6000,
+          smartSpeed: 700,
+          nav: false,
+          dots: true,
+          animateOut: 'fadeOut',
+        });
+      }
     </script>
 @endsection

@@ -205,7 +205,10 @@
 	    var scrollPos = $(document).scrollTop();
 	    $('.nav a').each(function () {
 	        var currLink = $(this);
-	        var refElement = $(currLink.attr("href"));
+	        var href = currLink.attr("href");
+	        if (!href || href.charAt(0) !== '#') { return; }
+	        var refElement = $(href);
+	        if (!refElement.length) { return; }
 	        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
 	            $('.nav ul li a').removeClass("active");
 	            currLink.addClass("active");
@@ -276,8 +279,9 @@
 
 
 	function visible(partial) {
-        var $t = partial,
-            $w = jQuery(window),
+        var $t = partial;
+        if (!$t || !$t.length || !$t.offset()) { return false; }
+        var $w = jQuery(window),
             viewTop = $w.scrollTop(),
             viewBottom = viewTop + $w.height(),
             _top = $t.offset().top,

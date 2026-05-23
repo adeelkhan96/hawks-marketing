@@ -1,0 +1,372 @@
+/* =============================================
+   Hawks Marketing — Admin Panel Styles
+   ============================================= */
+
+/* Reset & base */
+.admin-body {
+  background: #f0f2f5;
+  min-height: 100vh;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+.admin-wrapper {
+  min-height: 100vh;
+}
+
+/* ---- Sidebar ---- */
+.admin-sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: #212741;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.admin-logo {
+  padding: 22px 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+}
+
+.admin-logo img {
+  height: 36px;
+  width: auto;
+}
+
+.admin-logo span {
+  display: block;
+  color: rgba(255,255,255,0.5);
+  font-size: 11px;
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.admin-nav {
+  padding: 12px 0;
+  flex: 1;
+}
+
+.admin-nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none !important;
+  font-size: 14px;
+  font-weight: 400;
+  transition: all .2s;
+  border-left: 3px solid transparent;
+}
+
+.admin-nav a:hover,
+.admin-nav a.active {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  border-left-color: #ff511a;
+}
+
+.admin-nav a i {
+  width: 18px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.admin-sidebar-footer {
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.admin-sidebar-footer a {
+  color: rgba(255,255,255,0.4);
+  font-size: 12px;
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color .2s;
+}
+
+.admin-sidebar-footer a:hover {
+  color: rgba(255,255,255,0.7);
+}
+
+/* ---- Header ---- */
+.admin-header {
+  background: #fff;
+  padding: 14px 24px;
+  border-bottom: 1px solid #e8e8e8;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.admin-user-info {
+  font-size: 14px;
+  color: #444;
+}
+
+/* ---- Badges ---- */
+.badge-admin {
+  background: #ff511a;
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.badge-editor {
+  background: #6366f1;
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* ---- Content Area ---- */
+.admin-content-area {
+  padding: 28px;
+  overflow-y: auto;
+}
+
+/* ---- Cards ---- */
+.admin-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+  margin-bottom: 24px;
+}
+
+.admin-card h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212741;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* ---- Stat Cards ---- */
+.stat-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px 24px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+  border-left: 4px solid #ff511a;
+}
+
+.stat-card h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #212741;
+  margin: 0;
+  line-height: 1;
+}
+
+.stat-card p {
+  color: #888;
+  margin: 6px 0 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-card > i {
+  font-size: 36px;
+  color: #ff511a;
+  opacity: 0.2;
+}
+
+/* ---- Table ---- */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th {
+  background: #fafafa;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.admin-table td {
+  padding: 13px 14px;
+  border-bottom: 1px solid #f7f7f7;
+  font-size: 14px;
+  color: #333;
+  vertical-align: middle;
+}
+
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tr:hover td {
+  background: #fafafa;
+}
+
+/* ---- Button ---- */
+.btn-admin {
+  background: #ff511a;
+  color: #fff !important;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background .2s;
+}
+
+.btn-admin:hover,
+.btn-admin:focus {
+  background: #e04416;
+  color: #fff !important;
+}
+
+/* ---- Modal Overlay ---- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+.modal-box h5 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #212741;
+  margin-bottom: 10px;
+}
+
+/* ---- Login Page ---- */
+.admin-login-body {
+  background: linear-gradient(135deg, #212741 0%, #1a1f36 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 40px 36px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.35);
+}
+
+.login-logo {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.login-logo img {
+  height: 48px;
+  width: auto;
+  margin-bottom: 14px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-logo h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #212741;
+  margin-bottom: 4px;
+}
+
+/* ---- Content Editor ---- */
+.content-section-card {
+  background: #f8f9fc;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  border: 1px solid #ebebeb;
+}
+
+.content-section-card h6 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ff511a;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 14px;
+}
+
+.content-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.content-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.content-key {
+  font-size: 11px;
+  font-weight: 700;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 110px;
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.content-value {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.edit-textarea {
+  width: 100%;
+  border: 2px solid #ff511a;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+  outline: none;
+  font-family: inherit;
+}

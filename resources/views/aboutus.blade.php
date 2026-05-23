@@ -3,20 +3,7 @@
 @section('title','About Us | Hawks Marketing')
 @section('content')
 
-  <div class="page-heading">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="header-text">
-            <h2>About Us</h2>
-            <div class="div-dec"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <section class="top-section">
+  <section class="top-section page-top-offset">
     <div class="container">
       <div class="row">
         <div class="col-lg-6">

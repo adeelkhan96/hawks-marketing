@@ -12,7 +12,7 @@
     <title>@yield('title')</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/hawks-custom.css') }}?v=3">
 <!--
 
 TemplateMo 574 Mexant
@@ -31,7 +32,7 @@ https://templatemo.com/tm-574-mexant
     @yield('head')
   </head>
 
-  <body>
+  <body class="@yield('body-class')">
     @include('layouts.header')
     @yield('content')
     @include('layouts.footer')
