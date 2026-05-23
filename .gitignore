@@ -1,6 +1,11 @@
 *.log
 .DS_Store
 .env
+
+# Runtime-uploaded files — live only on the server, never committed
+/public/assets/images/banners/
+/public/assets/images/companies/
+/public/assets/images/testimonials/
 .env.backup
 .env.production
 .phpactor.json
