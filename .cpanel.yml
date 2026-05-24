@@ -6,6 +6,7 @@ deployment:
     - /bin/cp $REPO/public/index.php $PUB/index.php
     - /bin/cp $REPO/public/.htaccess $PUB/.htaccess
     - /bin/cp -r $REPO/public/assets/. $PUB/assets/
+    - /bin/cp -r $REPO/public/vendor/. $PUB/vendor/
     - /usr/local/bin/php $REPO/artisan migrate --force
     - /usr/local/bin/php $REPO/artisan config:cache
     - /usr/local/bin/php $REPO/artisan route:cache
