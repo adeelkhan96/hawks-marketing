@@ -1,8 +1,12 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/thehawks/repositories/hawks-marketing
-    - /usr/local/bin/php $DEPLOYPATH/artisan migrate --force
-    - /usr/local/bin/php $DEPLOYPATH/artisan config:cache
-    - /usr/local/bin/php $DEPLOYPATH/artisan route:cache
-    - /usr/local/bin/php $DEPLOYPATH/artisan view:clear
+    - export REPO=/home/thehawks/repositories/hawks-marketing
+    - export PUB=/home/thehawks/public_html
+    - /bin/cp $REPO/public/index.php $PUB/index.php
+    - /bin/cp $REPO/public/.htaccess $PUB/.htaccess
+    - /bin/cp -r $REPO/public/assets/. $PUB/assets/
+    - /usr/local/bin/php $REPO/artisan migrate --force
+    - /usr/local/bin/php $REPO/artisan config:cache
+    - /usr/local/bin/php $REPO/artisan route:cache
+    - /usr/local/bin/php $REPO/artisan view:clear
