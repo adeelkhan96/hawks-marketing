@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     @php
-        $metaTitle       = trim(strip_tags(@yield('meta-title', @yield('title', 'Hawks Marketing'))));
-        $metaDescription = trim(strip_tags(@yield('meta-description', 'Hawks Marketing — A results-driven digital marketing agency offering SEO, social media management, content writing, PPC, and custom web development.')));
-        $metaImage       = @yield('meta-image', asset('assets/images/logo.png'));
+        $metaTitle       = trim(strip_tags($__env->yieldContent('meta-title') ?: $__env->yieldContent('title') ?: 'Hawks Marketing'));
+        $metaDescription = trim(strip_tags($__env->yieldContent('meta-description') ?: 'Hawks Marketing — A results-driven digital marketing agency offering SEO, social media management, content writing, PPC, and custom web development.'));
+        $metaImage       = $__env->yieldContent('meta-image') ?: asset('assets/images/logo.png');
         $canonicalUrl    = url()->current();
     @endphp
 
