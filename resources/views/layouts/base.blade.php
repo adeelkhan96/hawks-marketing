@@ -40,14 +40,14 @@
     <!-- Schema.org JSON-LD: Organization -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "MarketingAgency",
+      "@@context": "https://schema.org",
+      "@@type": "MarketingAgency",
       "name": "Hawks Marketing",
       "url": "{{ url('/') }}",
       "logo": "{{ asset('assets/images/logo.png') }}",
       "description": "Hawks Marketing is a results-driven digital marketing agency offering SEO, social media management, content writing, PPC, and custom web development.",
       "contactPoint": {
-        "@type": "ContactPoint",
+        "@@type": "ContactPoint",
         "contactType": "customer service",
         "url": "{{ route('contact') }}"
       },
