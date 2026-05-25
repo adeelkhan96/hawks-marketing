@@ -9,5 +9,6 @@ deployment:
     - /bin/cp -r $REPO/public/vendor/. $PUB/vendor/
     - /usr/local/bin/php $REPO/artisan migrate --force
     - /usr/local/bin/php $REPO/artisan config:cache
+    - /usr/local/bin/php $REPO/artisan route:clear
     - /usr/local/bin/php $REPO/artisan route:cache
     - /usr/local/bin/php $REPO/artisan view:clear
