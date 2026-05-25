@@ -75,7 +75,7 @@
               <div class="info-item">
                 <i class="fa fa-envelope"></i>
                 <h4>Email Address</h4>
-                <a href="mailto:aashirkhanjadoon3@gmail.com">aashirkhanjadoon3@gmail.com</a>
+                <a href="mailto:info@thehawksmarketing.com">info@thehawksmarketing.com</a>
               </div>
             </div>
             <div class="col-lg-4">
