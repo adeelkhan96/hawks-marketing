@@ -11,6 +11,20 @@
 </head>
 <body class="admin-body">
 
+{{-- Page loader --}}
+<div id="admin-loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-ring">
+      <svg viewBox="0 0 60 60">
+        <circle cx="30" cy="30" r="26" stroke="#ff511a" />
+      </svg>
+      <span class="loader-dot"></span>
+    </div>
+    <div class="loader-message" id="loader-msg">Loading…</div>
+    <div class="loader-brand">Hawks Marketing</div>
+  </div>
+</div>
+
   <div class="admin-wrapper d-flex">
 
     <!-- Sidebar -->
@@ -107,5 +121,72 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   @livewireScripts
+
+  <script>
+  (function () {
+    var loader = document.getElementById('admin-loader');
+    var msgEl  = document.getElementById('loader-msg');
+
+    function show(msg) {
+      msgEl.textContent = msg || 'Loading…';
+      loader.classList.add('loader-visible');
+    }
+
+    function hide() {
+      loader.classList.remove('loader-visible');
+    }
+
+    // Always hide on page load/restore (handles back-forward cache too)
+    hide();
+    window.addEventListener('pageshow', hide);
+
+    // Map URL path → message
+    function navMessage(path) {
+      if (/\/email\/compose/.test(path))   return 'Opening composer…';
+      if (/\/email\/sent/.test(path))      return 'Loading sent folder…';
+      if (/\/email\/\d+/.test(path))       return 'Loading email…';
+      if (/\/email/.test(path))            return 'Loading inbox…';
+      if (/\/submissions/.test(path))      return 'Loading submissions…';
+      if (/\/banner/.test(path))           return 'Loading banner settings…';
+      if (/\/content/.test(path))          return 'Loading content editor…';
+      if (/\/testimonials/.test(path))     return 'Loading testimonials…';
+      if (/\/companies/.test(path))        return 'Loading companies…';
+      if (/\/users/.test(path))            return 'Loading users…';
+      if (/\/admin\/?$/.test(path))        return 'Loading dashboard…';
+      return 'Loading…';
+    }
+
+    // Map form action → message
+    function formMessage(form) {
+      var action = (form.getAttribute('action') || '').toLowerCase();
+      if (/\/email\/send/.test(action))    return 'Sending email…';
+      if (/\/logout/.test(action))         return 'Logging out…';
+      if (/\/login/.test(action))          return 'Signing in…';
+      if (/\/contact/.test(action))        return 'Sending message…';
+      return 'Processing…';
+    }
+
+    // Intercept navigation clicks
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      // Skip: same-page anchors, javascript, mailto, external, new-tab
+      if (!href || href.charAt(0) === '#' || /^(javascript|mailto|tel):/.test(href) || a.target === '_blank') return;
+      try {
+        var url = new URL(href, location.origin);
+        if (url.origin !== location.origin) return;
+        show(navMessage(url.pathname));
+      } catch (err) {
+        show('Loading…');
+      }
+    });
+
+    // Intercept form submits
+    document.addEventListener('submit', function (e) {
+      show(formMessage(e.target));
+    });
+  }());
+  </script>
 </body>
 </html>
