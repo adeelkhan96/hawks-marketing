@@ -40,11 +40,21 @@
 </div>
 
 {{-- Email body --}}
+@php
+$emailDoc = '<!DOCTYPE html><html><head><meta charset="UTF-8">
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 1.7; color: #333; padding: 24px; margin: 0; }
+  a    { color: #ff511a; }
+  img  { max-width: 100%; height: auto; }
+  p    { margin: 0 0 12px; }
+  pre  { white-space: pre-wrap; font-family: inherit; }
+</style></head><body>' . $message['body'] . '</body></html>';
+@endphp
 <div class="card border-0 shadow-sm">
     <div class="card-body p-0" style="overflow:hidden;border-radius:inherit;">
         <iframe id="emailFrame"
                 sandbox="allow-same-origin"
-                srcdoc="{{ e($message['body']) }}"
+                srcdoc="{!! e($emailDoc) !!}"
                 style="width:100%;border:none;min-height:420px;display:block;">
         </iframe>
     </div>
