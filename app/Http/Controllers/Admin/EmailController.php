@@ -14,10 +14,10 @@ class EmailController extends Controller
             throw new \RuntimeException('PHP IMAP extension is not enabled on this server. Please enable it in cPanel → Select PHP Version.');
         }
 
-        $host    = config('services.imap.host');
-        $port    = config('services.imap.port');
-        $user    = config('services.imap.username');
-        $pass    = config('services.imap.password');
+        $host    = config('services.imap.host', 'mail.thehawksmarketing.com');
+        $port    = (int) config('services.imap.port', 993);
+        $user    = config('services.imap.username', '');
+        $pass    = config('services.imap.password', '');
         $mailbox = '{' . $host . ':' . $port . '/imap/ssl/novalidate-cert}INBOX';
 
         $conn = @imap_open($mailbox, $user, $pass, 0, 1);
@@ -107,10 +107,69 @@ class EmailController extends Controller
             'body'    => 'required|string',
         ]);
 
-        Mail::html($request->body, fn($m) => $m->to($request->to)->subject($request->subject));
+        $html = $this->wrapInTemplate($request->subject, $request->body);
+
+        Mail::html($html, fn($m) => $m->to($request->to)->subject($request->subject));
 
         return redirect()->route('admin.email.inbox')
             ->with('message', 'Email sent to ' . $request->to . ' successfully.');
+    }
+
+    private function wrapInTemplate(string $subject, string $body): string
+    {
+        $logoUrl    = url('assets/images/logo.png');
+        $siteUrl    = url('/');
+        $bodyLines  = nl2br(e($body));
+
+        return <<<HTML
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body style="margin:0;padding:0;background:#f4f4f4;font-family:Arial,Helvetica,sans-serif;">
+          <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f4;padding:32px 0;">
+            <tr><td align="center">
+              <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+
+                <!-- Header with logo -->
+                <tr>
+                  <td align="center" style="background:#1a1a2e;padding:28px 40px;">
+                    <a href="{$siteUrl}">
+                      <img src="{$logoUrl}" alt="Hawks Marketing" style="height:52px;max-width:200px;display:block;">
+                    </a>
+                  </td>
+                </tr>
+
+                <!-- Orange accent bar -->
+                <tr>
+                  <td style="background:#ff511a;height:4px;font-size:0;line-height:0;">&nbsp;</td>
+                </tr>
+
+                <!-- Body -->
+                <tr>
+                  <td style="padding:36px 40px;color:#333333;font-size:15px;line-height:1.7;">
+                    {$bodyLines}
+                  </td>
+                </tr>
+
+                <!-- Footer -->
+                <tr>
+                  <td style="background:#f9f9f9;padding:20px 40px;border-top:1px solid #eeeeee;text-align:center;color:#999999;font-size:12px;">
+                    <strong style="color:#333;">Hawks Marketing</strong><br>
+                    <a href="{$siteUrl}" style="color:#ff511a;text-decoration:none;">thehawksmarketing.com</a>
+                    &nbsp;·&nbsp;
+                    <a href="mailto:info@thehawksmarketing.com" style="color:#ff511a;text-decoration:none;">info@thehawksmarketing.com</a>
+                  </td>
+                </tr>
+
+              </table>
+            </td></tr>
+          </table>
+        </body>
+        </html>
+        HTML;
     }
 
     // ── Private helpers ──────────────────────────────────────────────────────
