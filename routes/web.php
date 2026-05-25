@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController as AdminAuthController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\EmailController as AdminEmailController;
 use App\Http\Controllers\ContactController;
 
 Route::get('/', function () {
@@ -50,5 +51,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/testimonials', [AdminDashboardController::class, 'testimonials'])->name('testimonials');
         Route::get('/companies', [AdminDashboardController::class, 'companies'])->name('companies');
         Route::middleware('admin')->get('/users', [AdminDashboardController::class, 'users'])->name('users');
+
+        // Email
+        Route::get('/email',          [AdminEmailController::class, 'inbox']  )->name('email.inbox');
+        Route::get('/email/compose',  [AdminEmailController::class, 'compose'])->name('email.compose');
+        Route::post('/email/send',    [AdminEmailController::class, 'send']   )->name('email.send');
+        Route::get('/email/{uid}',    [AdminEmailController::class, 'show']   )->name('email.show');
     });
 });

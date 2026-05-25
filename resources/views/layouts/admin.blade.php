@@ -42,6 +42,9 @@
             <span style="background:#ff511a; color:#fff; font-size:10px; font-weight:700; padding:1px 6px; border-radius:10px; margin-left:auto;">{{ $unread }}</span>
           @endif
         </a>
+        <a href="{{ route('admin.email.inbox') }}" class="{{ request()->routeIs('admin.email.*') ? 'active' : '' }}">
+          <i class="fas fa-envelope-open-text"></i> Email
+        </a>
         @if(auth()->user()->role === 'admin')
         <a href="{{ route('admin.users') }}" class="{{ request()->routeIs('admin.users') ? 'active' : '' }}">
           <i class="fas fa-users"></i> User Management
