@@ -373,22 +373,12 @@
 
 /* ---- Page Loader ---- */
 #admin-loader {
-  position: fixed;
-  inset: 0;
-  background: rgba(26, 31, 54, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 99999;
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.18s ease, visibility 0.18s ease;
-  backdrop-filter: blur(3px);
+  transition: opacity 0.18s ease;
 }
 
 #admin-loader.loader-visible {
   opacity: 1;
-  visibility: visible;
 }
 
 .loader-inner {

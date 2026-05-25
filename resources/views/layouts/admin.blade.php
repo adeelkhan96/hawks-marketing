@@ -12,11 +12,11 @@
 <body class="admin-body">
 
 {{-- Page loader --}}
-<div id="admin-loader" aria-hidden="true">
+<div id="admin-loader" style="display:none;position:fixed;inset:0;background:rgba(26,31,54,.9);align-items:center;justify-content:center;z-index:99999;backdrop-filter:blur(3px);" aria-hidden="true">
   <div class="loader-inner">
     <div class="loader-ring">
-      <svg viewBox="0 0 60 60">
-        <circle cx="30" cy="30" r="26" stroke="#ff511a" />
+      <svg viewBox="0 0 60 60" width="60" height="60">
+        <circle cx="30" cy="30" r="26" fill="none" stroke="#ff511a" />
       </svg>
       <span class="loader-dot"></span>
     </div>
@@ -129,11 +129,13 @@
 
     function show(msg) {
       msgEl.textContent = msg || 'Loading…';
+      loader.style.display = 'flex';
       loader.classList.add('loader-visible');
     }
 
     function hide() {
       loader.classList.remove('loader-visible');
+      loader.style.display = 'none';
     }
 
     // Always hide on page load/restore (handles back-forward cache too)
