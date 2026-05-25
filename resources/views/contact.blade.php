@@ -1,5 +1,7 @@
 @extends('layouts.base')
 @section('title','Contact Us | Hawks Marketing')
+@section('meta-title','Contact Us | Hawks Marketing')
+@section('meta-description','Get in touch with Hawks Marketing. Whether you need SEO, social media management, content writing, or web development, our team is ready to help your brand grow.')
 
 @section('head')
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">

@@ -1,6 +1,8 @@
 
 @extends('layouts.base')
 @section('title','Social Media Management | Hawks Marketing')
+@section('meta-title','Social Media Management | Hawks Marketing')
+@section('meta-description','Grow your brand on social media with Hawks Marketing. We manage content creation, scheduling, community engagement, and paid social campaigns across all major platforms.')
 @section('content')
 
   <section class="intro-section">

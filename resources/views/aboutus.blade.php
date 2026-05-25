@@ -1,6 +1,8 @@
 
 @extends('layouts.base')
 @section('title','About Us | Hawks Marketing')
+@section('meta-title','About Us | Hawks Marketing')
+@section('meta-description','Learn about Hawks Marketing — our story, mission, and the team behind your brand\'s digital growth. We combine strategy, creativity, and data to deliver real results.')
 @section('content')
 
   <section class="top-section page-top-offset">

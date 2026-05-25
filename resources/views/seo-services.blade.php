@@ -1,6 +1,8 @@
 
 @extends('layouts.base')
 @section('title','SEO Services | Hawks Marketing')
+@section('meta-title','SEO Services | Hawks Marketing')
+@section('meta-description','Boost your search rankings with Hawks Marketing\'s expert SEO services — keyword research, on-page optimisation, link building, and technical SEO to drive organic traffic and grow your business.')
 @section('content')
 
   <section class="intro-section">

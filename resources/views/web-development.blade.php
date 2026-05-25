@@ -1,6 +1,8 @@
 
 @extends('layouts.base')
 @section('title','Website Development | Hawks Marketing')
+@section('meta-title','Website Development | Hawks Marketing')
+@section('meta-description','Hawks Marketing builds fast, responsive, and conversion-focused websites. From landing pages to full web applications, we design and develop digital experiences that grow your business.')
 @section('content')
 
   <section class="intro-section">

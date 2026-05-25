@@ -1,6 +1,8 @@
 
 @extends('layouts.base')
 @section('title','Content Writing | Hawks Marketing')
+@section('meta-title','Content Writing | Hawks Marketing')
+@section('meta-description','Hawks Marketing delivers compelling, SEO-optimised content — blog posts, web copy, social media content, and more — to engage your audience and improve your search visibility.')
 @section('content')
 
   <section class="intro-section">

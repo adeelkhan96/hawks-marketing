@@ -1,5 +1,7 @@
 @extends('layouts.base')
-@section('title','Hawks Marketing')
+@section('title','Hawks Marketing | Digital Marketing Agency')
+@section('meta-title','Hawks Marketing | Digital Marketing Agency')
+@section('meta-description','Hawks Marketing is a results-driven digital marketing agency specialising in SEO, social media management, content writing, PPC advertising, and custom web development. Grow your brand with us.')
 @section('body-class','has-hero')
 @php use App\Models\PageContent; @endphp
 

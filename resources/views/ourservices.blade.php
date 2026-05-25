@@ -1,6 +1,8 @@
 
 @extends('layouts.base')
 @section('title','Our Services | Hawks Marketing')
+@section('meta-title','Our Services | Hawks Marketing')
+@section('meta-description','Explore Hawks Marketing\'s full suite of digital marketing services: SEO, social media management, content writing, PPC, and custom web development tailored to your business goals.')
 @section('content')
 
   <section class="main-services page-top-offset">
