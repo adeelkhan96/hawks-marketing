@@ -14,10 +14,10 @@ class EmailController extends Controller
             throw new \RuntimeException('PHP IMAP extension is not enabled on this server. Please enable it in cPanel → Select PHP Version.');
         }
 
-        $host    = env('IMAP_HOST', 'mail.thehawksmarketing.com');
-        $port    = env('IMAP_PORT', 993);
-        $user    = env('IMAP_USERNAME', 'info@thehawksmarketing.com');
-        $pass    = env('IMAP_PASSWORD', '');
+        $host    = config('services.imap.host');
+        $port    = config('services.imap.port');
+        $user    = config('services.imap.username');
+        $pass    = config('services.imap.password');
         $mailbox = '{' . $host . ':' . $port . '/imap/ssl/novalidate-cert}INBOX';
 
         $conn = @imap_open($mailbox, $user, $pass, 0, 1);

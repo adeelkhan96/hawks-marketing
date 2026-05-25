@@ -35,4 +35,11 @@ return [
         ],
     ],
 
+    'imap' => [
+        'host'     => env('IMAP_HOST', 'mail.thehawksmarketing.com'),
+        'port'     => env('IMAP_PORT', 993),
+        'username' => env('IMAP_USERNAME', ''),
+        'password' => env('IMAP_PASSWORD', ''),
+    ],
+
 ];
