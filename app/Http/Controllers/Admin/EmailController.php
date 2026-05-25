@@ -14,10 +14,10 @@ class EmailController extends Controller
             throw new \RuntimeException('PHP IMAP extension is not enabled on this server. Please enable it in cPanel → Select PHP Version.');
         }
 
-        $host    = config('services.imap.host', 'mail.thehawksmarketing.com');
-        $port    = (int) config('services.imap.port', 993);
-        $user    = config('services.imap.username', '');
-        $pass    = config('services.imap.password', '');
+        $host    = (string) config('services.imap.host', 'mail.thehawksmarketing.com');
+        $port    = (int)    config('services.imap.port', 993);
+        $user    = (string) config('services.imap.username', '');
+        $pass    = (string) config('services.imap.password', '');
         $mailbox = '{' . $host . ':' . $port . '/imap/ssl/novalidate-cert}INBOX';
 
         $conn = @imap_open($mailbox, $user, $pass, 0, 1);
@@ -31,8 +31,37 @@ class EmailController extends Controller
 
     public function inbox()
     {
+        return $this->fetchFolder('INBOX', 'inbox');
+    }
+
+    public function sent()
+    {
+        // cPanel/Dovecot uses "Sent" — fallback to "Sent Items" if not found
+        foreach (['Sent', 'Sent Items', 'INBOX.Sent'] as $folder) {
+            $result = $this->fetchFolder($folder, 'sent');
+            if ($result->original !== null) return $result;
+        }
+        return $this->fetchFolder('Sent', 'sent');
+    }
+
+    private function fetchFolder(string $folder, string $activeTab)
+    {
         try {
-            $conn  = $this->connect();
+            $host    = (string) config('services.imap.host', 'mail.thehawksmarketing.com');
+            $port    = (int)    config('services.imap.port', 993);
+            $user    = (string) config('services.imap.username', '');
+            $pass    = (string) config('services.imap.password', '');
+            $mailbox = '{' . $host . ':' . $port . '/imap/ssl/novalidate-cert}' . $folder;
+
+            if (!function_exists('imap_open')) {
+                throw new \RuntimeException('PHP IMAP extension is not enabled.');
+            }
+
+            $conn  = @imap_open($mailbox, $user, $pass, 0, 1);
+            if (!$conn) {
+                throw new \RuntimeException(imap_last_error() ?: 'Could not connect.');
+            }
+
             $total = imap_num_msg($conn);
             $start = max(1, $total - 49);
 
@@ -41,20 +70,37 @@ class EmailController extends Controller
                 $ov = imap_fetch_overview($conn, (string)$i);
                 if (empty($ov)) continue;
                 $ov = $ov[0];
+
+                $label = $activeTab === 'sent'
+                    ? (isset($ov->to)      ? imap_utf8($ov->to)      : 'Unknown')
+                    : (isset($ov->from)    ? imap_utf8($ov->from)    : 'Unknown');
+
                 $messages[] = [
                     'num'     => $i,
                     'uid'     => imap_uid($conn, $i),
-                    'from'    => isset($ov->from)    ? imap_utf8($ov->from)    : 'Unknown',
+                    'label'   => $label,
                     'subject' => isset($ov->subject) ? imap_utf8($ov->subject) : '(no subject)',
                     'date'    => isset($ov->date)    ? date('d M Y, H:i', strtotime($ov->date)) : '',
-                    'seen'    => (bool)($ov->seen ?? 0),
+                    'seen'    => (bool)($ov->seen ?? 1),
                 ];
             }
 
             imap_close($conn);
-            return view('admin.email.index', ['messages' => $messages, 'error' => null, 'total' => $total]);
+            return view('admin.email.index', [
+                'messages'  => $messages,
+                'error'     => null,
+                'total'     => $total,
+                'activeTab' => $activeTab,
+                'folder'    => $folder,
+            ]);
         } catch (\Exception $e) {
-            return view('admin.email.index', ['messages' => [], 'error' => $e->getMessage(), 'total' => 0]);
+            return view('admin.email.index', [
+                'messages'  => [],
+                'error'     => $e->getMessage(),
+                'total'     => 0,
+                'activeTab' => $activeTab,
+                'folder'    => $folder,
+            ]);
         }
     }
 
@@ -107,7 +153,7 @@ class EmailController extends Controller
             'body'    => 'required|string',
         ]);
 
-        $html = $this->wrapInTemplate($request->subject, $request->body);
+        $html = $this->wrapInTemplate($request->body);
 
         Mail::html($html, fn($m) => $m->to($request->to)->subject($request->subject));
 
@@ -115,7 +161,7 @@ class EmailController extends Controller
             ->with('message', 'Email sent to ' . $request->to . ' successfully.');
     }
 
-    private function wrapInTemplate(string $subject, string $body): string
+    private function wrapInTemplate(string $body): string
     {
         $logoUrl    = url('assets/images/logo.png');
         $siteUrl    = url('/');

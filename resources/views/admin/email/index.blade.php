@@ -1,14 +1,30 @@
 @extends('layouts.admin')
-@section('title', 'Email Inbox')
-@section('page-title', 'Email — Inbox')
+@section('title', $activeTab === 'sent' ? 'Sent Emails' : 'Email Inbox')
+@section('page-title', 'Email — ' . ($activeTab === 'sent' ? 'Sent' : 'Inbox'))
 
 @section('content')
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <div>
-        <h5 class="mb-0 fw-semibold">Inbox</h5>
+        {{-- Inbox / Sent tabs --}}
+        <ul class="nav nav-pills nav-sm gap-1">
+            <li class="nav-item">
+                <a href="{{ route('admin.email.inbox') }}"
+                   class="nav-link px-3 py-1 {{ $activeTab === 'inbox' ? 'active' : 'text-secondary' }}"
+                   style="{{ $activeTab === 'inbox' ? 'background:#ff511a;' : '' }}">
+                    <i class="fas fa-inbox me-1"></i> Inbox
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('admin.email.sent') }}"
+                   class="nav-link px-3 py-1 {{ $activeTab === 'sent' ? 'active' : 'text-secondary' }}"
+                   style="{{ $activeTab === 'sent' ? 'background:#ff511a;' : '' }}">
+                    <i class="fas fa-paper-plane me-1"></i> Sent
+                </a>
+            </li>
+        </ul>
         @if($total > 0)
-            <small class="text-muted">{{ $total }} total messages — showing latest 50</small>
+            <small class="text-muted mt-1 d-block">{{ $total }} total messages — showing latest 50</small>
         @endif
     </div>
     <a href="{{ route('admin.email.compose') }}" class="btn btn-sm px-3" style="background:#ff511a;color:#fff;">
@@ -37,8 +53,8 @@
 @if(!$error && count($messages) === 0)
     <div class="card border-0 shadow-sm">
         <div class="card-body text-center py-5 text-muted">
-            <i class="fas fa-inbox fa-2x mb-3 d-block" style="opacity:.3"></i>
-            Your inbox is empty.
+            <i class="fas fa-{{ $activeTab === 'sent' ? 'paper-plane' : 'inbox' }} fa-2x mb-3 d-block" style="opacity:.3"></i>
+            {{ $activeTab === 'sent' ? 'No sent messages.' : 'Your inbox is empty.' }}
         </div>
     </div>
 @endif
@@ -50,7 +66,7 @@
                 <thead class="table-light">
                     <tr>
                         <th style="width:12px;"></th>
-                        <th>From</th>
+                        <th>{{ $activeTab === 'sent' ? 'To' : 'From' }}</th>
                         <th>Subject</th>
                         <th>Date</th>
                         <th style="width:60px;"></th>
@@ -66,22 +82,28 @@
                             @endif
                         </td>
                         <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px;">
-                            {{ $msg['from'] }}
+                            {{ $msg['label'] }}
                         </td>
                         <td>
-                            <a href="{{ route('admin.email.show', $msg['uid']) }}"
-                               class="text-decoration-none {{ !$msg['seen'] ? 'text-dark' : 'text-secondary' }}">
-                                {{ $msg['subject'] }}
-                            </a>
+                            @if($activeTab === 'inbox')
+                                <a href="{{ route('admin.email.show', $msg['uid']) }}"
+                                   class="text-decoration-none {{ !$msg['seen'] ? 'text-dark' : 'text-secondary' }}">
+                                    {{ $msg['subject'] }}
+                                </a>
+                            @else
+                                <span class="text-secondary">{{ $msg['subject'] }}</span>
+                            @endif
                         </td>
                         <td class="text-muted" style="font-size:13px;white-space:nowrap;">
                             {{ $msg['date'] }}
                         </td>
                         <td>
-                            <a href="{{ route('admin.email.show', $msg['uid']) }}"
-                               class="btn btn-sm btn-outline-secondary">
-                                <i class="fas fa-eye"></i>
-                            </a>
+                            @if($activeTab === 'inbox')
+                                <a href="{{ route('admin.email.show', $msg['uid']) }}"
+                                   class="btn btn-sm btn-outline-secondary">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            @endif
                         </td>
                     </tr>
                     @endforeach

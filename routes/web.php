@@ -54,6 +54,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         // Email
         Route::get('/email',          [AdminEmailController::class, 'inbox']  )->name('email.inbox');
+        Route::get('/email/sent',     [AdminEmailController::class, 'sent']   )->name('email.sent');
         Route::get('/email/compose',  [AdminEmailController::class, 'compose'])->name('email.compose');
         Route::post('/email/send',    [AdminEmailController::class, 'send']   )->name('email.send');
         Route::get('/email/{uid}',    [AdminEmailController::class, 'show']   )->name('email.show');
