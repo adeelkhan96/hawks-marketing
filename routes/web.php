@@ -64,8 +64,21 @@ Route::get('/clients', function () {
 })->name('clients');
 
 Route::get('/career', function () {
-    return view('career');
+    $jobs = \App\Models\JobPosting::active()->orderBy('sort_order')->get();
+    return view('career', compact('jobs'));
 })->name('career');
+
+Route::get('/career/{job}', function (\App\Models\JobPosting $job) {
+    abort_unless($job->status === 'active', 404);
+    return view('job-detail', compact('job'));
+})->name('career.job');
+
+Route::get('/career/{job}/apply', function (\App\Models\JobPosting $job) {
+    abort_unless($job->status === 'active', 404);
+    return view('job-apply', compact('job'));
+})->name('career.apply.form');
+
+Route::post('/career/{job}/apply', [\App\Http\Controllers\JobController::class, 'apply'])->name('career.apply');
 
 Route::get('/blogs', function () {
     $blogs = \App\Models\Blog::published()->latest('published_at')->get();
@@ -93,6 +106,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::middleware('admin')->get('/users', [AdminDashboardController::class, 'users'])->name('users');
         Route::get('/blogs', [AdminDashboardController::class, 'blogs'])->name('blogs');
         Route::post('/upload-blog-image', [AdminDashboardController::class, 'uploadBlogImage'])->name('upload-blog-image');
+        Route::get('/jobs', [AdminDashboardController::class, 'jobs'])->name('jobs');
+        Route::get('/job-applications', [AdminDashboardController::class, 'jobApplications'])->name('job-applications');
+        Route::get('/job-applications/{id}/resume', [\App\Http\Controllers\JobController::class, 'downloadResume'])->name('applications.resume');
 
         // Email
         Route::get('/email',          [AdminEmailController::class, 'inbox']  )->name('email.inbox');

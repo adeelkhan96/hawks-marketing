@@ -53,6 +53,16 @@
         <a href="{{ route('admin.blogs') }}" class="{{ request()->routeIs('admin.blogs') ? 'active' : '' }}">
           <i class="fas fa-newspaper"></i> Blog Manager
         </a>
+        <a href="{{ route('admin.jobs') }}" class="{{ request()->routeIs('admin.jobs') ? 'active' : '' }}">
+          <i class="fas fa-briefcase"></i> Job Postings
+        </a>
+        <a href="{{ route('admin.job-applications') }}" class="{{ request()->routeIs('admin.job-applications') ? 'active' : '' }}" style="position:relative;">
+          <i class="fas fa-file-alt"></i> Applications
+          @php $newApps = \App\Models\JobApplication::whereNull('read_at')->count(); @endphp
+          @if($newApps > 0)
+            <span style="background:#ff511a;color:#fff;font-size:10px;font-weight:700;padding:1px 6px;border-radius:10px;margin-left:auto;">{{ $newApps }}</span>
+          @endif
+        </a>
         <a href="{{ route('admin.submissions') }}" class="{{ request()->routeIs('admin.submissions') ? 'active' : '' }}" style="position:relative;">
           <i class="fas fa-envelope"></i> Contact Inbox
           @php $unread = \App\Models\ContactSubmission::whereNull('read_at')->count(); @endphp
@@ -158,7 +168,9 @@
       if (/\/content/.test(path))          return 'Loading content editor…';
       if (/\/testimonials/.test(path))     return 'Loading testimonials…';
       if (/\/companies/.test(path))        return 'Loading companies…';
-      if (/\/blogs/.test(path))           return 'Loading blog manager…';
+      if (/\/blogs/.test(path))                return 'Loading blog manager…';
+      if (/\/job-applications/.test(path))    return 'Loading applications…';
+      if (/\/jobs/.test(path))                return 'Loading job postings…';
       if (/\/users/.test(path))            return 'Loading users…';
       if (/\/admin\/?$/.test(path))        return 'Loading dashboard…';
       return 'Loading…';
