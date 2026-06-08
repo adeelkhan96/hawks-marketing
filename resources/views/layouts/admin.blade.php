@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>@yield('title', 'Admin') | Hawks Marketing</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}">
@@ -48,6 +49,9 @@
         </a>
         <a href="{{ route('admin.companies') }}" class="{{ request()->routeIs('admin.companies') ? 'active' : '' }}">
           <i class="fas fa-building"></i> Companies
+        </a>
+        <a href="{{ route('admin.blogs') }}" class="{{ request()->routeIs('admin.blogs') ? 'active' : '' }}">
+          <i class="fas fa-newspaper"></i> Blog Manager
         </a>
         <a href="{{ route('admin.submissions') }}" class="{{ request()->routeIs('admin.submissions') ? 'active' : '' }}" style="position:relative;">
           <i class="fas fa-envelope"></i> Contact Inbox
@@ -121,6 +125,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   @livewireScripts
+  @stack('admin-scripts')
 
   <script>
   (function () {
@@ -153,6 +158,7 @@
       if (/\/content/.test(path))          return 'Loading content editor…';
       if (/\/testimonials/.test(path))     return 'Loading testimonials…';
       if (/\/companies/.test(path))        return 'Loading companies…';
+      if (/\/blogs/.test(path))           return 'Loading blog manager…';
       if (/\/users/.test(path))            return 'Loading users…';
       if (/\/admin\/?$/.test(path))        return 'Loading dashboard…';
       return 'Loading…';

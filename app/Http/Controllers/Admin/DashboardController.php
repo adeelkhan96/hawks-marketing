@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\ContactSubmission;
 use App\Models\PageContent;
 use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class DashboardController extends Controller
 {
@@ -53,5 +55,23 @@ class DashboardController extends Controller
     public function companies()
     {
         return view('admin.companies');
+    }
+
+    public function blogs()
+    {
+        return view('admin.blogs');
+    }
+
+    public function uploadBlogImage(Request $request): \Illuminate\Http\JsonResponse
+    {
+        $request->validate(['image' => 'required|image|max:5120|mimes:jpg,jpeg,png,webp,gif']);
+
+        $dir = public_path('assets/images/blogs/inline');
+        File::ensureDirectoryExists($dir);
+
+        $filename = 'inline_' . time() . '_' . rand(100, 999) . '.' . $request->file('image')->getClientOriginalExtension();
+        $request->file('image')->move($dir, $filename);
+
+        return response()->json(['url' => asset('assets/images/blogs/inline/' . $filename)]);
     }
 }

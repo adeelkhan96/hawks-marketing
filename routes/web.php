@@ -68,8 +68,15 @@ Route::get('/career', function () {
 })->name('career');
 
 Route::get('/blogs', function () {
-    return view('blogs');
+    $blogs = \App\Models\Blog::published()->latest('published_at')->get();
+    return view('blogs', compact('blogs'));
 })->name('blogs');
+
+Route::get('/blogs/{slug}', function (string $slug) {
+    $blog         = \App\Models\Blog::published()->where('slug', $slug)->firstOrFail();
+    $recentBlogs  = \App\Models\Blog::published()->where('id', '!=', $blog->id)->latest('published_at')->limit(4)->get();
+    return view('blog-detail', compact('blog', 'recentBlogs'));
+})->name('blog.show');
 
 // Admin panel
 Route::prefix('admin')->name('admin.')->group(function () {
@@ -84,6 +91,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/testimonials', [AdminDashboardController::class, 'testimonials'])->name('testimonials');
         Route::get('/companies', [AdminDashboardController::class, 'companies'])->name('companies');
         Route::middleware('admin')->get('/users', [AdminDashboardController::class, 'users'])->name('users');
+        Route::get('/blogs', [AdminDashboardController::class, 'blogs'])->name('blogs');
+        Route::post('/upload-blog-image', [AdminDashboardController::class, 'uploadBlogImage'])->name('upload-blog-image');
 
         // Email
         Route::get('/email',          [AdminEmailController::class, 'inbox']  )->name('email.inbox');
