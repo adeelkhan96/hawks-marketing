@@ -87,61 +87,64 @@ https://templatemo.com/tm-574-mexant
 
 /* --- Home: Services Grid --- */
 .services-grid-section {
-  background: #eaecf5 !important;
-  padding: 80px 0 !important;
+  background: #212741 !important;
+  padding: 90px 0 !important;
 }
+.services-grid-section .section-heading h4 { color: #fff !important; }
+.services-grid-section .section-heading h6 { color: #ff511a !important; }
 .service-category-card {
-  background: #ffffff !important;
-  border-radius: 14px !important;
-  padding: 28px 24px !important;
-  margin-bottom: 0 !important;
-  box-shadow: 0 6px 30px rgba(33,39,65,0.12) !important;
-  border-top: 3px solid #ff511a !important;
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-left: 4px solid #ff511a !important;
+  border-radius: 10px !important;
+  padding: 28px 26px !important;
   transition: all 0.3s ease !important;
   height: 100% !important;
 }
 .service-category-card:hover {
-  box-shadow: 0 14px 44px rgba(33,39,65,0.18) !important;
-  transform: translateY(-6px) !important;
+  background: rgba(255,255,255,0.09) !important;
+  border-color: rgba(255,81,26,0.5) !important;
+  border-left-color: #ff511a !important;
+  transform: translateY(-5px) !important;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.25) !important;
 }
 .service-category-card h5 {
   font-size: 15px !important;
   font-weight: 700 !important;
-  color: #212741 !important;
+  color: #fff !important;
   margin-bottom: 14px !important;
   padding-bottom: 12px !important;
-  border-bottom: 1px solid #eee !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1) !important;
   display: flex !important;
   align-items: center !important;
-  gap: 10px !important;
+  gap: 12px !important;
 }
 .service-category-card h5 a,
 .service-category-card h5 a:link,
-.service-category-card h5 a:visited,
-.service-category-card h5 a:hover {
-  color: #212741 !important;
+.service-category-card h5 a:visited {
+  color: #fff !important;
   text-decoration: none !important;
 }
 .service-category-card h5 a:hover { color: #ff511a !important; }
 .service-category-card .scc-icon {
-  width: 36px !important;
-  height: 36px !important;
-  background: rgba(255,81,26,0.12) !important;
-  border-radius: 9px !important;
+  width: 38px !important;
+  height: 38px !important;
+  background: rgba(255,81,26,0.2) !important;
+  border-radius: 8px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   flex-shrink: 0 !important;
 }
-.service-category-card .scc-icon i { color: #ff511a !important; font-size: 15px !important; }
+.service-category-card .scc-icon i { color: #ff511a !important; font-size: 16px !important; }
 .service-category-card ul {
   list-style: none !important;
   padding: 0 !important;
   margin: 0 !important;
 }
 .service-category-card ul li {
-  padding: 6px 0 !important;
-  border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+  padding: 7px 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06) !important;
   display: flex !important;
   align-items: center !important;
   gap: 8px !important;
@@ -159,7 +162,7 @@ https://templatemo.com/tm-574-mexant
 .service-category-card ul li a,
 .service-category-card ul li a:link,
 .service-category-card ul li a:visited {
-  color: #555 !important;
+  color: rgba(255,255,255,0.65) !important;
   text-decoration: none !important;
 }
 .service-category-card ul li a:hover { color: #ff511a !important; }
