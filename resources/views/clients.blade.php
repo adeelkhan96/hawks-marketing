@@ -205,8 +205,8 @@
             @foreach([
                 ['fas fa-chart-line','Data-Driven Strategy','Every decision we make is backed by analytics and research — not guesswork. We track what works and double down on it.'],
                 ['fas fa-users','Dedicated Team','You get a full team of specialists: SEO experts, content writers, designers, and ad managers — all working on your brand.'],
-                ['fas fa-clock','Fast & Transparent','We move quickly and communicate openly. You always know what we're working on and what results it's driving.'],
-                ['fas fa-shield-alt','Long-Term Partnership','We're not a vendor — we're a growth partner. We invest in your success because our reputation depends on your results.'],
+                ['fas fa-clock','Fast & Transparent','We move quickly and communicate openly. You always know what we\'re working on and what results it\'s driving.'],
+                ['fas fa-shield-alt','Long-Term Partnership','We\'re not a vendor — we\'re a growth partner. We invest in your success because our reputation depends on your results.'],
                 ['fas fa-trophy','Proven Playbooks','Strategies refined across dozens of industries, adapted for your specific market and goals.'],
                 ['fas fa-handshake','No Lock-In Contracts','We earn your loyalty every month. Flexible engagements with no surprises.'],
             ] as $card)
