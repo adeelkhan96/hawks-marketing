@@ -1,2 +1,13 @@
 User-agent: *
-Disallow:
+Allow: /
+
+# Block admin area from all crawlers
+Disallow: /admin
+Disallow: /admin/
+
+# Block Laravel internals
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /.env
+
+Sitemap: https://thehawksmarketing.com/sitemap.xml

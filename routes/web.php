@@ -9,6 +9,84 @@ use App\Http\Controllers\ContactController;
 Route::get('/', function () {
     return view('home');
 })->name('home');
+
+Route::get('/sitemap.xml', function () {
+    $baseUrl = 'https://thehawksmarketing.com';
+
+    $staticPages = [
+        ['url' => '/',                              'priority' => '1.0', 'freq' => 'weekly'],
+        ['url' => '/about-us',                      'priority' => '0.8', 'freq' => 'monthly'],
+        ['url' => '/our-services',                  'priority' => '0.9', 'freq' => 'monthly'],
+        ['url' => '/clients',                       'priority' => '0.7', 'freq' => 'monthly'],
+        ['url' => '/career',                        'priority' => '0.7', 'freq' => 'weekly'],
+        ['url' => '/blogs',                         'priority' => '0.8', 'freq' => 'daily'],
+        ['url' => '/contact',                       'priority' => '0.8', 'freq' => 'monthly'],
+        // Digital Marketing
+        ['url' => '/seo-services',                  'priority' => '0.8', 'freq' => 'monthly'],
+        ['url' => '/social-media-management',       'priority' => '0.8', 'freq' => 'monthly'],
+        ['url' => '/ppc-advertising',               'priority' => '0.8', 'freq' => 'monthly'],
+        ['url' => '/google-meta-advertising',       'priority' => '0.8', 'freq' => 'monthly'],
+        // Design
+        ['url' => '/graphic-designing',             'priority' => '0.7', 'freq' => 'monthly'],
+        ['url' => '/ui-ux-designing',               'priority' => '0.7', 'freq' => 'monthly'],
+        ['url' => '/video-editing',                 'priority' => '0.7', 'freq' => 'monthly'],
+        ['url' => '/social-media-design',           'priority' => '0.7', 'freq' => 'monthly'],
+        ['url' => '/logo-designing',                'priority' => '0.7', 'freq' => 'monthly'],
+        // IT
+        ['url' => '/website-development',           'priority' => '0.8', 'freq' => 'monthly'],
+        ['url' => '/web-development',               'priority' => '0.8', 'freq' => 'monthly'],
+        ['url' => '/app-development',               'priority' => '0.7', 'freq' => 'monthly'],
+        ['url' => '/custom-website-development',    'priority' => '0.7', 'freq' => 'monthly'],
+        ['url' => '/ecommerce-development',         'priority' => '0.7', 'freq' => 'monthly'],
+        // Branding
+        ['url' => '/branding-service',              'priority' => '0.7', 'freq' => 'monthly'],
+        ['url' => '/branding-strategy',             'priority' => '0.7', 'freq' => 'monthly'],
+        ['url' => '/brand-manual',                  'priority' => '0.6', 'freq' => 'monthly'],
+        // Content
+        ['url' => '/content-writing',               'priority' => '0.7', 'freq' => 'monthly'],
+        ['url' => '/blog-writing',                  'priority' => '0.7', 'freq' => 'monthly'],
+        ['url' => '/social-media-content-marketing','priority' => '0.7', 'freq' => 'monthly'],
+        ['url' => '/social-media-content-creation', 'priority' => '0.7', 'freq' => 'monthly'],
+        // Advisory
+        ['url' => '/business-analysis',             'priority' => '0.6', 'freq' => 'monthly'],
+        ['url' => '/consultation',                  'priority' => '0.6', 'freq' => 'monthly'],
+    ];
+
+    $blogs = \App\Models\Blog::published()->latest('published_at')->get();
+    $jobs  = \App\Models\JobPosting::active()->get();
+
+    $xml  = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+
+    foreach ($staticPages as $page) {
+        $xml .= "  <url>\n";
+        $xml .= "    <loc>{$baseUrl}{$page['url']}</loc>\n";
+        $xml .= "    <changefreq>{$page['freq']}</changefreq>\n";
+        $xml .= "    <priority>{$page['priority']}</priority>\n";
+        $xml .= "  </url>\n";
+    }
+
+    foreach ($blogs as $blog) {
+        $xml .= "  <url>\n";
+        $xml .= "    <loc>{$baseUrl}/blogs/{$blog->slug}</loc>\n";
+        $xml .= "    <lastmod>{$blog->published_at->toAtomString()}</lastmod>\n";
+        $xml .= "    <changefreq>monthly</changefreq>\n";
+        $xml .= "    <priority>0.7</priority>\n";
+        $xml .= "  </url>\n";
+    }
+
+    foreach ($jobs as $job) {
+        $xml .= "  <url>\n";
+        $xml .= "    <loc>{$baseUrl}/career/{$job->id}</loc>\n";
+        $xml .= "    <changefreq>weekly</changefreq>\n";
+        $xml .= "    <priority>0.6</priority>\n";
+        $xml .= "  </url>\n";
+    }
+
+    $xml .= '</urlset>';
+
+    return response($xml, 200)->header('Content-Type', 'application/xml');
+})->name('sitemap');
 Route::get('/about-us', function () {
     return view('aboutus');
 })->name('about-us');
