@@ -72,6 +72,11 @@ class DashboardController extends Controller
         return view('admin.job-applications');
     }
 
+    public function clientStories()
+    {
+        return view('admin.client-stories');
+    }
+
     public function uploadBlogImage(Request $request): \Illuminate\Http\JsonResponse
     {
         $request->validate(['image' => 'required|image|max:5120|mimes:jpg,jpeg,png,webp,gif']);

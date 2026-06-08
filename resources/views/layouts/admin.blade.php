@@ -53,6 +53,9 @@
         <a href="{{ route('admin.blogs') }}" class="{{ request()->routeIs('admin.blogs') ? 'active' : '' }}">
           <i class="fas fa-newspaper"></i> Blog Manager
         </a>
+        <a href="{{ route('admin.client-stories') }}" class="{{ request()->routeIs('admin.client-stories') ? 'active' : '' }}">
+          <i class="fas fa-star"></i> Client Stories
+        </a>
         <a href="{{ route('admin.jobs') }}" class="{{ request()->routeIs('admin.jobs') ? 'active' : '' }}">
           <i class="fas fa-briefcase"></i> Job Postings
         </a>
@@ -169,6 +172,7 @@
       if (/\/testimonials/.test(path))     return 'Loading testimonials…';
       if (/\/companies/.test(path))        return 'Loading companies…';
       if (/\/blogs/.test(path))                return 'Loading blog manager…';
+      if (/\/client-stories/.test(path))      return 'Loading client stories…';
       if (/\/job-applications/.test(path))    return 'Loading applications…';
       if (/\/jobs/.test(path))                return 'Loading job postings…';
       if (/\/users/.test(path))            return 'Loading users…';

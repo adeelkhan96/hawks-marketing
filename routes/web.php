@@ -59,8 +59,8 @@ Route::get('/business-analysis', fn() => view('business-analysis'))->name('busin
 Route::get('/consultation', fn() => view('consultation'))->name('consultation');
 
 Route::get('/clients', function () {
-    $companies = \App\Models\Company::where('active', true)->orderBy('sort_order')->orderBy('id')->get();
-    return view('clients', compact('companies'));
+    $stories = \App\Models\ClientStory::active()->orderBy('sort_order')->orderBy('id')->get();
+    return view('clients', compact('stories'));
 })->name('clients');
 
 Route::get('/career', function () {
@@ -109,6 +109,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/jobs', [AdminDashboardController::class, 'jobs'])->name('jobs');
         Route::get('/job-applications', [AdminDashboardController::class, 'jobApplications'])->name('job-applications');
         Route::get('/job-applications/{id}/resume', [\App\Http\Controllers\JobController::class, 'downloadResume'])->name('applications.resume');
+        Route::get('/client-stories', [AdminDashboardController::class, 'clientStories'])->name('client-stories');
 
         // Email
         Route::get('/email',          [AdminEmailController::class, 'inbox']  )->name('email.inbox');
