@@ -814,23 +814,72 @@ body:not(.has-hero) .header-area .main-nav .nav {
 
 /* ---- Service Description Cards (Our Services page) ---- */
 .service-desc-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 14px;
+  padding: 30px 26px 24px;
   margin-bottom: 28px;
-  border-left: 4px solid #ff511a;
+  box-shadow: 0 4px 22px rgba(0,0,0,0.07);
+  border-top: 3px solid #ff511a;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: calc(100% - 28px);
+}
+.service-desc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 36px rgba(255,81,26,0.14);
+  text-decoration: none;
+  color: inherit;
+}
+.service-desc-card .sdc-icon {
+  width: 54px;
+  height: 54px;
+  background: rgba(255,81,26,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  flex-shrink: 0;
+}
+.service-desc-card .sdc-icon i {
+  color: #ff511a;
+  font-size: 21px;
 }
 .service-desc-card h5 {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   color: #212741;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+.service-desc-card:hover h5 {
+  color: #ff511a;
 }
 .service-desc-card p {
   font-size: 14px;
   color: #666;
   line-height: 1.75;
   margin-bottom: 0;
+  flex: 1;
+}
+.service-desc-card .sdc-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ff511a;
+}
+.service-desc-card .sdc-more i {
+  font-size: 11px;
+  transition: transform 0.2s;
+}
+.service-desc-card:hover .sdc-more i {
+  transform: translateX(4px);
 }
 
 /* ---- Career / Blogs Placeholder ---- */
