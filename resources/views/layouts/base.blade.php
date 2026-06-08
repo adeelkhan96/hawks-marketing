@@ -80,6 +80,156 @@ https://templatemo.com/tm-574-mexant
 
 -->
     @yield('head')
+<style>
+/* =====================================================
+   OVERRIDE STYLES — loaded inline to guarantee delivery
+   ===================================================== */
+
+/* --- Home: Services Grid --- */
+.services-grid-section {
+  background: #eaecf5 !important;
+  padding: 80px 0 !important;
+}
+.service-category-card {
+  background: #ffffff !important;
+  border-radius: 14px !important;
+  padding: 28px 24px !important;
+  margin-bottom: 0 !important;
+  box-shadow: 0 6px 30px rgba(33,39,65,0.12) !important;
+  border-top: 3px solid #ff511a !important;
+  transition: all 0.3s ease !important;
+  height: 100% !important;
+}
+.service-category-card:hover {
+  box-shadow: 0 14px 44px rgba(33,39,65,0.18) !important;
+  transform: translateY(-6px) !important;
+}
+.service-category-card h5 {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #212741 !important;
+  margin-bottom: 14px !important;
+  padding-bottom: 12px !important;
+  border-bottom: 1px solid #eee !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+.service-category-card h5 a,
+.service-category-card h5 a:link,
+.service-category-card h5 a:visited,
+.service-category-card h5 a:hover {
+  color: #212741 !important;
+  text-decoration: none !important;
+}
+.service-category-card h5 a:hover { color: #ff511a !important; }
+.service-category-card .scc-icon {
+  width: 36px !important;
+  height: 36px !important;
+  background: rgba(255,81,26,0.12) !important;
+  border-radius: 9px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+.service-category-card .scc-icon i { color: #ff511a !important; font-size: 15px !important; }
+.service-category-card ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.service-category-card ul li {
+  padding: 6px 0 !important;
+  border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 13.5px !important;
+}
+.service-category-card ul li:last-child { border-bottom: none !important; }
+.service-category-card ul li::before {
+  content: '\203A' !important;
+  color: #ff511a !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  flex-shrink: 0 !important;
+  line-height: 1 !important;
+}
+.service-category-card ul li a,
+.service-category-card ul li a:link,
+.service-category-card ul li a:visited {
+  color: #555 !important;
+  text-decoration: none !important;
+}
+.service-category-card ul li a:hover { color: #ff511a !important; }
+
+/* --- Footer --- */
+.hawks-footer {
+  background: #181f36 !important;
+}
+.hawks-footer a,
+.hawks-footer a:link,
+.hawks-footer a:visited {
+  color: rgba(255,255,255,0.6) !important;
+  text-decoration: none !important;
+}
+.hawks-footer a:hover { color: #ff511a !important; }
+.hawks-footer .footer-col-heading {
+  color: #ffffff !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+  margin-bottom: 20px !important;
+  padding-bottom: 10px !important;
+  border-bottom: 2px solid #ff511a !important;
+}
+.hawks-footer .footer-col-heading::after { display: none !important; }
+.hawks-footer .footer-links {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.hawks-footer .footer-links li { margin-bottom: 8px !important; }
+.hawks-footer .footer-links li a,
+.hawks-footer .footer-links li a:link,
+.hawks-footer .footer-links li a:visited {
+  color: rgba(255,255,255,0.6) !important;
+  font-size: 13px !important;
+}
+.hawks-footer .footer-links li a:hover { color: #ff511a !important; }
+.hawks-footer .footer-contact-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.hawks-footer .footer-contact-list li {
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 13px !important;
+  margin-bottom: 12px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  line-height: 1.5 !important;
+}
+.hawks-footer .footer-contact-list li i { color: #ff511a !important; margin-top: 2px !important; flex-shrink: 0 !important; }
+.hawks-footer .footer-contact-list li a,
+.hawks-footer .footer-contact-list li a:link,
+.hawks-footer .footer-contact-list li a:visited {
+  color: rgba(255,255,255,0.65) !important;
+}
+.hawks-footer .footer-contact-list li a:hover { color: #ff511a !important; }
+.hawks-footer .footer-tagline { color: rgba(255,255,255,0.5) !important; }
+.hawks-footer .footer-bottom { text-align: center !important; padding: 18px 0 !important; border-top: 1px solid rgba(255,255,255,0.07) !important; }
+.hawks-footer .footer-bottom p { color: rgba(255,255,255,0.35) !important; font-size: 13px !important; margin: 0 !important; }
+.hawks-footer .footer-social a {
+  background: rgba(255,255,255,0.08) !important;
+  border: 1px solid rgba(255,255,255,0.15) !important;
+  color: rgba(255,255,255,0.7) !important;
+}
+.hawks-footer .footer-social a:hover { background: #ff511a !important; border-color: #ff511a !important; color: #fff !important; }
+</style>
   </head>
 
   <body class="@yield('body-class')">
