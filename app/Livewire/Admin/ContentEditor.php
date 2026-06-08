@@ -3,19 +3,33 @@
 namespace App\Livewire\Admin;
 
 use App\Models\PageContent;
-use Illuminate\Support\Str;
 use Livewire\Component;
 
 class ContentEditor extends Component
 {
     public string $selectedPage = 'home';
-    public array $pages = ['home', 'about', 'services', 'contact'];
+    public array $pageGroups = [
+        'General'           => ['home', 'about', 'contact', 'our-services'],
+        'Digital Marketing' => ['seo-services', 'social-media', 'ppc-advertising', 'google-meta-advertising'],
+        'Designing'         => ['graphic-designing', 'ui-ux-designing', 'video-editing', 'social-media-design', 'logo-designing'],
+        'Branding'          => ['branding-strategy', 'branding-service', 'brand-manual'],
+        'IT Solution'       => ['web-development', 'custom-website-development', 'ecommerce-development', 'app-development'],
+        'Content Creation'  => ['content-writing', 'social-media-content-marketing', 'social-media-content-creation', 'blog-writing'],
+        'Other Services'    => ['business-analysis', 'consultation'],
+    ];
     public array $contents = [];
     public ?int $editingId = null;
     public string $editValue = '';
 
     public function mount(): void
     {
+        $this->loadContents();
+    }
+
+    public function updatedSelectedPage(): void
+    {
+        $this->editingId = null;
+        $this->editValue = '';
         $this->loadContents();
     }
 

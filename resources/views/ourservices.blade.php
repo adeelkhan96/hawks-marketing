@@ -1,65 +1,44 @@
-
 @extends('layouts.base')
 @section('title','Our Services | Hawks Marketing')
 @section('meta-title','Our Services | Hawks Marketing')
-@section('meta-description','Explore Hawks Marketing\'s full suite of digital marketing services: SEO, social media management, content writing, PPC, and custom web development tailored to your business goals.')
+@section('meta-description','Explore Hawks Marketing\'s full suite of services: SEO, social media, PPC, graphic design, UI/UX, web development, app development, branding, content creation, and more.')
 @section('content')
+@php use App\Models\PageContent as PC; $p = 'our-services'; @endphp
 
-  <section class="main-services page-top-offset">
+  {{-- Digital Marketing Services --}}
+  <section class="why-choose-section page-top-offset" id="digital-marketing">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
-          <div class="service-item">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="left-image">
-                  <img src="assets/images/service-image-01.jpg" alt="Brand Strategy">
-                </div>
-              </div>
-              <div class="col-lg-6 align-self-center">
-                <div class="right-text-content">
-                  <i class="fas fa-shop"></i>
-                  <h4>Brand Strategy and Media Planning</h4>
-                  <p>We leverage branding and media tactics as instruments to establish your business's distinct identity. Our content approaches build a digital footprint for exceptional market visibility, positioning your brand to connect with the right audience at the right time.</p>
-                </div>
-              </div>
-            </div>
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h6>What We Do</h6>
+            <h4>{{ PC::getValue($p, 'digital', 'heading', 'Digital Marketing Services') }}</h4>
           </div>
         </div>
-        <div class="col-lg-12">
-          <div class="service-item">
-            <div class="row">
-              <div class="col-lg-6 align-self-center">
-                <div class="left-text-content">
-                  <i class="fas fa-camera"></i>
-                  <h4>Digital Content Creation</h4>
-                  <p>Strong content strategy drives success; exceptional content execution delivers results. We unite both to produce superior content implementing the perfect combination of creativity and data-driven insight — from compelling copy to engaging visuals that move audiences to action.</p>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="right-image">
-                  <img src="assets/images/service-image-02.jpg" alt="Content Creation">
-                </div>
-              </div>
-            </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'digital', 'seo_title', 'Search Engine Optimization (SEO)') }}</h5>
+            <p>{{ PC::getValue($p, 'digital', 'seo_desc', 'Improving your website\'s visibility on search engines to attract high-quality organic traffic.') }}</p>
           </div>
         </div>
-        <div class="col-lg-12">
-          <div class="service-item last-service">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="left-image">
-                  <img src="assets/images/service-image-03.jpg" alt="Web Development">
-                </div>
-              </div>
-              <div class="col-lg-6 align-self-center">
-                <div class="right-text-content">
-                  <i class="fas fa-code"></i>
-                  <h4>Custom Website Solutions</h4>
-                  <p>We address every dimension of website creation to provide you the optimal product. Our professionals work through well-planned inbound marketing approaches, building user-friendly, responsive, and fully tested websites that represent your brand at its best.</p>
-                </div>
-              </div>
-            </div>
+        <div class="col-lg-6">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'digital', 'social_title', 'Social Media Marketing & Management') }}</h5>
+            <p>{{ PC::getValue($p, 'digital', 'social_desc', 'Strategic creation and management of content to build brand presence and audience engagement.') }}</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'digital', 'ppc_title', 'Pay-Per-Click Advertising (PPC)') }}</h5>
+            <p>{{ PC::getValue($p, 'digital', 'ppc_desc', 'A performance-driven advertising model where you pay only when users click on your ads.') }}</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'digital', 'google_title', 'Google & Meta Advertisement') }}</h5>
+            <p>{{ PC::getValue($p, 'digital', 'google_desc', 'Advertising across platforms like Google & Meta Platforms to reach highly specific audiences.') }}</p>
           </div>
         </div>
       </div>
@@ -83,111 +62,205 @@
     </div>
   </section>
 
-  <section class="service-details">
+  {{-- Designing --}}
+  <section class="why-choose-section" id="designing" style="padding-top:80px;">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading">
-            <h6>What We Offer</h6>
-            <h4>Our Full Service Range</h4>
+            <h6>Creative Excellence</h6>
+            <h4>{{ PC::getValue($p, 'designing', 'heading', 'Designing') }}</h4>
           </div>
         </div>
-        <div class="col-lg-10 offset-lg-1">
-          <div class="naccs">
-            <div class="tabs">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="menu">
-                    <div class="active gradient-border"><span>Brand &amp; Content</span></div>
-                    <div class="gradient-border"><span>Digital Advertising</span></div>
-                    <div class="gradient-border"><span>Web &amp; Social</span></div>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <ul class="nacc">
-                    <li class="active">
-                      <div>
-                        <div class="left-image">
-                          <img src="assets/images/service-details-01.jpg" alt="">
-                        </div>
-                        <div class="right-content">
-                          <h4>Brand Strategy, Content &amp; Visual Design</h4>
-                          <p>We build brand identities and create content that connects, engages, and drives action. From media planning to motion graphics, every asset is crafted to elevate your market presence.</p>
-                          <span>- Brand Strategy and Media Planning</span>
-                          <span>- Digital Content Creation</span>
-                          <span class="last-span">- Visual Design and Motion Graphics</span>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="left-image">
-                          <img src="assets/images/service-details-02.jpg" alt="">
-                        </div>
-                        <div class="right-content">
-                          <h4>Search, Paid &amp; Email Marketing</h4>
-                          <p>From dominating search rankings to maximizing paid ad ROI and reconnecting with prospects via email, our performance-driven campaigns are built to grow your revenue.</p>
-                          <span>- Search Engine Marketing (SEO/SEM)</span>
-                          <span>- Pay-Per-Click Advertising</span>
-                          <span class="last-span">- Email Campaign Optimization</span>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="left-image">
-                          <img src="assets/images/service-details-03.jpg" alt="">
-                        </div>
-                        <div class="right-content">
-                          <h4>Web Development, Social &amp; Conversion</h4>
-                          <p>We build high-converting websites, manage your social media presence end-to-end, and turn visitors into loyal customers through strategic conversion enhancement.</p>
-                          <span>- Custom Website Solutions</span>
-                          <span>- Social Platform Management</span>
-                          <span class="last-span">- Conversion Enhancement</span>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'designing', 'graphic_title', 'Graphic Designing') }}</h5>
+            <p>{{ PC::getValue($p, 'designing', 'graphic_desc', 'Graphic designing is the process of creating visual content to communicate information and ideas effectively.') }}</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'designing', 'uiux_title', 'UI/UX Designing') }}</h5>
+            <p>{{ PC::getValue($p, 'designing', 'uiux_desc', 'UI/UX designing focuses on creating intuitive, visually appealing, and user-friendly digital experiences.') }}</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'designing', 'video_title', 'Video Editing') }}</h5>
+            <p>{{ PC::getValue($p, 'designing', 'video_desc', 'Professional video editing services that transform raw footage into compelling, polished content.') }}</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'designing', 'smdesign_title', 'Social Media Design') }}</h5>
+            <p>{{ PC::getValue($p, 'designing', 'smdesign_desc', 'Eye-catching, on-brand designs created specifically for social media platforms.') }}</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'designing', 'logo_title', 'Logo Designing') }}</h5>
+            <p>{{ PC::getValue($p, 'designing', 'logo_desc', 'Distinctive, memorable logo designs that capture the essence of your brand.') }}</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="partners">
+  {{-- IT Solution --}}
+  <section class="why-choose-section" id="it-solution" style="padding-top:80px; background:#f9f9f9;">
+    <div class="container" style="padding-bottom:80px;">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h6>Technology</h6>
+            <h4>{{ PC::getValue($p, 'it', 'heading', 'IT Solution') }}</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'it', 'web_title', 'Web Development') }}</h5>
+            <p>{{ PC::getValue($p, 'it', 'web_desc', 'Web development involves building and maintaining functional, responsive, and high-performance websites.') }}</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'it', 'app_title', 'App Development') }}</h5>
+            <p>{{ PC::getValue($p, 'it', 'app_desc', 'App development involves creating functional and user-focused mobile applications for Android and iOS platforms.') }}</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'it', 'custom_title', 'Custom Website Development') }}</h5>
+            <p>{{ PC::getValue($p, 'it', 'custom_desc', 'Bespoke website solutions built from the ground up to match your exact business requirements.') }}</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'it', 'ecommerce_title', 'Ecommerce Web Development') }}</h5>
+            <p>{{ PC::getValue($p, 'it', 'ecommerce_desc', 'Fully featured online stores designed to convert visitors into customers.') }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{-- Branding --}}
+  <section class="why-choose-section" id="branding" style="padding-top:80px;">
     <div class="container">
       <div class="row">
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h6>Identity</h6>
+            <h4>{{ PC::getValue($p, 'branding', 'heading', 'Branding') }}</h4>
           </div>
         </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
+      </div>
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'branding', 'overview_title', 'Branding') }}</h5>
+            <p>{{ PC::getValue($p, 'branding', 'overview_desc', 'Branding is the process of creating a distinct identity for a business through visual, verbal, and strategic elements.') }}</p>
           </div>
         </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
+        <div class="col-lg-6">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'branding', 'strategy_title', 'Branding Strategy Services') }}</h5>
+            <p>{{ PC::getValue($p, 'branding', 'strategy_desc', 'Data-informed brand strategy development that aligns your positioning, messaging, and identity with your business goals.') }}</p>
           </div>
         </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
+        <div class="col-lg-6">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'branding', 'manual_title', 'Brand Manual Document') }}</h5>
+            <p>{{ PC::getValue($p, 'branding', 'manual_desc', 'Comprehensive brand guidelines documentation covering logo usage, color palette, typography, tone of voice, and visual standards.') }}</p>
           </div>
         </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  {{-- Content Creation --}}
+  <section class="why-choose-section" id="content-creation" style="padding-top:80px; background:#f9f9f9;">
+    <div class="container" style="padding-bottom:80px;">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h6>Storytelling</h6>
+            <h4>{{ PC::getValue($p, 'content', 'heading', 'Content Creation') }}</h4>
           </div>
         </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="assets/images/client-01.png" alt="">
+      </div>
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'content', 'overview_title', 'Content Creation') }}</h5>
+            <p>{{ PC::getValue($p, 'content', 'overview_desc', 'Content creation involves developing engaging and relevant material to communicate a brand\'s message effectively.') }}</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'content', 'smcontent_title', 'Social Media Content Marketing') }}</h5>
+            <p>{{ PC::getValue($p, 'content', 'smcontent_desc', 'Strategic content designed to grow your social media presence, drive engagement, and build a loyal audience.') }}</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'content', 'writing_title', 'Website Content Writing') }}</h5>
+            <p>{{ PC::getValue($p, 'content', 'writing_desc', 'SEO-optimized, professionally written website copy that communicates your value proposition clearly.') }}</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'content', 'blog_title', 'Blog Writing') }}</h5>
+            <p>{{ PC::getValue($p, 'content', 'blog_desc', 'Well-researched, engaging blog articles that establish your brand as an industry authority.') }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{-- Other Services --}}
+  <section class="why-choose-section" id="other-services" style="padding-top:80px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h6>Advisory</h6>
+            <h4>{{ PC::getValue($p, 'other', 'heading', 'Other Services') }}</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'other', 'ba_title', 'Business Analysis') }}</h5>
+            <p>{{ PC::getValue($p, 'other', 'ba_desc', 'Business analysis involves evaluating a company\'s operations, market position, and performance to identify growth opportunities.') }}</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-desc-card">
+            <h5>{{ PC::getValue($p, 'other', 'consult_title', 'Consultation') }}</h5>
+            <p>{{ PC::getValue($p, 'other', 'consult_desc', 'Business consultation involves providing expert guidance to improve business strategy, operations, and growth potential.') }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="simple-cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <h4>Ready to <em>Grow</em> Your <strong>Business?</strong></h4>
+        </div>
+        <div class="col-lg-7">
+          <div class="buttons">
+            <div class="orange-button">
+              <a href="{{ route('contact') }}">Contact Us Today</a>
+            </div>
           </div>
         </div>
       </div>
@@ -198,8 +271,5 @@
 @section('js')
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/tabs.js"></script>
   <script src="assets/js/custom.js"></script>
 @endsection

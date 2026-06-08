@@ -72,76 +72,91 @@
   </div>
   <!-- ***** Main Banner Area End ***** -->
 
-  <section class="services" id="services">
+  <section class="services-grid-section" id="services">
     <div class="container">
       <div class="row">
-                <div class="col-lg-6 offset-lg-3">
+        <div class="col-lg-6 offset-lg-3">
           <div class="section-heading">
             <h6>SERVICES</h6>
-            <h4>{{ PageContent::getValue('home', 'services', 'heading', 'Our Core Services') }}</h4>
+            <h4>Our Services</h4>
           </div>
         </div>
-        <div class="col-lg-6 col-sm-6 col-md-6">
-          <div class="service-item">
-            <i class="fas fa-shop"></i>
-            <h4>Brand Strategy and Media Planning</h4>
-            <p>Building brands with data-driven strategic direction</p>
+      </div>
+      <div class="row">
+
+        {{-- Digital Marketing Services --}}
+        <div class="col-lg-6 col-md-6">
+          <div class="service-category-card">
+            <h5><a href="{{ route('our-services') }}">Digital Marketing Services</a></h5>
+            <ul>
+              <li><a href="{{ route('seo-services') }}">Search Engine Optimization (SEO)</a></li>
+              <li><a href="{{ route('social-media') }}">Social Media Marketing &amp; Management</a></li>
+              <li><a href="{{ route('ppc-advertising') }}">Pay-Per-Click Advertising (PPC)</a></li>
+              <li><a href="{{ route('google-meta-advertising') }}">Google &amp; Meta Advertisement</a></li>
+            </ul>
           </div>
         </div>
-        <div class="col-lg-6 col-sm-6 col-md-6">
-          <div class="service-item">
-            <i class="fas fa-camera"></i>
-            <h4>Digital Content Creation</h4>
-            <p>Creating engaging content that drives action</p>
+
+        {{-- Designing --}}
+        <div class="col-lg-6 col-md-6">
+          <div class="service-category-card">
+            <h5><a href="{{ route('our-services') }}">Designing</a></h5>
+            <ul>
+              <li><a href="{{ route('graphic-designing') }}">Graphic Designing</a></li>
+              <li><a href="{{ route('ui-ux-designing') }}">UI/UX Designing</a></li>
+              <li><a href="{{ route('video-editing') }}">Video Editing</a></li>
+              <li><a href="{{ route('social-media-design') }}">Social Media Design</a></li>
+              <li><a href="{{ route('logo-designing') }}">Logo Designing</a></li>
+            </ul>
           </div>
         </div>
-        <div class="col-lg-6 col-sm-6 col-md-6">
-          <div class="service-item">
-            <i class="fas fa-compass-drafting"></i>
-            <h4>Visual Design </h4>
-            <p>Designing visuals that communicate your identity</p>
+
+        {{-- Branding --}}
+        <div class="col-lg-6 col-md-6">
+          <div class="service-category-card">
+            <h5><a href="{{ route('our-services') }}">Branding</a></h5>
+            <ul>
+              <li><a href="{{ route('branding-strategy') }}">Branding Strategy Services</a></li>
+              <li><a href="{{ route('branding-service') }}">Branding Service</a></li>
+              <li><a href="{{ route('brand-manual') }}">Brand Manual Document</a></li>
+            </ul>
           </div>
         </div>
-        <div class="col-lg-6 col-sm-6 col-md-6">
-          <div class="service-item">
-            <i class="fas fa-magnifying-glass"></i>
-            <h4>Search Engine Marketing</h4>
-            <p>Improving visibility through smart search strategies</p>
+
+        {{-- IT Solution --}}
+        <div class="col-lg-6 col-md-6">
+          <div class="service-category-card">
+            <h5><a href="{{ route('web-development') }}">IT Solution</a></h5>
+            <ul>
+              <li><a href="{{ route('web-development') }}">Website Design and Development</a></li>
+              <li><a href="{{ route('custom-website-development') }}">Custom Website Development</a></li>
+              <li><a href="{{ route('ecommerce-development') }}">Ecommerce Web Development</a></li>
+              <li><a href="{{ route('app-development') }}">App Development</a></li>
+            </ul>
           </div>
         </div>
-        <div class="col-lg-6 col-sm-6 col-md-6">
-          <div class="service-item">
-            <i class="fas fa-rectangle-ad"></i>
-            <h4>Pay-Per-Click Advertising</h4>
-            <p>Driving targeted traffic with paid campaigns</p>
+
+        {{-- Content Creation --}}
+        <div class="col-lg-6 col-md-6">
+          <div class="service-category-card">
+            <h5><a href="{{ route('content-writing') }}">Content Creation</a></h5>
+            <ul>
+              <li><a href="{{ route('social-media-content-marketing') }}">Social Media Content Marketing</a></li>
+              <li><a href="{{ route('social-media-content-creation') }}">Social Media Content Creation Services</a></li>
+              <li><a href="{{ route('content-writing') }}">Website Content Writing</a></li>
+              <li><a href="{{ route('blog-writing') }}">Blog Writing</a></li>
+            </ul>
           </div>
         </div>
-        <div class="col-lg-6 col-sm-6 col-md-6">
-          <div class="service-item">
-            <i class="fas fa-code"></i>
-            <h4>Custom Website Solutions</h4>
-            <p>Websites tailored to your business goals</p>
-          </div>
-        </div>
-        <div class="col-lg-6 col-sm-6 col-md-6">
-          <div class="service-item">
-            <i class="fas fa-hashtag"></i>
-            <h4>Social Platform Management</h4>
-            <p>Managing social presence for consistent growth</p>
-          </div>
-        </div>
-        <div class="col-lg-6 col-sm-6 col-md-6">
-          <div class="service-item">
-            <i class="fas fa-at"></i>
-            <h4>Email Campaign Optimization</h4>
-            <p>Optimizing emails for higher engagement</p>
-          </div>
-        </div>
-        <div class="col-lg-6 col-sm-6 col-md-6">
-          <div class="service-item">
-            <i class="fas fa-user-check"></i>
-            <h4>Conversion Enhancement</h4>
-            <p>Turning visitors into loyal customers</p>
+
+        {{-- Other Services --}}
+        <div class="col-lg-6 col-md-6">
+          <div class="service-category-card">
+            <h5><a href="{{ route('our-services') }}">Other Services</a></h5>
+            <ul>
+              <li><a href="{{ route('business-analysis') }}">Business Analysis</a></li>
+              <li><a href="{{ route('consultation') }}">Consultation</a></li>
+            </ul>
           </div>
         </div>
 
@@ -371,26 +386,26 @@
       <div class="row text-center">
         <div class="col-lg-3 col-sm-6">
           <div class="stat-item">
-            <h2>50+</h2>
-            <p>Happy Clients</p>
+            <h2>{{ PageContent::getValue('home', 'stats', 'clients_num', '50+') }}</h2>
+            <p>{{ PageContent::getValue('home', 'stats', 'clients_label', 'Happy Clients') }}</p>
           </div>
         </div>
         <div class="col-lg-3 col-sm-6">
           <div class="stat-item">
-            <h2>100+</h2>
-            <p>Projects Completed</p>
+            <h2>{{ PageContent::getValue('home', 'stats', 'projects_num', '100+') }}</h2>
+            <p>{{ PageContent::getValue('home', 'stats', 'projects_label', 'Projects Completed') }}</p>
           </div>
         </div>
         <div class="col-lg-3 col-sm-6">
           <div class="stat-item">
-            <h2>9+</h2>
-            <p>Core Services</p>
+            <h2>{{ PageContent::getValue('home', 'stats', 'services_num', '9+') }}</h2>
+            <p>{{ PageContent::getValue('home', 'stats', 'services_label', 'Core Services') }}</p>
           </div>
         </div>
         <div class="col-lg-3 col-sm-6">
           <div class="stat-item">
-            <h2>5+</h2>
-            <p>Years Experience</p>
+            <h2>{{ PageContent::getValue('home', 'stats', 'experience_num', '5+') }}</h2>
+            <p>{{ PageContent::getValue('home', 'stats', 'experience_label', 'Years Experience') }}</p>
           </div>
         </div>
       </div>

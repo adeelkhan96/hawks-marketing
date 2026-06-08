@@ -38,6 +38,39 @@ Route::get('/contact', function () {
 })->name('contact');
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
+// Individual service pages
+Route::get('/ppc-advertising', fn() => view('ppc-advertising'))->name('ppc-advertising');
+Route::get('/google-meta-advertising', fn() => view('google-meta-advertising'))->name('google-meta-advertising');
+Route::get('/graphic-designing', fn() => view('graphic-designing'))->name('graphic-designing');
+Route::get('/ui-ux-designing', fn() => view('ui-ux-designing'))->name('ui-ux-designing');
+Route::get('/video-editing', fn() => view('video-editing'))->name('video-editing');
+Route::get('/social-media-design', fn() => view('social-media-design'))->name('social-media-design');
+Route::get('/logo-designing', fn() => view('logo-designing'))->name('logo-designing');
+Route::get('/branding-strategy', fn() => view('branding-strategy'))->name('branding-strategy');
+Route::get('/branding-service', fn() => view('branding-service'))->name('branding-service');
+Route::get('/brand-manual', fn() => view('brand-manual'))->name('brand-manual');
+Route::get('/custom-website-development', fn() => view('custom-website-development'))->name('custom-website-development');
+Route::get('/ecommerce-development', fn() => view('ecommerce-development'))->name('ecommerce-development');
+Route::get('/app-development', fn() => view('app-development'))->name('app-development');
+Route::get('/social-media-content-marketing', fn() => view('social-media-content-marketing'))->name('social-media-content-marketing');
+Route::get('/social-media-content-creation', fn() => view('social-media-content-creation'))->name('social-media-content-creation');
+Route::get('/blog-writing', fn() => view('blog-writing'))->name('blog-writing');
+Route::get('/business-analysis', fn() => view('business-analysis'))->name('business-analysis');
+Route::get('/consultation', fn() => view('consultation'))->name('consultation');
+
+Route::get('/clients', function () {
+    $companies = \App\Models\Company::where('active', true)->orderBy('sort_order')->orderBy('id')->get();
+    return view('clients', compact('companies'));
+})->name('clients');
+
+Route::get('/career', function () {
+    return view('career');
+})->name('career');
+
+Route::get('/blogs', function () {
+    return view('blogs');
+})->name('blogs');
+
 // Admin panel
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/login', [AdminAuthController::class, 'showLogin'])->name('login');

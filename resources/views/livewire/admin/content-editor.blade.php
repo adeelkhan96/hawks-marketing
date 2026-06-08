@@ -8,16 +8,23 @@
   @endif
 
   <div class="admin-card">
-    {{-- Page Tabs --}}
+    {{-- Page Selector --}}
     <div class="mb-4">
       <p class="fw-semibold text-muted small mb-2 text-uppercase" style="letter-spacing: 1px;">Select Page to Edit</p>
-      <div class="d-flex gap-2 flex-wrap">
-        @foreach($pages as $page)
-          <button wire:click="changePage('{{ $page }}')"
-            class="btn btn-sm {{ $selectedPage === $page ? 'btn-admin' : 'btn-outline-secondary' }}">
-            <i class="fas fa-file-alt me-1"></i>{{ ucfirst($page) }}
-          </button>
-        @endforeach
+      <div class="d-flex align-items-center gap-3 flex-wrap">
+        <select wire:model.live="selectedPage" class="form-select" style="max-width:300px;">
+          @foreach($pageGroups as $group => $groupPages)
+            <optgroup label="{{ $group }}">
+              @foreach($groupPages as $page)
+                <option value="{{ $page }}">{{ ucwords(str_replace('-', ' ', $page)) }}</option>
+              @endforeach
+            </optgroup>
+          @endforeach
+        </select>
+        <span class="text-muted small">
+          <i class="fas fa-layer-group me-1"></i>
+          {{ count($contents) }} section{{ count($contents) !== 1 ? 's' : '' }} on this page
+        </span>
       </div>
     </div>
 

@@ -11,19 +11,13 @@
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
                       <ul class="nav">
-                          <li class="scroll-to-section"><a href="{{route('home')}}" class="active">Home</a></li>
+                          <li class="scroll-to-section"><a href="{{ route('home') }}" class="active">Home</a></li>
+                          <li><a href="{{ route('our-services') }}">Our Services</a></li>
                           <li><a href="{{ route('about-us') }}">About Us</a></li>
-                          <li class="has-sub">
-                              <a href="javascript:void(0)">Services</a>
-                              <ul class="sub-menu">
-                                  <li><a href="{{ route('our-services') }}">All Services</a></li>
-                                  <li><a href="{{ route('seo-services') }}">SEO Services</a></li>
-                                  <li><a href="{{ route('social-media') }}">Social Media Management</a></li>
-                                  <li><a href="{{ route('content-writing') }}">Content Writing</a></li>
-                                  <li><a href="{{ route('web-development') }}">Website Development</a></li>
-                              </ul>
-                          </li>
-                          <li><a href="{{ route('contact') }}">Contact</a></li>
+                          <li><a href="{{ route('clients') }}">Clients</a></li>
+                          <li><a href="{{ route('career') }}">Career</a></li>
+                          <li><a href="{{ route('blogs') }}">Blogs</a></li>
+                          <li><a href="{{ route('contact') }}">Contact Us</a></li>
                       </ul>
                       <a class='menu-trigger' href="javascript:void(0)">
                           <span>Menu</span>
