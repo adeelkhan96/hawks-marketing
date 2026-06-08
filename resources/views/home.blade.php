@@ -85,9 +85,12 @@
       <div class="row">
 
         {{-- Digital Marketing Services --}}
-        <div class="col-lg-6 col-md-6">
+        <div class="col-lg-6 col-md-6 mb-4">
           <div class="service-category-card">
-            <h5><a href="{{ route('our-services') }}">Digital Marketing Services</a></h5>
+            <h5>
+              <span class="scc-icon"><i class="fas fa-bullhorn"></i></span>
+              <a href="{{ route('our-services') }}#digital-marketing">Digital Marketing Services</a>
+            </h5>
             <ul>
               <li><a href="{{ route('seo-services') }}">Search Engine Optimization (SEO)</a></li>
               <li><a href="{{ route('social-media') }}">Social Media Marketing &amp; Management</a></li>
@@ -98,9 +101,12 @@
         </div>
 
         {{-- Designing --}}
-        <div class="col-lg-6 col-md-6">
+        <div class="col-lg-6 col-md-6 mb-4">
           <div class="service-category-card">
-            <h5><a href="{{ route('our-services') }}">Designing</a></h5>
+            <h5>
+              <span class="scc-icon"><i class="fas fa-paintbrush"></i></span>
+              <a href="{{ route('our-services') }}#designing">Designing</a>
+            </h5>
             <ul>
               <li><a href="{{ route('graphic-designing') }}">Graphic Designing</a></li>
               <li><a href="{{ route('ui-ux-designing') }}">UI/UX Designing</a></li>
@@ -112,9 +118,12 @@
         </div>
 
         {{-- Branding --}}
-        <div class="col-lg-6 col-md-6">
+        <div class="col-lg-6 col-md-6 mb-4">
           <div class="service-category-card">
-            <h5><a href="{{ route('our-services') }}">Branding</a></h5>
+            <h5>
+              <span class="scc-icon"><i class="fas fa-certificate"></i></span>
+              <a href="{{ route('our-services') }}#branding">Branding</a>
+            </h5>
             <ul>
               <li><a href="{{ route('branding-strategy') }}">Branding Strategy Services</a></li>
               <li><a href="{{ route('branding-service') }}">Branding Service</a></li>
@@ -124,9 +133,12 @@
         </div>
 
         {{-- IT Solution --}}
-        <div class="col-lg-6 col-md-6">
+        <div class="col-lg-6 col-md-6 mb-4">
           <div class="service-category-card">
-            <h5><a href="{{ route('web-development') }}">IT Solution</a></h5>
+            <h5>
+              <span class="scc-icon"><i class="fas fa-laptop-code"></i></span>
+              <a href="{{ route('our-services') }}#it-solution">IT Solution</a>
+            </h5>
             <ul>
               <li><a href="{{ route('web-development') }}">Website Design and Development</a></li>
               <li><a href="{{ route('custom-website-development') }}">Custom Website Development</a></li>
@@ -137,12 +149,15 @@
         </div>
 
         {{-- Content Creation --}}
-        <div class="col-lg-6 col-md-6">
+        <div class="col-lg-6 col-md-6 mb-4">
           <div class="service-category-card">
-            <h5><a href="{{ route('content-writing') }}">Content Creation</a></h5>
+            <h5>
+              <span class="scc-icon"><i class="fas fa-pen-nib"></i></span>
+              <a href="{{ route('our-services') }}#content-creation">Content Creation</a>
+            </h5>
             <ul>
               <li><a href="{{ route('social-media-content-marketing') }}">Social Media Content Marketing</a></li>
-              <li><a href="{{ route('social-media-content-creation') }}">Social Media Content Creation Services</a></li>
+              <li><a href="{{ route('social-media-content-creation') }}">Social Media Content Creation</a></li>
               <li><a href="{{ route('content-writing') }}">Website Content Writing</a></li>
               <li><a href="{{ route('blog-writing') }}">Blog Writing</a></li>
             </ul>
@@ -150,9 +165,12 @@
         </div>
 
         {{-- Other Services --}}
-        <div class="col-lg-6 col-md-6">
+        <div class="col-lg-6 col-md-6 mb-4">
           <div class="service-category-card">
-            <h5><a href="{{ route('our-services') }}">Other Services</a></h5>
+            <h5>
+              <span class="scc-icon"><i class="fas fa-handshake"></i></span>
+              <a href="{{ route('our-services') }}#other-services">Other Services</a>
+            </h5>
             <ul>
               <li><a href="{{ route('business-analysis') }}">Business Analysis</a></li>
               <li><a href="{{ route('consultation') }}">Consultation</a></li>
