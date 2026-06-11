@@ -9,6 +9,11 @@
 /* ---- Org chart tree ---- */
 .org-ceo-row { text-align:center; position:relative; }
 .org-ceo-row::after {
+    content:''; display:block; width:2px; height:40px;
+    background:#f1a51e; margin:0 auto;
+}
+.org-do-row { text-align:center; position:relative; }
+.org-do-row::after {
     content:''; display:block; width:2px; height:48px;
     background:#f1a51e; margin:0 auto;
 }
@@ -246,6 +251,21 @@
                     <div style="text-align:left;">
                         <div style="color:#fff;font-size:16px;font-weight:800;">{{ PC::getValue($p, 'founder', 'name', 'Aashir Khan Jadoon') }}</div>
                         <div style="color:#f1a51e;font-size:12px;font-weight:600;">Founder &amp; CEO</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{-- Director Operations node --}}
+        <div class="org-do-row">
+            <div style="display:inline-block;background:linear-gradient(135deg,#1e2a4a,#162040);border:2px solid rgba(241,165,30,.45);border-radius:14px;padding:14px 40px;box-shadow:0 6px 24px rgba(33,39,65,.15);">
+                <div style="display:flex;align-items:center;gap:14px;">
+                    <div style="width:44px;height:44px;border-radius:50%;background:rgba(241,165,30,.12);border:2px solid rgba(241,165,30,.35);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                        <i class="fas fa-user-shield" style="color:#f1a51e;font-size:18px;"></i>
+                    </div>
+                    <div style="text-align:left;">
+                        <div style="color:#fff;font-size:14px;font-weight:700;">Talha Zafar</div>
+                        <div style="color:#f1a51e;font-size:11px;font-weight:600;letter-spacing:.5px;">Director Operations (DO)</div>
                     </div>
                 </div>
             </div>
