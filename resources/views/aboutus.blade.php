@@ -142,7 +142,7 @@
                 <div class="row g-3">
                     @foreach([
                         ['fas fa-chart-bar','Measurable Performance','Strong emphasis on ROI and performance metrics that actually move the needle.'],
-                        ['fas fa-sliders-h','Tailored Strategies','{{ PC::getValue($p, "why", "point2", "Tailored strategies designed for each client\'s unique requirements") }}'],
+                        ['fas fa-sliders-h','Tailored Strategies','Tailored strategies designed for each client\'s unique requirements.'],
                         ['fas fa-brain','Creative + Data','Integration of creative direction with data-driven decision-making.'],
                         ['fas fa-shield-alt','Transparency','Commitment to transparency, consistency, and full accountability.'],
                     ] as $card)
