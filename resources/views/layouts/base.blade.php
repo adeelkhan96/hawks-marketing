@@ -85,6 +85,27 @@ https://templatemo.com/tm-574-mexant
    OVERRIDE STYLES — loaded inline to guarantee delivery
    ===================================================== */
 
+/* --- Global brand color: force gold over any cached CSS orange --- */
+.orange-button a,
+.orange-button a:link,
+.orange-button a:visited,
+button.orange-button,
+#calculate button.orange-button,
+#contact button.orange-button { background-color: #f1a51e !important; color: #fff !important; }
+.orange-button a:hover,
+button.orange-button:hover { background-color: #d4901a !important; }
+.slide-inner .header-text h2 em,
+.header-text h2 em,
+h2 em, h3 em, h4 em, h5 em { color: #f1a51e !important; font-style: normal !important; }
+.colored, a.colored { color: #f1a51e !important; }
+.nav li a.active,
+.nav li.active a,
+header .navbar-nav .nav-item > a.active,
+header nav a.active { color: #f1a51e !important; }
+.div-dec { background-color: #f1a51e !important; }
+.section-heading h6,
+.section-heading span { color: #f1a51e !important; }
+
 /* --- Home: Services Grid --- */
 .services-grid-section {
   background: #212741 !important;
