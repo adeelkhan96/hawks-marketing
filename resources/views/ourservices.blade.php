@@ -16,19 +16,19 @@
 .svc-card-light:hover {
     box-shadow:0 12px 36px rgba(33,39,65,.13);
     transform:translateY(-5px);
-    border-bottom-color:#ff511a;
+    border-bottom-color:#f1a51e;
 }
 .svc-card-light .svc-icon {
     width:56px; height:56px; border-radius:14px;
-    background:rgba(255,81,26,.1); display:flex; align-items:center;
+    background:rgba(241,165,30,.1); display:flex; align-items:center;
     justify-content:center; margin-bottom:18px; transition:all .3s;
 }
-.svc-card-light:hover .svc-icon { background:#ff511a; }
-.svc-card-light .svc-icon i { color:#ff511a; font-size:22px; transition:color .3s; }
+.svc-card-light:hover .svc-icon { background:#f1a51e; }
+.svc-card-light .svc-icon i { color:#f1a51e; font-size:22px; transition:color .3s; }
 .svc-card-light:hover .svc-icon i { color:#fff; }
 .svc-card-light h5 { font-size:16px; font-weight:700; color:#212741; margin-bottom:10px; }
 .svc-card-light p { font-size:13px; color:#6b7280; line-height:1.75; margin-bottom:14px; flex:1; }
-.svc-card-light .svc-more { font-size:13px; font-weight:600; color:#ff511a; display:flex; align-items:center; gap:6px; }
+.svc-card-light .svc-more { font-size:13px; font-weight:600; color:#f1a51e; display:flex; align-items:center; gap:6px; }
 
 /* Dark section cards */
 .svc-card-dark {
@@ -38,20 +38,20 @@
 }
 .svc-card-dark:hover {
     background:rgba(255,255,255,.1);
-    border-color:rgba(255,81,26,.5);
+    border-color:rgba(241,165,30,.5);
     transform:translateY(-5px);
 }
 .svc-card-dark .svc-icon {
     width:56px; height:56px; border-radius:14px;
-    background:rgba(255,81,26,.15); display:flex; align-items:center;
+    background:rgba(241,165,30,.15); display:flex; align-items:center;
     justify-content:center; margin-bottom:18px; transition:all .3s;
 }
-.svc-card-dark:hover .svc-icon { background:#ff511a; }
-.svc-card-dark .svc-icon i { color:#ff511a; font-size:22px; transition:color .3s; }
+.svc-card-dark:hover .svc-icon { background:#f1a51e; }
+.svc-card-dark .svc-icon i { color:#f1a51e; font-size:22px; transition:color .3s; }
 .svc-card-dark:hover .svc-icon i { color:#fff; }
 .svc-card-dark h5 { font-size:16px; font-weight:700; color:#fff; margin-bottom:10px; }
 .svc-card-dark p { font-size:13px; color:rgba(255,255,255,.6); line-height:1.75; margin-bottom:14px; flex:1; }
-.svc-card-dark .svc-more { font-size:13px; font-weight:600; color:#ff9a7a; display:flex; align-items:center; gap:6px; }
+.svc-card-dark .svc-more { font-size:13px; font-weight:600; color:#f8c96a; display:flex; align-items:center; gap:6px; }
 
 /* Category nav pills */
 .cat-pill {
@@ -62,15 +62,15 @@
     white-space:nowrap;
 }
 .cat-pill:hover, .cat-pill:focus {
-    background:#ff511a; border-color:#ff511a; color:#fff;
+    background:#f1a51e; border-color:#f1a51e; color:#fff;
 }
 
 /* Section heading left-aligned with accent */
 .svc-section-label {
     font-size:12px; font-weight:700; text-transform:uppercase;
-    letter-spacing:2px; color:#ff511a; margin-bottom:10px;
+    letter-spacing:2px; color:#f1a51e; margin-bottom:10px;
 }
-.svc-section-label.dark { color:#ff511a; }
+.svc-section-label.dark { color:#f1a51e; }
 </style>
 @endsection
 
@@ -78,21 +78,21 @@
 
 {{-- ===== HERO ===== --}}
 <section style="background:linear-gradient(135deg,#212741 0%,#1a2155 100%);padding:90px 0 70px;position:relative;overflow:hidden;">
-    <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:rgba(255,81,26,.07);border-radius:50%;pointer-events:none;"></div>
-    <div style="position:absolute;bottom:-60px;left:-40px;width:260px;height:260px;background:rgba(255,81,26,.05);border-radius:50%;pointer-events:none;"></div>
+    <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:rgba(241,165,30,.07);border-radius:50%;pointer-events:none;"></div>
+    <div style="position:absolute;bottom:-60px;left:-40px;width:260px;height:260px;background:rgba(241,165,30,.05);border-radius:50%;pointer-events:none;"></div>
     <div class="container" style="position:relative;z-index:2;">
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <p style="color:#ff511a;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">
+                <p style="color:#f1a51e;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">
                     <i class="fas fa-cogs me-2"></i>What We Do
                 </p>
                 <h1 style="color:#fff;font-size:44px;font-weight:800;line-height:1.2;margin-bottom:18px;">
-                    Full-Service<br><span style="color:#ff511a;">Digital Marketing</span><br>Under One Roof
+                    Full-Service<br><span style="color:#f1a51e;">Digital Marketing</span><br>Under One Roof
                 </h1>
                 <p style="color:rgba(255,255,255,.72);font-size:16px;line-height:1.8;max-width:480px;margin-bottom:36px;">
                     From search engine rankings to stunning designs and custom-built websites — we cover every pillar of your digital growth.
                 </p>
-                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:10px;background:#ff511a;color:#fff;padding:14px 30px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;">
+                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:10px;background:#f1a51e;color:#fff;padding:14px 30px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;">
                     Get a Free Consultation <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -125,7 +125,7 @@
                 </p>
             </div>
             <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
-                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,81,26,.1);color:#ff511a;padding:11px 22px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;">
+                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:8px;background:rgba(241,165,30,.1);color:#f1a51e;padding:11px 22px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;">
                     Start a Campaign <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -151,14 +151,14 @@
 </section>
 
 {{-- ===== MID CTA STRIP ===== --}}
-<section style="background:#ff511a;padding:32px 0;">
+<section style="background:#f1a51e;padding:32px 0;">
     <div class="container">
         <div class="row align-items-center g-3">
             <div class="col-lg-8">
                 <h4 style="color:#fff;font-size:22px;font-weight:800;margin:0;">Complete <em style="font-style:normal;opacity:.85;">Digital Marketing</em> Solutions for Your <strong>Business</strong></h4>
             </div>
             <div class="col-lg-4 text-lg-end">
-                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#ff511a;padding:12px 26px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;">
+                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#f1a51e;padding:12px 26px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;">
                     Get Started <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -180,7 +180,7 @@
                 </p>
             </div>
             <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
-                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,81,26,.15);border:1px solid rgba(255,81,26,.4);color:#ff9a7a;padding:11px 22px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;">
+                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:8px;background:rgba(241,165,30,.15);border:1px solid rgba(241,165,30,.4);color:#f8c96a;padding:11px 22px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;">
                     Discuss Your Design <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -220,7 +220,7 @@
                 </p>
             </div>
             <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
-                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,81,26,.1);color:#ff511a;padding:11px 22px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;">
+                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:8px;background:rgba(241,165,30,.1);color:#f1a51e;padding:11px 22px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;">
                     Start Your Project <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -259,7 +259,7 @@
                 </p>
             </div>
             <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
-                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,81,26,.15);border:1px solid rgba(255,81,26,.4);color:#ff9a7a;padding:11px 22px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;">
+                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:8px;background:rgba(241,165,30,.15);border:1px solid rgba(241,165,30,.4);color:#f8c96a;padding:11px 22px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;">
                     Build Your Brand <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -297,7 +297,7 @@
                 </p>
             </div>
             <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
-                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,81,26,.1);color:#ff511a;padding:11px 22px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;">
+                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:8px;background:rgba(241,165,30,.1);color:#f1a51e;padding:11px 22px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;">
                     Discuss Content <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -359,12 +359,12 @@
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-7">
-                <p style="color:#ff511a;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Let\'s Get Started</p>
-                <h3 style="color:#212741;font-size:36px;font-weight:800;line-height:1.3;margin-bottom:16px;">Ready to <em style="font-style:normal;color:#ff511a;">Grow</em> Your<br>Business?</h3>
+                <p style="color:#f1a51e;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Let\'s Get Started</p>
+                <h3 style="color:#212741;font-size:36px;font-weight:800;line-height:1.3;margin-bottom:16px;">Ready to <em style="font-style:normal;color:#f1a51e;">Grow</em> Your<br>Business?</h3>
                 <p style="color:#6b7280;font-size:15px;line-height:1.8;max-width:480px;">Tell us your goals and we\'ll build a strategy that delivers. No fluff, no guesswork — just results.</p>
             </div>
             <div class="col-lg-5 text-lg-end">
-                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:10px;background:#ff511a;color:#fff;padding:16px 36px;border-radius:12px;font-size:16px;font-weight:700;text-decoration:none;box-shadow:0 8px 28px rgba(255,81,26,.35);">
+                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:10px;background:#f1a51e;color:#fff;padding:16px 36px;border-radius:12px;font-size:16px;font-weight:700;text-decoration:none;box-shadow:0 8px 28px rgba(241,165,30,.35);">
                     Contact Us Today <i class="fas fa-arrow-right"></i>
                 </a>
             </div>

@@ -45,21 +45,21 @@
     <div class="col-sm-6 col-xl">
       <a href="{{ route('admin.submissions') }}" style="text-decoration:none;">
         <div class="stat-card d-flex align-items-center justify-content-between"
-             style="border-color:{{ $stats['unread_submissions'] > 0 ? '#ff511a' : '#cbd5e1' }}; transition:.2s;">
+             style="border-color:{{ $stats['unread_submissions'] > 0 ? '#f1a51e' : '#cbd5e1' }}; transition:.2s;">
           <div>
-            <h2 style="color:{{ $stats['unread_submissions'] > 0 ? '#ff511a' : '#212741' }};">
+            <h2 style="color:{{ $stats['unread_submissions'] > 0 ? '#f1a51e' : '#212741' }};">
               {{ $stats['total_submissions'] }}
             </h2>
             <p style="display:flex; align-items:center; gap:6px;">
               Messages
               @if($stats['unread_submissions'] > 0)
-                <span style="background:#ff511a; color:#fff; font-size:10px; font-weight:700; padding:1px 7px; border-radius:10px; line-height:1.6;">
+                <span style="background:#f1a51e; color:#fff; font-size:10px; font-weight:700; padding:1px 7px; border-radius:10px; line-height:1.6;">
                   {{ $stats['unread_submissions'] }} new
                 </span>
               @endif
             </p>
           </div>
-          <i class="fas fa-envelope" style="color:{{ $stats['unread_submissions'] > 0 ? '#ff511a' : '#cbd5e1' }};"></i>
+          <i class="fas fa-envelope" style="color:{{ $stats['unread_submissions'] > 0 ? '#f1a51e' : '#cbd5e1' }};"></i>
         </div>
       </a>
     </div>
@@ -105,7 +105,7 @@
                 <tr style="{{ $sub->read_at === null ? 'background:#fffbf8;' : '' }}">
                   <td style="padding-right:0;">
                     @if($sub->read_at === null)
-                      <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#ff511a;"></span>
+                      <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#f1a51e;"></span>
                     @endif
                   </td>
                   <td style="{{ $sub->read_at === null ? 'font-weight:600;' : '' }}">{{ $sub->name }}</td>

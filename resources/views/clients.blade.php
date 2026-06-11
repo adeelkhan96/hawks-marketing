@@ -8,10 +8,10 @@
 .story-card { background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 4px 24px rgba(33,39,65,.08); transition:all .35s; display:flex; flex-direction:column; height:100%; }
 .story-card:hover { box-shadow:0 16px 48px rgba(33,39,65,.15); transform:translateY(-6px); }
 .story-card-header { background:linear-gradient(135deg,#212741 0%,#1a2155 100%); padding:32px 32px 28px; position:relative; overflow:hidden; }
-.story-card-header::after { content:''; position:absolute; top:-40px; right:-40px; width:160px; height:160px; background:rgba(255,81,26,.1); border-radius:50%; }
-.story-tagline { background:rgba(255,81,26,.15); border:1px solid rgba(255,81,26,.3); border-radius:8px; padding:10px 16px; margin-top:16px; }
+.story-card-header::after { content:''; position:absolute; top:-40px; right:-40px; width:160px; height:160px; background:rgba(241,165,30,.1); border-radius:50%; }
+.story-tagline { background:rgba(241,165,30,.15); border:1px solid rgba(241,165,30,.3); border-radius:8px; padding:10px 16px; margin-top:16px; }
 .story-body { padding:28px 32px; flex:1; display:flex; flex-direction:column; }
-.story-section-label { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:1.5px; color:#ff511a; margin-bottom:6px; }
+.story-section-label { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:1.5px; color:#f1a51e; margin-bottom:6px; }
 .story-result-item { display:flex; align-items:flex-start; gap:10px; padding:7px 0; border-bottom:1px solid #f3f4f6; font-size:13px; color:#374151; line-height:1.5; }
 .story-result-item:last-child { border-bottom:none; }
 .stat-card { background:#fff; border-radius:12px; padding:24px; text-align:center; box-shadow:0 4px 16px rgba(33,39,65,.06); }
@@ -22,21 +22,21 @@
 
 {{-- ===== HERO ===== --}}
 <section style="background:linear-gradient(135deg,#212741 0%,#1a2155 100%);padding:90px 0 80px;position:relative;overflow:hidden;">
-    <div style="position:absolute;top:-60px;right:-60px;width:380px;height:380px;background:rgba(255,81,26,.07);border-radius:50%;pointer-events:none;"></div>
-    <div style="position:absolute;bottom:-80px;left:-40px;width:260px;height:260px;background:rgba(255,81,26,.05);border-radius:50%;pointer-events:none;"></div>
+    <div style="position:absolute;top:-60px;right:-60px;width:380px;height:380px;background:rgba(241,165,30,.07);border-radius:50%;pointer-events:none;"></div>
+    <div style="position:absolute;bottom:-80px;left:-40px;width:260px;height:260px;background:rgba(241,165,30,.05);border-radius:50%;pointer-events:none;"></div>
     <div class="container" style="position:relative;z-index:2;">
         <div class="row align-items-center g-5">
             <div class="col-lg-7">
-                <p style="color:#ff511a;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">
+                <p style="color:#f1a51e;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">
                     <i class="fas fa-trophy me-2"></i>Client Success Stories
                 </p>
                 <h1 style="color:#fff;font-size:44px;font-weight:800;line-height:1.2;margin-bottom:18px;">
-                    Real Results for<br><span style="color:#ff511a;">Real Businesses</span>
+                    Real Results for<br><span style="color:#f1a51e;">Real Businesses</span>
                 </h1>
                 <p style="color:rgba(255,255,255,.72);font-size:16px;line-height:1.8;max-width:520px;margin-bottom:32px;">
                     We don't just run campaigns — we build growth engines. Explore how Hawks Marketing has helped businesses across Pakistan and beyond achieve measurable, lasting results.
                 </p>
-                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:10px;background:#ff511a;color:#fff;padding:14px 30px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;">
+                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:10px;background:#f1a51e;color:#fff;padding:14px 30px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;">
                     Start Your Success Story <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -50,7 +50,7 @@
                     ] as $s)
                     <div class="col-6">
                         <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:20px;text-align:center;">
-                            <i class="{{ $s[0] }}" style="font-size:22px;color:#ff511a;margin-bottom:10px;display:block;"></i>
+                            <i class="{{ $s[0] }}" style="font-size:22px;color:#f1a51e;margin-bottom:10px;display:block;"></i>
                             <div style="color:#fff;font-size:13px;font-weight:700;margin-bottom:4px;">{{ $s[1] }}</div>
                             <div style="color:rgba(255,255,255,.5);font-size:11px;line-height:1.5;">{{ $s[2] }}</div>
                         </div>
@@ -65,7 +65,7 @@
 @if($stories->isNotEmpty())
 
 {{-- ===== STATS BAR ===== --}}
-<section style="background:#ff511a;padding:28px 0;">
+<section style="background:#f1a51e;padding:28px 0;">
     <div class="container">
         <div class="row g-3 text-center text-white">
             @foreach([['50+','Clients Served'],['4+','Years of Growth'],['95%','Client Retention'],['3M+','Leads Generated']] as $stat)
@@ -101,8 +101,8 @@
                                         <img src="{{ asset($story->client_logo) }}" alt="{{ $story->client_name }}" style="max-width:100%;max-height:100%;object-fit:contain;">
                                     </div>
                                     @else
-                                    <div style="width:44px;height:44px;background:rgba(255,81,26,.2);border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
-                                        <i class="fas fa-building" style="color:#ff9a7a;font-size:18px;"></i>
+                                    <div style="width:44px;height:44px;background:rgba(241,165,30,.2);border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+                                        <i class="fas fa-building" style="color:#f8c96a;font-size:18px;"></i>
                                     </div>
                                     @endif
                                     <div>
@@ -128,7 +128,7 @@
                         {{-- Tagline --}}
                         <div class="story-tagline" style="position:relative;z-index:2;">
                             <div style="display:flex;align-items:center;gap:8px;">
-                                <i class="fas fa-trophy" style="color:#ff511a;font-size:14px;flex-shrink:0;"></i>
+                                <i class="fas fa-trophy" style="color:#f1a51e;font-size:14px;flex-shrink:0;"></i>
                                 <span style="color:#fff;font-size:13px;font-weight:700;line-height:1.4;">{{ $story->tagline }}</span>
                             </div>
                         </div>
@@ -155,7 +155,7 @@
                             <div>
                                 @foreach($story->results_list as $result)
                                 <div class="story-result-item">
-                                    <i class="fas fa-check-circle" style="color:#ff511a;flex-shrink:0;margin-top:1px;font-size:13px;"></i>
+                                    <i class="fas fa-check-circle" style="color:#f1a51e;flex-shrink:0;margin-top:1px;font-size:13px;"></i>
                                     <span>{{ $result }}</span>
                                 </div>
                                 @endforeach
@@ -174,7 +174,7 @@
 <section style="background:#212741;padding:70px 0;">
     <div class="container">
         <div class="section-heading" style="margin-bottom:40px;">
-            <h6 style="color:#ff511a;">OUR EXPERTISE</h6>
+            <h6 style="color:#f1a51e;">OUR EXPERTISE</h6>
             <h4 style="color:#fff;">Industries We Serve</h4>
         </div>
         <div class="row g-3 justify-content-center">
@@ -212,8 +212,8 @@
             ] as $card)
             <div class="col-lg-4 col-md-6">
                 <div style="background:#fff;border-radius:14px;padding:32px;height:100%;box-shadow:0 4px 20px rgba(33,39,65,.06);transition:all .3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 36px rgba(33,39,65,.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(33,39,65,.06)'">
-                    <div style="width:56px;height:56px;background:rgba(255,81,26,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
-                        <i class="{{ $card[0] }}" style="color:#ff511a;font-size:22px;"></i>
+                    <div style="width:56px;height:56px;background:rgba(241,165,30,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+                        <i class="{{ $card[0] }}" style="color:#f1a51e;font-size:22px;"></i>
                     </div>
                     <h5 style="font-size:16px;font-weight:700;color:#212741;margin-bottom:10px;">{{ $card[1] }}</h5>
                     <p style="font-size:14px;color:#6b7280;line-height:1.75;margin:0;">{{ $card[2] }}</p>
@@ -224,14 +224,14 @@
 
         {{-- Placeholder message --}}
         <div class="text-center py-5" style="background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(33,39,65,.06);">
-            <div style="width:80px;height:80px;background:rgba(255,81,26,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
-                <i class="fas fa-star" style="font-size:32px;color:#ff511a;"></i>
+            <div style="width:80px;height:80px;background:rgba(241,165,30,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+                <i class="fas fa-star" style="font-size:32px;color:#f1a51e;"></i>
             </div>
             <h4 style="color:#212741;font-weight:800;margin-bottom:10px;">Client Stories Coming Soon</h4>
             <p style="color:#6b7280;font-size:15px;max-width:460px;margin:0 auto 28px;line-height:1.7;">
                 We're putting together detailed case studies for our clients. In the meantime, get in touch and we'd love to share our results directly.
             </p>
-            <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:10px;background:#ff511a;color:#fff;padding:14px 30px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;">
+            <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:10px;background:#f1a51e;color:#fff;padding:14px 30px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;">
                 Talk to Our Team <i class="fas fa-arrow-right"></i>
             </a>
         </div>
@@ -243,7 +243,7 @@
 <section style="background:#212741;padding:70px 0;">
     <div class="container">
         <div class="section-heading" style="margin-bottom:40px;">
-            <h6 style="color:#ff511a;">OUR EXPERTISE</h6>
+            <h6 style="color:#f1a51e;">OUR EXPERTISE</h6>
             <h4 style="color:#fff;">Industries We Serve</h4>
         </div>
         <div class="row g-3 justify-content-center">
@@ -265,7 +265,7 @@
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-7">
-                <p style="color:#ff511a;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Ready to Grow?</p>
+                <p style="color:#f1a51e;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Ready to Grow?</p>
                 <h3 style="color:#212741;font-size:34px;font-weight:800;line-height:1.3;margin-bottom:16px;">Let's Write Your<br>Success Story Together</h3>
                 <p style="color:#6b7280;font-size:15px;line-height:1.8;max-width:500px;">From SEO to social media, paid ads to content — we build digital marketing strategies that generate real, measurable growth for your business.</p>
             </div>
@@ -273,11 +273,11 @@
                 <div style="background:#fff;border-radius:16px;padding:36px;box-shadow:0 8px 32px rgba(33,39,65,.09);">
                     <h5 style="color:#212741;font-weight:800;margin-bottom:6px;">Get a Free Strategy Call</h5>
                     <p style="color:#9ca3af;font-size:13px;margin-bottom:24px;">No commitment. No sales pitch. Just honest advice about what would work for your business.</p>
-                    <a href="{{ route('contact') }}" style="display:block;background:#ff511a;color:#fff;padding:14px;border-radius:10px;font-size:15px;font-weight:700;text-align:center;text-decoration:none;margin-bottom:12px;">
+                    <a href="{{ route('contact') }}" style="display:block;background:#f1a51e;color:#fff;padding:14px;border-radius:10px;font-size:15px;font-weight:700;text-align:center;text-decoration:none;margin-bottom:12px;">
                         <i class="fas fa-phone-alt me-2"></i>Book a Free Call
                     </a>
                     <a href="mailto:info@thehawksmarketing.com" style="display:block;background:#f8f9fc;color:#212741;padding:13px;border-radius:10px;font-size:14px;font-weight:600;text-align:center;text-decoration:none;border:1px solid #e5e7eb;">
-                        <i class="fas fa-envelope me-2" style="color:#ff511a;"></i>Email Us Directly
+                        <i class="fas fa-envelope me-2" style="color:#f1a51e;"></i>Email Us Directly
                     </a>
                 </div>
             </div>

@@ -34,25 +34,25 @@
               <div class="col-lg-6">
                 <fieldset>
                   <input type="text" name="name" id="name" placeholder="Name..." autocomplete="on" required value="{{ old('name') }}">
-                  @error('name')<span style="color:#ff511a; font-size:12px; margin-top:4px; display:block;">{{ $message }}</span>@enderror
+                  @error('name')<span style="color:#f1a51e; font-size:12px; margin-top:4px; display:block;">{{ $message }}</span>@enderror
                 </fieldset>
               </div>
               <div class="col-lg-6">
                 <fieldset>
                   <input type="email" name="email" id="email" placeholder="Email..." required value="{{ old('email') }}">
-                  @error('email')<span style="color:#ff511a; font-size:12px; margin-top:4px; display:block;">{{ $message }}</span>@enderror
+                  @error('email')<span style="color:#f1a51e; font-size:12px; margin-top:4px; display:block;">{{ $message }}</span>@enderror
                 </fieldset>
               </div>
               <div class="col-lg-12">
                 <fieldset>
                   <input type="tel" name="phone" id="phone" placeholder="Phone Number..." autocomplete="on" value="{{ old('phone') }}">
-                  @error('phone')<span style="color:#ff511a; font-size:12px; margin-top:4px; display:block;">{{ $message }}</span>@enderror
+                  @error('phone')<span style="color:#f1a51e; font-size:12px; margin-top:4px; display:block;">{{ $message }}</span>@enderror
                 </fieldset>
               </div>
               <div class="col-lg-12">
                 <fieldset>
                   <textarea name="message" id="message" placeholder="Message (Optional)...">{{ old('message') }}</textarea>
-                  @error('message')<span style="color:#ff511a; font-size:12px; margin-top:4px; display:block;">{{ $message }}</span>@enderror
+                  @error('message')<span style="color:#f1a51e; font-size:12px; margin-top:4px; display:block;">{{ $message }}</span>@enderror
                 </fieldset>
               </div>
               <div class="col-lg-12">
@@ -104,9 +104,9 @@
         {{-- Social Links --}}
         <div class="col-lg-10 offset-lg-1 text-center mb-5">
           <div style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap;">
-            <a href="https://www.instagram.com/hawksmarketing.pk" target="_blank" rel="noopener" style="width:44px;height:44px;border-radius:50%;background:#212741;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#ff511a'" onmouseout="this.style.background='#212741'"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61577364703717" target="_blank" rel="noopener" style="width:44px;height:44px;border-radius:50%;background:#212741;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#ff511a'" onmouseout="this.style.background='#212741'"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.linkedin.com/company/the-hawks-marketing" target="_blank" rel="noopener" style="width:44px;height:44px;border-radius:50%;background:#212741;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#ff511a'" onmouseout="this.style.background='#212741'"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/hawksmarketing.pk" target="_blank" rel="noopener" style="width:44px;height:44px;border-radius:50%;background:#212741;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#f1a51e'" onmouseout="this.style.background='#212741'"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61577364703717" target="_blank" rel="noopener" style="width:44px;height:44px;border-radius:50%;background:#212741;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#f1a51e'" onmouseout="this.style.background='#212741'"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/the-hawks-marketing" target="_blank" rel="noopener" style="width:44px;height:44px;border-radius:50%;background:#212741;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#f1a51e'" onmouseout="this.style.background='#212741'"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
 

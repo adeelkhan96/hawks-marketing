@@ -4,11 +4,11 @@
 
 @section('head')
 <style>
-.apply-section-heading { font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#212741;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid rgba(255,81,26,.2); }
-.form-control:focus, .form-select:focus { border-color:#ff511a !important; box-shadow:0 0 0 3px rgba(255,81,26,.12) !important; }
+.apply-section-heading { font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#212741;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid rgba(241,165,30,.2); }
+.form-control:focus, .form-select:focus { border-color:#f1a51e !important; box-shadow:0 0 0 3px rgba(241,165,30,.12) !important; }
 .apply-card { background:#fff;border-radius:14px;padding:32px;box-shadow:0 4px 20px rgba(33,39,65,.07);margin-bottom:24px; }
 .field-label { font-size:13px;font-weight:600;color:#374151;margin-bottom:6px; }
-.field-required { color:#ff511a; }
+.field-required { color:#f1a51e; }
 </style>
 @endsection
 
@@ -32,12 +32,12 @@
 {{-- Header --}}
 <section style="background:linear-gradient(135deg,#212741 0%,#1a2155 100%);padding:50px 0 40px;">
     <div class="container">
-        <p style="color:#ff511a;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;">Application Form</p>
+        <p style="color:#f1a51e;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;">Application Form</p>
         <h1 style="color:#fff;font-size:30px;font-weight:800;margin-bottom:8px;">{{ $job->title }}</h1>
         <div class="d-flex flex-wrap gap-3" style="font-size:13px;color:rgba(255,255,255,.65);">
-            <span><i class="fas fa-building me-1" style="color:#ff511a;"></i>{{ $job->department }}</span>
-            <span><i class="fas fa-map-marker-alt me-1" style="color:#ff511a;"></i>{{ $job->location }}</span>
-            <span><i class="fas fa-briefcase me-1" style="color:#ff511a;"></i>{{ $job->type_label }}</span>
+            <span><i class="fas fa-building me-1" style="color:#f1a51e;"></i>{{ $job->department }}</span>
+            <span><i class="fas fa-map-marker-alt me-1" style="color:#f1a51e;"></i>{{ $job->location }}</span>
+            <span><i class="fas fa-briefcase me-1" style="color:#f1a51e;"></i>{{ $job->type_label }}</span>
         </div>
     </div>
 </section>
@@ -64,7 +64,7 @@
 
                     {{-- Personal details --}}
                     <div class="apply-card">
-                        <h5 class="apply-section-heading"><i class="fas fa-user me-2" style="color:#ff511a;"></i>Personal Details</h5>
+                        <h5 class="apply-section-heading"><i class="fas fa-user me-2" style="color:#f1a51e;"></i>Personal Details</h5>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label class="field-label">Full Name <span class="field-required">*</span></label>
@@ -95,7 +95,7 @@
 
                     {{-- Professional details --}}
                     <div class="apply-card">
-                        <h5 class="apply-section-heading"><i class="fas fa-briefcase me-2" style="color:#ff511a;"></i>Professional Background</h5>
+                        <h5 class="apply-section-heading"><i class="fas fa-briefcase me-2" style="color:#f1a51e;"></i>Professional Background</h5>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label class="field-label">Years of Experience <span class="field-required">*</span></label>
@@ -134,7 +134,7 @@
 
                     {{-- Cover letter --}}
                     <div class="apply-card">
-                        <h5 class="apply-section-heading"><i class="fas fa-file-alt me-2" style="color:#ff511a;"></i>Cover Letter <span class="field-required">*</span></h5>
+                        <h5 class="apply-section-heading"><i class="fas fa-file-alt me-2" style="color:#f1a51e;"></i>Cover Letter <span class="field-required">*</span></h5>
                         <p style="font-size:13px;color:#9ca3af;margin-bottom:12px;">Tell us why you're the right fit for this role. Include relevant experience, key achievements, and what excites you about working at Hawks Marketing. (Minimum 100 characters)</p>
                         <textarea name="cover_letter" rows="8" class="form-control @error('cover_letter') is-invalid @enderror"
                                   style="border-radius:8px;font-size:14px;line-height:1.7;resize:vertical;"
@@ -145,13 +145,13 @@
 
                     {{-- Resume upload --}}
                     <div class="apply-card">
-                        <h5 class="apply-section-heading"><i class="fas fa-paperclip me-2" style="color:#ff511a;"></i>Resume / CV <span class="field-required">*</span></h5>
+                        <h5 class="apply-section-heading"><i class="fas fa-paperclip me-2" style="color:#f1a51e;"></i>Resume / CV <span class="field-required">*</span></h5>
                         <p style="font-size:13px;color:#9ca3af;margin-bottom:16px;">Upload your CV in PDF or Word format. Maximum file size: 5 MB.</p>
 
                         <label class="w-100 text-center py-4 cursor-pointer"
                                style="border:2px dashed #e5e7eb;border-radius:10px;cursor:pointer;transition:all .2s;"
                                id="resume-label"
-                               onmouseover="this.style.borderColor='#ff511a'"
+                               onmouseover="this.style.borderColor='#f1a51e'"
                                onmouseout="this.style.borderColor='#e5e7eb'">
                             <i class="fas fa-cloud-upload-alt d-block mb-2" style="font-size:32px;color:#9ca3af;" id="resume-icon"></i>
                             <span id="resume-text" style="font-size:14px;color:#9ca3af;">Click to upload or drag and drop</span>
@@ -174,9 +174,9 @@
                         </div>
 
                         <button type="submit"
-                                style="display:block;width:100%;background:#ff511a;color:#fff;border:none;padding:16px;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;transition:background .2s;"
+                                style="display:block;width:100%;background:#f1a51e;color:#fff;border:none;padding:16px;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;transition:background .2s;"
                                 onmouseover="this.style.background='#e04010'"
-                                onmouseout="this.style.background='#ff511a'">
+                                onmouseout="this.style.background='#f1a51e'">
                             <i class="fas fa-paper-plane me-2"></i> Submit Application
                         </button>
                         <p style="font-size:12px;color:#9ca3af;text-align:center;margin-top:12px;margin-bottom:0;">

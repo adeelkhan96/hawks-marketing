@@ -15,7 +15,7 @@
         <h5 class="mb-0 fw-bold" style="color:#212741;">Job Postings</h5>
         <small class="text-muted">Manage open positions</small>
     </div>
-    <button wire:click="create" class="btn btn-sm fw-semibold" style="background:#ff511a;color:#fff;padding:8px 20px;border-radius:8px;">
+    <button wire:click="create" class="btn btn-sm fw-semibold" style="background:#f1a51e;color:#fff;padding:8px 20px;border-radius:8px;">
         <i class="fas fa-plus me-1"></i> New Job
     </button>
 </div>
@@ -108,7 +108,7 @@
         </button>
         <h5 class="mb-0 fw-bold" style="color:#212741;">{{ $editId ? 'Edit Job Posting' : 'Create Job Posting' }}</h5>
     </div>
-    <button wire:click="save" class="btn btn-sm fw-semibold" style="background:#ff511a;color:#fff;border-radius:8px;padding:8px 22px;">
+    <button wire:click="save" class="btn btn-sm fw-semibold" style="background:#f1a51e;color:#fff;border-radius:8px;padding:8px 22px;">
         <span wire:loading.remove wire:target="save"><i class="fas fa-save me-1"></i> Save</span>
         <span wire:loading wire:target="save"><i class="fas fa-spinner fa-spin me-1"></i> Saving…</span>
     </button>

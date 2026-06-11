@@ -11,14 +11,14 @@
             <li class="nav-item">
                 <a href="{{ route('admin.email.inbox') }}"
                    class="nav-link px-3 py-1 {{ $activeTab === 'inbox' ? 'active' : 'text-secondary' }}"
-                   style="{{ $activeTab === 'inbox' ? 'background:#ff511a;' : '' }}">
+                   style="{{ $activeTab === 'inbox' ? 'background:#f1a51e;' : '' }}">
                     <i class="fas fa-inbox me-1"></i> Inbox
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{ route('admin.email.sent') }}"
                    class="nav-link px-3 py-1 {{ $activeTab === 'sent' ? 'active' : 'text-secondary' }}"
-                   style="{{ $activeTab === 'sent' ? 'background:#ff511a;' : '' }}">
+                   style="{{ $activeTab === 'sent' ? 'background:#f1a51e;' : '' }}">
                     <i class="fas fa-paper-plane me-1"></i> Sent
                 </a>
             </li>
@@ -27,7 +27,7 @@
             <small class="text-muted mt-1 d-block">{{ $total }} total messages — showing latest 50</small>
         @endif
     </div>
-    <a href="{{ route('admin.email.compose') }}" class="btn btn-sm px-3" style="background:#ff511a;color:#fff;">
+    <a href="{{ route('admin.email.compose') }}" class="btn btn-sm px-3" style="background:#f1a51e;color:#fff;">
         <i class="fas fa-pen me-1"></i> Compose
     </a>
 </div>
@@ -78,7 +78,7 @@
                         style="{{ !$msg['seen'] ? 'background:#fff9f7;' : '' }}">
                         <td>
                             @if(!$msg['seen'])
-                                <span style="width:8px;height:8px;background:#ff511a;border-radius:50%;display:inline-block;"></span>
+                                <span style="width:8px;height:8px;background:#f1a51e;border-radius:50%;display:inline-block;"></span>
                             @endif
                         </td>
                         <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px;">

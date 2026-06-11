@@ -91,11 +91,11 @@ https://templatemo.com/tm-574-mexant
   padding: 90px 0 !important;
 }
 .services-grid-section .section-heading h4 { color: #fff !important; }
-.services-grid-section .section-heading h6 { color: #ff511a !important; }
+.services-grid-section .section-heading h6 { color: #f1a51e !important; }
 .service-category-card {
   background: rgba(255,255,255,0.05) !important;
   border: 1px solid rgba(255,255,255,0.1) !important;
-  border-left: 4px solid #ff511a !important;
+  border-left: 4px solid #f1a51e !important;
   border-radius: 10px !important;
   padding: 28px 26px !important;
   transition: all 0.3s ease !important;
@@ -103,8 +103,8 @@ https://templatemo.com/tm-574-mexant
 }
 .service-category-card:hover {
   background: rgba(255,255,255,0.09) !important;
-  border-color: rgba(255,81,26,0.5) !important;
-  border-left-color: #ff511a !important;
+  border-color: rgba(241,165,30,0.5) !important;
+  border-left-color: #f1a51e !important;
   transform: translateY(-5px) !important;
   box-shadow: 0 16px 40px rgba(0,0,0,0.25) !important;
 }
@@ -125,18 +125,18 @@ https://templatemo.com/tm-574-mexant
   color: #fff !important;
   text-decoration: none !important;
 }
-.service-category-card h5 a:hover { color: #ff511a !important; }
+.service-category-card h5 a:hover { color: #f1a51e !important; }
 .service-category-card .scc-icon {
   width: 38px !important;
   height: 38px !important;
-  background: rgba(255,81,26,0.2) !important;
+  background: rgba(241,165,30,0.2) !important;
   border-radius: 8px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   flex-shrink: 0 !important;
 }
-.service-category-card .scc-icon i { color: #ff511a !important; font-size: 16px !important; }
+.service-category-card .scc-icon i { color: #f1a51e !important; font-size: 16px !important; }
 .service-category-card ul {
   list-style: none !important;
   padding: 0 !important;
@@ -153,7 +153,7 @@ https://templatemo.com/tm-574-mexant
 .service-category-card ul li:last-child { border-bottom: none !important; }
 .service-category-card ul li::before {
   content: '\203A' !important;
-  color: #ff511a !important;
+  color: #f1a51e !important;
   font-size: 18px !important;
   font-weight: 700 !important;
   flex-shrink: 0 !important;
@@ -165,7 +165,7 @@ https://templatemo.com/tm-574-mexant
   color: rgba(255,255,255,0.65) !important;
   text-decoration: none !important;
 }
-.service-category-card ul li a:hover { color: #ff511a !important; }
+.service-category-card ul li a:hover { color: #f1a51e !important; }
 
 /* --- Footer --- */
 .hawks-footer {
@@ -177,7 +177,7 @@ https://templatemo.com/tm-574-mexant
   color: rgba(255,255,255,0.6) !important;
   text-decoration: none !important;
 }
-.hawks-footer a:hover { color: #ff511a !important; }
+.hawks-footer a:hover { color: #f1a51e !important; }
 .hawks-footer .footer-col-heading {
   color: #ffffff !important;
   font-size: 13px !important;
@@ -186,7 +186,7 @@ https://templatemo.com/tm-574-mexant
   letter-spacing: 1.5px !important;
   margin-bottom: 20px !important;
   padding-bottom: 10px !important;
-  border-bottom: 2px solid #ff511a !important;
+  border-bottom: 2px solid #f1a51e !important;
 }
 .hawks-footer .footer-col-heading::after { display: none !important; }
 .hawks-footer .footer-links {
@@ -201,7 +201,7 @@ https://templatemo.com/tm-574-mexant
   color: rgba(255,255,255,0.6) !important;
   font-size: 13px !important;
 }
-.hawks-footer .footer-links li a:hover { color: #ff511a !important; }
+.hawks-footer .footer-links li a:hover { color: #f1a51e !important; }
 .hawks-footer .footer-contact-list {
   list-style: none !important;
   padding: 0 !important;
@@ -216,13 +216,13 @@ https://templatemo.com/tm-574-mexant
   gap: 10px !important;
   line-height: 1.5 !important;
 }
-.hawks-footer .footer-contact-list li i { color: #ff511a !important; margin-top: 2px !important; flex-shrink: 0 !important; }
+.hawks-footer .footer-contact-list li i { color: #f1a51e !important; margin-top: 2px !important; flex-shrink: 0 !important; }
 .hawks-footer .footer-contact-list li a,
 .hawks-footer .footer-contact-list li a:link,
 .hawks-footer .footer-contact-list li a:visited {
   color: rgba(255,255,255,0.65) !important;
 }
-.hawks-footer .footer-contact-list li a:hover { color: #ff511a !important; }
+.hawks-footer .footer-contact-list li a:hover { color: #f1a51e !important; }
 .hawks-footer .footer-tagline { color: rgba(255,255,255,0.5) !important; }
 .hawks-footer .footer-bottom { text-align: center !important; padding: 18px 0 !important; border-top: 1px solid rgba(255,255,255,0.07) !important; }
 .hawks-footer .footer-bottom p { color: rgba(255,255,255,0.35) !important; font-size: 13px !important; margin: 0 !important; }
@@ -231,7 +231,7 @@ https://templatemo.com/tm-574-mexant
   border: 1px solid rgba(255,255,255,0.15) !important;
   color: rgba(255,255,255,0.7) !important;
 }
-.hawks-footer .footer-social a:hover { background: #ff511a !important; border-color: #ff511a !important; color: #fff !important; }
+.hawks-footer .footer-social a:hover { background: #f1a51e !important; border-color: #f1a51e !important; color: #fff !important; }
 </style>
   </head>
 

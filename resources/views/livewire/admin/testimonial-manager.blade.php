@@ -48,7 +48,7 @@
           <div class="d-flex flex-column gap-3">
             @foreach($testimonials as $t)
               <div class="d-flex align-items-center gap-3 p-3"
-                style="background:{{ $editingId === $t->id ? '#fff3ee' : '#f8f9fc' }}; border-radius:10px; border:1px solid {{ $editingId === $t->id ? '#ff511a40' : '#ebebeb' }};">
+                style="background:{{ $editingId === $t->id ? '#fff3ee' : '#f8f9fc' }}; border-radius:10px; border:1px solid {{ $editingId === $t->id ? '#f1a51e40' : '#ebebeb' }};">
 
                 {{-- Photo --}}
                 <div style="width:52px; height:52px; border-radius:50%; overflow:hidden; flex-shrink:0; background:#e0e0e0;">
@@ -64,7 +64,7 @@
                 {{-- Info --}}
                 <div class="flex-grow-1" style="min-width:0;">
                   <div class="fw-semibold" style="font-size:14px; color:#212741;">{{ $t->name }}</div>
-                  <div style="font-size:12px; color:#ff511a; font-weight:500;">{{ $t->position }}</div>
+                  <div style="font-size:12px; color:#f1a51e; font-weight:500;">{{ $t->position }}</div>
                   <div class="text-truncate" style="font-size:12px; color:#888; max-width:320px;">{{ $t->message }}</div>
                 </div>
 
@@ -121,7 +121,7 @@
             <div class="mb-3 text-center">
               @if($image)
                 <img src="{{ $image->temporaryUrl() }}" alt="Preview"
-                  style="width:80px; height:80px; border-radius:50%; object-fit:cover; border:3px solid #ff511a; margin-bottom:10px; display:block; margin-left:auto; margin-right:auto;">
+                  style="width:80px; height:80px; border-radius:50%; object-fit:cover; border:3px solid #f1a51e; margin-bottom:10px; display:block; margin-left:auto; margin-right:auto;">
               @elseif($existingImage)
                 <img src="{{ asset($existingImage) }}" alt="Current"
                   style="width:80px; height:80px; border-radius:50%; object-fit:cover; border:3px solid #ebebeb; margin-bottom:10px; display:block; margin-left:auto; margin-right:auto;">

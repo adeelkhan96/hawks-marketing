@@ -13,7 +13,7 @@
                 'to'      => $message['from_email'],
                 'subject' => 'Re: ' . $message['subject'],
             ]) }}"
-           class="btn btn-sm px-3" style="background:#ff511a;color:#fff;">
+           class="btn btn-sm px-3" style="background:#f1a51e;color:#fff;">
             <i class="fas fa-reply me-1"></i> Reply
         </a>
         <a href="{{ route('admin.email.compose') }}"
@@ -44,7 +44,7 @@
 $emailDoc = '<!DOCTYPE html><html><head><meta charset="UTF-8">
 <style>
   body { font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 1.7; color: #333; padding: 24px; margin: 0; }
-  a    { color: #ff511a; }
+  a    { color: #f1a51e; }
   img  { max-width: 100%; height: auto; }
   p    { margin: 0 0 12px; }
   pre  { white-space: pre-wrap; font-family: inherit; }

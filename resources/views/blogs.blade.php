@@ -7,16 +7,16 @@
 
 {{-- Page Hero --}}
 <section style="background:linear-gradient(135deg,#212741 0%,#2d3561 100%);padding:90px 0 70px;position:relative;overflow:hidden;">
-  <div style="position:absolute;top:-60px;right:-60px;width:320px;height:320px;background:rgba(255,81,26,.08);border-radius:50%;"></div>
-  <div style="position:absolute;bottom:-80px;left:-40px;width:240px;height:240px;background:rgba(255,81,26,.06);border-radius:50%;"></div>
+  <div style="position:absolute;top:-60px;right:-60px;width:320px;height:320px;background:rgba(241,165,30,.08);border-radius:50%;"></div>
+  <div style="position:absolute;bottom:-80px;left:-40px;width:240px;height:240px;background:rgba(241,165,30,.06);border-radius:50%;"></div>
   <div class="container" style="position:relative;z-index:2;">
     <div class="row">
       <div class="col-lg-8">
-        <p style="color:#ff511a;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">
+        <p style="color:#f1a51e;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">
           <i class="fas fa-newspaper me-2"></i>Hawks Marketing Blog
         </p>
         <h1 style="color:#fff;font-size:42px;font-weight:800;line-height:1.2;margin-bottom:16px;">
-          Insights &amp; Strategies for <span style="color:#ff511a;">Digital Growth</span>
+          Insights &amp; Strategies for <span style="color:#f1a51e;">Digital Growth</span>
         </h1>
         <p style="color:rgba(255,255,255,.7);font-size:16px;line-height:1.7;max-width:520px;">
           Expert tips on SEO, social media marketing, branding, and business growth — straight from the Hawks Marketing team.
@@ -32,8 +32,8 @@
 
     @if($blogs->isEmpty())
     <div class="text-center py-5">
-      <div style="width:80px;height:80px;background:rgba(255,81,26,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
-        <i class="fas fa-pen-nib" style="font-size:32px;color:#ff511a;"></i>
+      <div style="width:80px;height:80px;background:rgba(241,165,30,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+        <i class="fas fa-pen-nib" style="font-size:32px;color:#f1a51e;"></i>
       </div>
       <h4 style="color:#212741;font-weight:700;">Coming Soon</h4>
       <p style="color:#6b7280;max-width:400px;margin:0 auto;">We're working on insightful articles for you. Check back soon!</p>
@@ -60,7 +60,7 @@
             </div>
             <div class="col-lg-6 d-flex align-items-center">
               <div style="padding:48px;">
-                <span style="background:rgba(255,81,26,.1);color:#ff511a;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 12px;border-radius:20px;">Featured Post</span>
+                <span style="background:rgba(241,165,30,.1);color:#f1a51e;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 12px;border-radius:20px;">Featured Post</span>
                 <h2 style="color:#212741;font-size:24px;font-weight:800;line-height:1.3;margin:16px 0 12px;">{{ $featured->title }}</h2>
                 @if($featured->excerpt)
                   <p style="color:#6b7280;font-size:14px;line-height:1.7;margin-bottom:20px;">{{ Str::limit($featured->excerpt, 160) }}</p>
@@ -70,7 +70,7 @@
                   <span><i class="fas fa-calendar-alt me-1"></i>{{ $featured->published_at?->format('d M Y') }}</span>
                   <span><i class="fas fa-clock me-1"></i>{{ $featured->read_time }}</span>
                 </div>
-                <span style="display:inline-flex;align-items:center;gap:8px;background:#ff511a;color:#fff;padding:10px 22px;border-radius:8px;font-size:13px;font-weight:700;">
+                <span style="display:inline-flex;align-items:center;gap:8px;background:#f1a51e;color:#fff;padding:10px 22px;border-radius:8px;font-size:13px;font-weight:700;">
                   Read Article <i class="fas fa-arrow-right"></i>
                 </span>
               </div>
@@ -93,7 +93,7 @@
                 <img src="{{ asset($blog->featured_image) }}" alt="{{ $blog->title }}"
                      style="width:100%;height:100%;object-fit:cover;transition:transform .4s;">
               @else
-                <div style="width:100%;height:100%;background:linear-gradient(135deg,#212741 0%,#2d3561 60%,rgba(255,81,26,.3) 100%);display:flex;align-items:center;justify-content:center;">
+                <div style="width:100%;height:100%;background:linear-gradient(135deg,#212741 0%,#2d3561 60%,rgba(241,165,30,.3) 100%);display:flex;align-items:center;justify-content:center;">
                   <i class="fas fa-newspaper" style="font-size:40px;color:rgba(255,255,255,.2);"></i>
                 </div>
               @endif
@@ -113,7 +113,7 @@
               @endif
               <div style="display:flex;align-items:center;justify-content:space-between;">
                 <span style="font-size:12px;color:#9ca3af;"><i class="fas fa-user-circle me-1"></i>{{ $blog->author }}</span>
-                <span style="color:#ff511a;font-size:13px;font-weight:700;">Read More <i class="fas fa-arrow-right"></i></span>
+                <span style="color:#f1a51e;font-size:13px;font-weight:700;">Read More <i class="fas fa-arrow-right"></i></span>
               </div>
             </div>
           </div>

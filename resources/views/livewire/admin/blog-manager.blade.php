@@ -17,7 +17,7 @@
         <h5 class="mb-0 fw-bold" style="color:#212741;">Blog Posts</h5>
         <small class="text-muted">Manage all blog articles</small>
     </div>
-    <button wire:click="create" class="btn btn-sm fw-semibold" style="background:#ff511a;color:#fff;padding:8px 20px;border-radius:8px;">
+    <button wire:click="create" class="btn btn-sm fw-semibold" style="background:#f1a51e;color:#fff;padding:8px 20px;border-radius:8px;">
         <i class="fas fa-plus me-1"></i> New Post
     </button>
 </div>
@@ -54,8 +54,8 @@
                             @if($blog->featured_image)
                                 <img src="{{ asset($blog->featured_image) }}" alt="" style="width:48px;height:36px;object-fit:cover;border-radius:6px;">
                             @else
-                                <div style="width:48px;height:36px;background:linear-gradient(135deg,#212741,#ff511a30);border-radius:6px;display:flex;align-items:center;justify-content:center;">
-                                    <i class="fas fa-newspaper" style="color:#ff511a;font-size:14px;"></i>
+                                <div style="width:48px;height:36px;background:linear-gradient(135deg,#212741,#f1a51e30);border-radius:6px;display:flex;align-items:center;justify-content:center;">
+                                    <i class="fas fa-newspaper" style="color:#f1a51e;font-size:14px;"></i>
                                 </div>
                             @endif
                             <div>
@@ -148,7 +148,7 @@
             <i class="fas fa-file me-1"></i> Draft
         </button>
         <button wire:click="save" type="button"
-                class="btn btn-sm fw-semibold" style="background:#ff511a;color:#fff;border-radius:8px;padding:8px 22px;">
+                class="btn btn-sm fw-semibold" style="background:#f1a51e;color:#fff;border-radius:8px;padding:8px 22px;">
             <span wire:loading.remove wire:target="save"><i class="fas fa-save me-1"></i> Publish</span>
             <span wire:loading wire:target="save"><i class="fas fa-spinner fa-spin me-1"></i> Saving…</span>
         </button>
@@ -281,7 +281,7 @@
 
                 <label class="w-100 text-center py-3 cursor-pointer"
                        style="border:2px dashed #e5e7eb;border-radius:8px;cursor:pointer;font-size:13px;color:#9ca3af;transition:all .2s;"
-                       onmouseover="this.style.borderColor='#ff511a';this.style.color='#ff511a'"
+                       onmouseover="this.style.borderColor='#f1a51e';this.style.color='#f1a51e'"
                        onmouseout="this.style.borderColor='#e5e7eb';this.style.color='#9ca3af'">
                     <i class="fas fa-cloud-upload-alt d-block mb-1" style="font-size:22px;"></i>
                     Click to upload image
@@ -304,50 +304,50 @@
                 <div class="d-flex flex-column gap-2">
                     {{-- Standard --}}
                     <label class="layout-option {{ $layout === 'standard' ? 'active' : '' }}"
-                           style="border:2px solid {{ $layout === 'standard' ? '#ff511a' : '#e5e7eb' }};border-radius:10px;padding:12px 14px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .2s;">
+                           style="border:2px solid {{ $layout === 'standard' ? '#f1a51e' : '#e5e7eb' }};border-radius:10px;padding:12px 14px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .2s;">
                         <input type="radio" wire:model.live="layout" value="standard" class="d-none">
                         <div style="flex-shrink:0;">
                             <svg width="42" height="32" viewBox="0 0 42 32" fill="none">
                                 <rect width="42" height="32" rx="4" fill="#f1f5f9"/>
-                                <rect x="4" y="4" width="34" height="8" rx="2" fill="{{ $layout === 'standard' ? '#ff511a' : '#cbd5e1' }}"/>
+                                <rect x="4" y="4" width="34" height="8" rx="2" fill="{{ $layout === 'standard' ? '#f1a51e' : '#cbd5e1' }}"/>
                                 <rect x="8" y="16" width="26" height="3" rx="1" fill="#94a3b8"/>
                                 <rect x="8" y="21" width="26" height="2" rx="1" fill="#cbd5e1"/>
                                 <rect x="8" y="25" width="18" height="2" rx="1" fill="#cbd5e1"/>
                             </svg>
                         </div>
                         <div>
-                            <div style="font-size:13px;font-weight:700;color:{{ $layout === 'standard' ? '#ff511a' : '#374151' }};">Standard</div>
+                            <div style="font-size:13px;font-weight:700;color:{{ $layout === 'standard' ? '#f1a51e' : '#374151' }};">Standard</div>
                             <div style="font-size:11px;color:#9ca3af;">Hero image + centered content</div>
                         </div>
                     </label>
 
                     {{-- Full Width --}}
                     <label class="layout-option {{ $layout === 'full-width' ? 'active' : '' }}"
-                           style="border:2px solid {{ $layout === 'full-width' ? '#ff511a' : '#e5e7eb' }};border-radius:10px;padding:12px 14px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .2s;">
+                           style="border:2px solid {{ $layout === 'full-width' ? '#f1a51e' : '#e5e7eb' }};border-radius:10px;padding:12px 14px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .2s;">
                         <input type="radio" wire:model.live="layout" value="full-width" class="d-none">
                         <div style="flex-shrink:0;">
                             <svg width="42" height="32" viewBox="0 0 42 32" fill="none">
                                 <rect width="42" height="32" rx="4" fill="#f1f5f9"/>
-                                <rect x="0" y="0" width="42" height="12" rx="4" fill="{{ $layout === 'full-width' ? '#ff511a' : '#cbd5e1' }}"/>
+                                <rect x="0" y="0" width="42" height="12" rx="4" fill="{{ $layout === 'full-width' ? '#f1a51e' : '#cbd5e1' }}"/>
                                 <rect x="4" y="16" width="34" height="2" rx="1" fill="#94a3b8"/>
                                 <rect x="4" y="21" width="34" height="2" rx="1" fill="#cbd5e1"/>
                                 <rect x="4" y="26" width="22" height="2" rx="1" fill="#cbd5e1"/>
                             </svg>
                         </div>
                         <div>
-                            <div style="font-size:13px;font-weight:700;color:{{ $layout === 'full-width' ? '#ff511a' : '#374151' }};">Full Width</div>
+                            <div style="font-size:13px;font-weight:700;color:{{ $layout === 'full-width' ? '#f1a51e' : '#374151' }};">Full Width</div>
                             <div style="font-size:11px;color:#9ca3af;">Billboard image + wide content</div>
                         </div>
                     </label>
 
                     {{-- Magazine --}}
                     <label class="layout-option {{ $layout === 'magazine' ? 'active' : '' }}"
-                           style="border:2px solid {{ $layout === 'magazine' ? '#ff511a' : '#e5e7eb' }};border-radius:10px;padding:12px 14px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .2s;">
+                           style="border:2px solid {{ $layout === 'magazine' ? '#f1a51e' : '#e5e7eb' }};border-radius:10px;padding:12px 14px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .2s;">
                         <input type="radio" wire:model.live="layout" value="magazine" class="d-none">
                         <div style="flex-shrink:0;">
                             <svg width="42" height="32" viewBox="0 0 42 32" fill="none">
                                 <rect width="42" height="32" rx="4" fill="#f1f5f9"/>
-                                <rect x="4" y="4" width="26" height="6" rx="2" fill="{{ $layout === 'magazine' ? '#ff511a' : '#cbd5e1' }}"/>
+                                <rect x="4" y="4" width="26" height="6" rx="2" fill="{{ $layout === 'magazine' ? '#f1a51e' : '#cbd5e1' }}"/>
                                 <rect x="4" y="13" width="26" height="2" rx="1" fill="#94a3b8"/>
                                 <rect x="4" y="17" width="26" height="2" rx="1" fill="#cbd5e1"/>
                                 <rect x="4" y="21" width="26" height="2" rx="1" fill="#cbd5e1"/>
@@ -356,7 +356,7 @@
                             </svg>
                         </div>
                         <div>
-                            <div style="font-size:13px;font-weight:700;color:{{ $layout === 'magazine' ? '#ff511a' : '#374151' }};">Magazine</div>
+                            <div style="font-size:13px;font-weight:700;color:{{ $layout === 'magazine' ? '#f1a51e' : '#374151' }};">Magazine</div>
                             <div style="font-size:11px;color:#9ca3af;">Content + sidebar layout</div>
                         </div>
                     </label>
@@ -428,8 +428,8 @@
 #quill-editor .ql-editor h2 { font-size: 22px; font-weight: 700; color: #212741; margin: 24px 0 12px; }
 #quill-editor .ql-editor h3 { font-size: 18px; font-weight: 700; color: #212741; margin: 20px 0 10px; }
 #quill-editor .ql-editor h4 { font-size: 16px; font-weight: 700; color: #212741; margin: 16px 0 8px; }
-#quill-editor .ql-editor blockquote { border-left: 4px solid #ff511a; padding-left: 16px; color: #6b7280; margin: 16px 0; }
-#quill-editor .ql-editor a { color: #ff511a; }
+#quill-editor .ql-editor blockquote { border-left: 4px solid #f1a51e; padding-left: 16px; color: #6b7280; margin: 16px 0; }
+#quill-editor .ql-editor a { color: #f1a51e; }
 </style>
 <script src="https://cdn.quilljs.com/1.3.7/quill.min.js"></script>
 <script>

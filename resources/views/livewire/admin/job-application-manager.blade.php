@@ -14,7 +14,7 @@
     <div>
         <h5 class="mb-0 fw-bold" style="color:#212741;">Job Applications
             @if($unreadCount > 0)
-                <span style="background:#ff511a;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;vertical-align:middle;">{{ $unreadCount }} new</span>
+                <span style="background:#f1a51e;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;vertical-align:middle;">{{ $unreadCount }} new</span>
             @endif
         </h5>
         <small class="text-muted">All submitted applications</small>
@@ -59,13 +59,13 @@
                 <tr style="{{ $app->isUnread() ? 'background:#fffbf5;' : '' }}">
                     <td style="padding:14px 20px;">
                         <div class="d-flex align-items-center gap-3">
-                            <div style="width:36px;height:36px;background:linear-gradient(135deg,#212741,#ff511a30);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                                <span style="color:#ff511a;font-size:13px;font-weight:800;">{{ strtoupper(substr($app->name, 0, 1)) }}</span>
+                            <div style="width:36px;height:36px;background:linear-gradient(135deg,#212741,#f1a51e30);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <span style="color:#f1a51e;font-size:13px;font-weight:800;">{{ strtoupper(substr($app->name, 0, 1)) }}</span>
                             </div>
                             <div>
                                 <div class="fw-semibold" style="font-size:14px;color:#212741;">
                                     {{ $app->name }}
-                                    @if($app->isUnread())<span style="width:7px;height:7px;background:#ff511a;border-radius:50%;display:inline-block;margin-left:6px;vertical-align:middle;"></span>@endif
+                                    @if($app->isUnread())<span style="width:7px;height:7px;background:#f1a51e;border-radius:50%;display:inline-block;margin-left:6px;vertical-align:middle;"></span>@endif
                                 </div>
                                 <div style="font-size:12px;color:#9ca3af;">{{ $app->email }}</div>
                             </div>
@@ -128,7 +128,7 @@
                     </div>
                     <div class="col-sm-6">
                         <div style="font-size:11px;color:#9ca3af;font-weight:600;text-transform:uppercase;letter-spacing:.5px;">Email</div>
-                        <div style="font-size:14px;margin-top:3px;"><a href="mailto:{{ $currentApp->email }}" style="color:#ff511a;">{{ $currentApp->email }}</a></div>
+                        <div style="font-size:14px;margin-top:3px;"><a href="mailto:{{ $currentApp->email }}" style="color:#f1a51e;">{{ $currentApp->email }}</a></div>
                     </div>
                     <div class="col-sm-6">
                         <div style="font-size:11px;color:#9ca3af;font-weight:600;text-transform:uppercase;letter-spacing:.5px;">Phone</div>
@@ -155,7 +155,7 @@
                     @if($currentApp->portfolio_url)
                     <div class="col-sm-6">
                         <div style="font-size:11px;color:#9ca3af;font-weight:600;text-transform:uppercase;letter-spacing:.5px;">Portfolio</div>
-                        <div style="margin-top:3px;"><a href="{{ $currentApp->portfolio_url }}" target="_blank" rel="noopener" style="color:#ff511a;font-size:13px;"><i class="fas fa-external-link-alt me-1"></i>View Portfolio</a></div>
+                        <div style="margin-top:3px;"><a href="{{ $currentApp->portfolio_url }}" target="_blank" rel="noopener" style="color:#f1a51e;font-size:13px;"><i class="fas fa-external-link-alt me-1"></i>View Portfolio</a></div>
                     </div>
                     @endif
                 </div>
@@ -188,7 +188,7 @@
                 </select>
                 <label class="form-label" style="font-size:12px;font-weight:600;color:#6b7280;">Internal Notes</label>
                 <textarea wire:model="adminNotes" rows="4" class="form-control form-control-sm mb-3" style="border-radius:8px;resize:none;font-size:13px;" placeholder="Add private notes about this applicant…"></textarea>
-                <button wire:click="saveNotes" class="btn btn-sm w-100 fw-semibold" style="background:#ff511a;color:#fff;border-radius:8px;">
+                <button wire:click="saveNotes" class="btn btn-sm w-100 fw-semibold" style="background:#f1a51e;color:#fff;border-radius:8px;">
                     <span wire:loading.remove wire:target="saveNotes"><i class="fas fa-save me-1"></i> Save Changes</span>
                     <span wire:loading wire:target="saveNotes"><i class="fas fa-spinner fa-spin me-1"></i> Saving…</span>
                 </button>

@@ -51,7 +51,7 @@
                   <tr style="{{ !$sub->isRead() ? 'background:#fffbf8;' : '' }} {{ $viewingId === $sub->id ? 'background:#fff3ee;' : '' }}">
                     <td style="width:8px; padding-right:0;">
                       @if(!$sub->isRead())
-                        <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#ff511a;"></span>
+                        <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#f1a51e;"></span>
                       @endif
                     </td>
                     <td style="{{ !$sub->isRead() ? 'font-weight:600;' : '' }}">{{ $sub->name }}</td>
@@ -99,7 +99,7 @@
               </div>
               <div class="col-sm-6">
                 <span class="content-key" style="width:auto; padding-top:0;">Email</span>
-                <a href="mailto:{{ $viewing->email }}" class="ms-2" style="color:#ff511a;">{{ $viewing->email }}</a>
+                <a href="mailto:{{ $viewing->email }}" class="ms-2" style="color:#f1a51e;">{{ $viewing->email }}</a>
               </div>
               @if($viewing->phone)
               <div class="col-sm-6">

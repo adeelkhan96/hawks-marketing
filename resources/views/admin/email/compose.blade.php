@@ -61,7 +61,7 @@
             </div>
 
             <div class="d-flex gap-2">
-                <button type="submit" class="btn px-4" style="background:#ff511a;color:#fff;">
+                <button type="submit" class="btn px-4" style="background:#f1a51e;color:#fff;">
                     <i class="fas fa-paper-plane me-2"></i> Send Email
                 </button>
                 <a href="{{ route('admin.email.inbox') }}" class="btn btn-outline-secondary">

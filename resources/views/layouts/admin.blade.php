@@ -17,9 +17,9 @@
   <div class="loader-inner" style="text-align:center;">
     <div class="loader-ring" style="position:relative;width:60px;height:60px;margin:0 auto 20px;">
       <svg viewBox="0 0 60 60" width="60" height="60" style="animation:loader-rotate 1s linear infinite;">
-        <circle cx="30" cy="30" r="26" fill="none" stroke="#ff511a" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="120" stroke-dashoffset="0" style="animation:loader-dash 1.4s ease-in-out infinite;" />
+        <circle cx="30" cy="30" r="26" fill="none" stroke="#f1a51e" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="120" stroke-dashoffset="0" style="animation:loader-dash 1.4s ease-in-out infinite;" />
       </svg>
-      <span class="loader-dot" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:8px;height:8px;background:#ff511a;border-radius:50%;animation:loader-pulse 1.4s ease-in-out infinite;"></span>
+      <span class="loader-dot" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:8px;height:8px;background:#f1a51e;border-radius:50%;animation:loader-pulse 1.4s ease-in-out infinite;"></span>
     </div>
     <div class="loader-message" id="loader-msg" style="font-size:15px;font-weight:600;color:#fff;letter-spacing:0.3px;margin-bottom:6px;text-shadow:0 1px 4px rgba(0,0,0,0.4);">Loading…</div>
     <div class="loader-brand" style="font-size:10px;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.4);">Hawks Marketing</div>
@@ -63,14 +63,14 @@
           <i class="fas fa-file-alt"></i> Applications
           @php $newApps = \App\Models\JobApplication::whereNull('read_at')->count(); @endphp
           @if($newApps > 0)
-            <span style="background:#ff511a;color:#fff;font-size:10px;font-weight:700;padding:1px 6px;border-radius:10px;margin-left:auto;">{{ $newApps }}</span>
+            <span style="background:#f1a51e;color:#fff;font-size:10px;font-weight:700;padding:1px 6px;border-radius:10px;margin-left:auto;">{{ $newApps }}</span>
           @endif
         </a>
         <a href="{{ route('admin.submissions') }}" class="{{ request()->routeIs('admin.submissions') ? 'active' : '' }}" style="position:relative;">
           <i class="fas fa-envelope"></i> Contact Inbox
           @php $unread = \App\Models\ContactSubmission::whereNull('read_at')->count(); @endphp
           @if($unread > 0)
-            <span style="background:#ff511a; color:#fff; font-size:10px; font-weight:700; padding:1px 6px; border-radius:10px; margin-left:auto;">{{ $unread }}</span>
+            <span style="background:#f1a51e; color:#fff; font-size:10px; font-weight:700; padding:1px 6px; border-radius:10px; margin-left:auto;">{{ $unread }}</span>
           @endif
         </a>
         <a href="{{ route('admin.email.inbox') }}" class="{{ request()->routeIs('admin.email.*') ? 'active' : '' }}">

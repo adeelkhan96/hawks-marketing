@@ -69,7 +69,7 @@
 .admin-nav a.active {
   background: rgba(255,255,255,0.08);
   color: #fff;
-  border-left-color: #ff511a;
+  border-left-color: #f1a51e;
 }
 
 .admin-nav a i {
@@ -115,7 +115,7 @@
 
 /* ---- Badges ---- */
 .badge-admin {
-  background: #ff511a;
+  background: #f1a51e;
   color: #fff;
   font-size: 11px;
   padding: 3px 8px;
@@ -162,7 +162,7 @@
   border-radius: 12px;
   padding: 22px 24px;
   box-shadow: 0 1px 6px rgba(0,0,0,0.07);
-  border-left: 4px solid #ff511a;
+  border-left: 4px solid #f1a51e;
 }
 
 .stat-card h2 {
@@ -183,7 +183,7 @@
 
 .stat-card > i {
   font-size: 36px;
-  color: #ff511a;
+  color: #f1a51e;
   opacity: 0.2;
 }
 
@@ -223,7 +223,7 @@
 
 /* ---- Button ---- */
 .btn-admin {
-  background: #ff511a;
+  background: #f1a51e;
   color: #fff !important;
   border: none;
   padding: 9px 20px;
@@ -322,7 +322,7 @@
 .content-section-card h6 {
   font-size: 12px;
   font-weight: 700;
-  color: #ff511a;
+  color: #f1a51e;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 14px;
@@ -361,7 +361,7 @@
 
 .edit-textarea {
   width: 100%;
-  border: 2px solid #ff511a;
+  border: 2px solid #f1a51e;
   border-radius: 8px;
   padding: 10px 12px;
   font-size: 14px;
@@ -426,7 +426,7 @@
   transform: translate(-50%, -50%);
   width: 8px;
   height: 8px;
-  background: #ff511a;
+  background: #f1a51e;
   border-radius: 50%;
   animation: loader-pulse 1.4s ease-in-out infinite;
 }

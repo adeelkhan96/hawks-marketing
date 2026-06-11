@@ -10,49 +10,49 @@
 .org-ceo-row { text-align:center; position:relative; }
 .org-ceo-row::after {
     content:''; display:block; width:2px; height:48px;
-    background:#ff511a; margin:0 auto;
+    background:#f1a51e; margin:0 auto;
 }
 .org-depts-outer { position:relative; }
 .org-depts-outer::before {
     content:''; position:absolute; top:0;
     left:calc(100% / 8); right:calc(100% / 8);
-    height:2px; background:#ff511a; z-index:0;
+    height:2px; background:#f1a51e; z-index:0;
 }
 .org-dept-col { flex:1; text-align:center; position:relative; padding:0 8px; }
 .org-dept-col::before {
     content:''; display:block; width:2px; height:32px;
-    background:#ff511a; margin:0 auto;
+    background:#f1a51e; margin:0 auto;
 }
 .org-dept-col::after {
     content:''; display:block; width:2px; height:24px;
-    background:rgba(255,81,26,.35); margin:0 auto;
+    background:rgba(241,165,30,.35); margin:0 auto;
 }
 .org-dept-node {
     background:linear-gradient(135deg,#212741,#1a2155);
-    border:2px solid rgba(255,81,26,.5);
+    border:2px solid rgba(241,165,30,.5);
     border-radius:12px; padding:14px 10px;
     display:inline-block; min-width:130px;
     position:relative; z-index:1;
 }
-.org-dept-node .dept-icon { font-size:22px; color:#ff511a; margin-bottom:6px; display:block; }
+.org-dept-node .dept-icon { font-size:22px; color:#f1a51e; margin-bottom:6px; display:block; }
 .org-dept-node .dept-name { color:#fff; font-size:13px; font-weight:700; line-height:1.3; }
 .org-member-list { display:flex; flex-direction:column; gap:8px; margin-top:0; padding:0 4px; }
 .org-member-card {
     background:#fff; border-radius:10px; padding:10px 12px;
     box-shadow:0 3px 12px rgba(33,39,65,.08);
-    border-left:3px solid rgba(255,81,26,.3);
+    border-left:3px solid rgba(241,165,30,.3);
     text-align:left; transition:all .25s;
 }
-.org-member-card:hover { border-left-color:#ff511a; box-shadow:0 6px 20px rgba(33,39,65,.13); transform:translateX(2px); }
+.org-member-card:hover { border-left-color:#f1a51e; box-shadow:0 6px 20px rgba(33,39,65,.13); transform:translateX(2px); }
 .org-member-card .m-name { font-size:13px; font-weight:700; color:#212741; margin-bottom:2px; }
 .org-member-card .m-role { font-size:11px; color:#9ca3af; }
 .org-member-card .m-avatar {
     width:32px; height:32px; border-radius:50%;
-    background:rgba(255,81,26,.1);
+    background:rgba(241,165,30,.1);
     display:flex; align-items:center; justify-content:center;
     flex-shrink:0;
 }
-.org-member-card .m-avatar i { color:#ff511a; font-size:13px; }
+.org-member-card .m-avatar i { color:#f1a51e; font-size:13px; }
 
 /* Mobile: collapse tree to stacked layout */
 @media (max-width: 768px) {
@@ -64,9 +64,9 @@
 
 /* --- About sections --- */
 .about-pillar-card { background:#fff; border-radius:14px; padding:28px; box-shadow:0 4px 18px rgba(33,39,65,.07); height:100%; transition:all .3s; border-top:3px solid transparent; }
-.about-pillar-card:hover { transform:translateY(-4px); box-shadow:0 12px 36px rgba(33,39,65,.12); border-top-color:#ff511a; }
-.about-pillar-icon { width:52px; height:52px; background:rgba(255,81,26,.1); border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; }
-.about-pillar-icon i { color:#ff511a; font-size:22px; }
+.about-pillar-card:hover { transform:translateY(-4px); box-shadow:0 12px 36px rgba(33,39,65,.12); border-top-color:#f1a51e; }
+.about-pillar-icon { width:52px; height:52px; background:rgba(241,165,30,.1); border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; }
+.about-pillar-icon i { color:#f1a51e; font-size:22px; }
 </style>
 @endsection
 
@@ -74,21 +74,21 @@
 
 {{-- ===== HERO ===== --}}
 <section style="background:linear-gradient(135deg,#212741 0%,#1a2155 100%);padding:90px 0 80px;position:relative;overflow:hidden;">
-    <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:rgba(255,81,26,.07);border-radius:50%;pointer-events:none;"></div>
-    <div style="position:absolute;bottom:-80px;left:-60px;width:280px;height:280px;background:rgba(255,81,26,.05);border-radius:50%;pointer-events:none;"></div>
+    <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:rgba(241,165,30,.07);border-radius:50%;pointer-events:none;"></div>
+    <div style="position:absolute;bottom:-80px;left:-60px;width:280px;height:280px;background:rgba(241,165,30,.05);border-radius:50%;pointer-events:none;"></div>
     <div class="container" style="position:relative;z-index:2;">
         <div class="row align-items-center g-5">
             <div class="col-lg-7">
-                <p style="color:#ff511a;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">
+                <p style="color:#f1a51e;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">
                     <i class="fas fa-info-circle me-2"></i>Who We Are
                 </p>
                 <h1 style="color:#fff;font-size:46px;font-weight:800;line-height:1.2;margin-bottom:18px;">
-                    Building Brands.<br>Driving <span style="color:#ff511a;">Real Growth.</span>
+                    Building Brands.<br>Driving <span style="color:#f1a51e;">Real Growth.</span>
                 </h1>
                 <p style="color:rgba(255,255,255,.72);font-size:16px;line-height:1.8;max-width:520px;margin-bottom:32px;">
                     {{ PC::getValue($p, 'company', 'para1', 'Hawks Marketing is a full-service digital marketing agency established in 2024, with operational experience dating back to 2019.') }}
                 </p>
-                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:10px;background:#ff511a;color:#fff;padding:14px 30px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;">
+                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:10px;background:#f1a51e;color:#fff;padding:14px 30px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;">
                     Work With Us <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -102,7 +102,7 @@
                     ] as $s)
                     <div class="col-6">
                         <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:22px;text-align:center;">
-                            <i class="{{ $s[0] }}" style="font-size:24px;color:#ff511a;margin-bottom:10px;display:block;"></i>
+                            <i class="{{ $s[0] }}" style="font-size:24px;color:#f1a51e;margin-bottom:10px;display:block;"></i>
                             <div style="color:#fff;font-size:14px;font-weight:700;margin-bottom:4px;">{{ $s[1] }}</div>
                             <div style="color:rgba(255,255,255,.5);font-size:11px;line-height:1.5;">{{ $s[2] }}</div>
                         </div>
@@ -119,15 +119,15 @@
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6">
-                <p style="color:#ff511a;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;">Our Story</p>
-                <h2 style="color:#212741;font-size:34px;font-weight:800;margin-bottom:20px;line-height:1.3;">A Marketing Agency Built on <span style="color:#ff511a;">Results</span></h2>
+                <p style="color:#f1a51e;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;">Our Story</p>
+                <h2 style="color:#212741;font-size:34px;font-weight:800;margin-bottom:20px;line-height:1.3;">A Marketing Agency Built on <span style="color:#f1a51e;">Results</span></h2>
                 <p style="font-size:15px;color:#4b5563;line-height:1.85;margin-bottom:16px;">
                     {{ PC::getValue($p, 'company', 'para2', 'We deliver strategic, data-driven marketing solutions and IT solutions designed to enhance brand visibility, strengthen audience engagement, and generate measurable business growth.') }}
                 </p>
                 <p style="font-size:15px;color:#4b5563;line-height:1.85;margin-bottom:24px;">
                     {{ PC::getValue($p, 'company', 'para3', 'Our focus is to help businesses navigate the evolving digital landscape with structured strategies, consistent execution, and long-term impact.') }}
                 </p>
-                <div style="border-left:4px solid #ff511a;padding:16px 20px;background:#fff;border-radius:0 10px 10px 0;box-shadow:0 3px 14px rgba(33,39,65,.07);">
+                <div style="border-left:4px solid #f1a51e;padding:16px 20px;background:#fff;border-radius:0 10px 10px 0;box-shadow:0 3px 14px rgba(33,39,65,.07);">
                     <p style="font-size:14px;color:#374151;line-height:1.75;margin:0;font-style:italic;">
                         "{{ PC::getValue($p, 'why', 'closing', 'We focus on building long-term partnerships by delivering reliable, scalable, and performance-driven marketing solutions.') }}"
                     </p>
@@ -159,16 +159,16 @@
 <section style="background:#212741;padding:80px 0;">
     <div class="container">
         <div class="section-heading" style="margin-bottom:50px;">
-            <h6 style="color:#ff511a;">OUR DIRECTION</h6>
+            <h6 style="color:#f1a51e;">OUR DIRECTION</h6>
             <h4 style="color:#fff;">Mission &amp; Vision</h4>
         </div>
         <div class="row g-4">
             <div class="col-md-6">
                 <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:40px;height:100%;">
-                    <div style="width:60px;height:60px;background:rgba(255,81,26,.15);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
-                        <i class="fas fa-eye" style="color:#ff511a;font-size:26px;"></i>
+                    <div style="width:60px;height:60px;background:rgba(241,165,30,.15);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+                        <i class="fas fa-eye" style="color:#f1a51e;font-size:26px;"></i>
                     </div>
-                    <span style="color:#ff511a;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;display:block;margin-bottom:10px;">Our Vision</span>
+                    <span style="color:#f1a51e;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;display:block;margin-bottom:10px;">Our Vision</span>
                     <h4 style="color:#fff;font-size:22px;font-weight:800;margin-bottom:16px;">Where We Are Headed</h4>
                     <p style="color:rgba(255,255,255,.7);font-size:15px;line-height:1.85;margin:0;">
                         {{ PC::getValue($p, 'vision', 'text', 'To establish Hawks Marketing as a globally recognized digital marketing agency, known for its strategic expertise, innovative thinking, and consistent delivery of high-performance results.') }}
@@ -176,11 +176,11 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div style="background:rgba(255,81,26,.08);border:1px solid rgba(255,81,26,.25);border-radius:16px;padding:40px;height:100%;">
-                    <div style="width:60px;height:60px;background:rgba(255,81,26,.2);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
-                        <i class="fas fa-rocket" style="color:#ff511a;font-size:26px;"></i>
+                <div style="background:rgba(241,165,30,.08);border:1px solid rgba(241,165,30,.25);border-radius:16px;padding:40px;height:100%;">
+                    <div style="width:60px;height:60px;background:rgba(241,165,30,.2);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+                        <i class="fas fa-rocket" style="color:#f1a51e;font-size:26px;"></i>
                     </div>
-                    <span style="color:#ff511a;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;display:block;margin-bottom:10px;">Our Mission</span>
+                    <span style="color:#f1a51e;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;display:block;margin-bottom:10px;">Our Mission</span>
                     <h4 style="color:#fff;font-size:22px;font-weight:800;margin-bottom:16px;">What Drives Us Daily</h4>
                     <p style="color:rgba(255,255,255,.7);font-size:15px;line-height:1.85;margin:0;">
                         {{ PC::getValue($p, 'mission', 'text', 'To empower businesses by providing structured, data-driven marketing solutions that transform ideas into measurable growth, enabling brands to compete and succeed in a rapidly evolving digital environment.') }}
@@ -202,12 +202,12 @@
             <div class="col-lg-8">
                 <div style="background:linear-gradient(135deg,#212741 0%,#1a2155 100%);border-radius:20px;padding:48px;display:flex;align-items:center;gap:40px;flex-wrap:wrap;box-shadow:0 12px 48px rgba(33,39,65,.2);">
                     <div style="flex-shrink:0;">
-                        <div style="width:110px;height:110px;border-radius:50%;background:rgba(255,81,26,.15);border:3px solid rgba(255,81,26,.4);display:flex;align-items:center;justify-content:center;">
-                            <i class="fas fa-user-tie" style="font-size:46px;color:#ff511a;"></i>
+                        <div style="width:110px;height:110px;border-radius:50%;background:rgba(241,165,30,.15);border:3px solid rgba(241,165,30,.4);display:flex;align-items:center;justify-content:center;">
+                            <i class="fas fa-user-tie" style="font-size:46px;color:#f1a51e;"></i>
                         </div>
                     </div>
                     <div style="flex:1;min-width:200px;">
-                        <span style="color:#ff511a;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;display:block;margin-bottom:8px;">Founder &amp; CEO</span>
+                        <span style="color:#f1a51e;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;display:block;margin-bottom:8px;">Founder &amp; CEO</span>
                         <h3 style="color:#fff;font-size:28px;font-weight:800;margin-bottom:12px;">
                             {{ PC::getValue($p, 'founder', 'name', 'Aashir Khan Jadoon') }}
                         </h3>
@@ -216,8 +216,8 @@
                         </p>
                         <div class="d-flex gap-2 flex-wrap">
                             @foreach([['fas fa-chart-line','Digital Strategy'],['fas fa-bullhorn','Brand Growth'],['fas fa-cogs','IT Solutions']] as $tag)
-                            <span style="background:rgba(255,81,26,.15);border:1px solid rgba(255,81,26,.3);color:rgba(255,255,255,.85);font-size:12px;font-weight:600;padding:5px 12px;border-radius:20px;">
-                                <i class="{{ $tag[0] }} me-1" style="color:#ff511a;"></i>{{ $tag[1] }}
+                            <span style="background:rgba(241,165,30,.15);border:1px solid rgba(241,165,30,.3);color:rgba(255,255,255,.85);font-size:12px;font-weight:600;padding:5px 12px;border-radius:20px;">
+                                <i class="{{ $tag[0] }} me-1" style="color:#f1a51e;"></i>{{ $tag[1] }}
                             </span>
                             @endforeach
                         </div>
@@ -238,14 +238,14 @@
 
         {{-- CEO node --}}
         <div class="org-ceo-row">
-            <div style="display:inline-block;background:linear-gradient(135deg,#212741,#1a2155);border:2px solid rgba(255,81,26,.6);border-radius:16px;padding:20px 48px;box-shadow:0 8px 32px rgba(33,39,65,.2);">
+            <div style="display:inline-block;background:linear-gradient(135deg,#212741,#1a2155);border:2px solid rgba(241,165,30,.6);border-radius:16px;padding:20px 48px;box-shadow:0 8px 32px rgba(33,39,65,.2);">
                 <div style="display:flex;align-items:center;gap:16px;">
-                    <div style="width:52px;height:52px;border-radius:50%;background:rgba(255,81,26,.15);border:2px solid rgba(255,81,26,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                        <i class="fas fa-user-tie" style="color:#ff511a;font-size:22px;"></i>
+                    <div style="width:52px;height:52px;border-radius:50%;background:rgba(241,165,30,.15);border:2px solid rgba(241,165,30,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                        <i class="fas fa-user-tie" style="color:#f1a51e;font-size:22px;"></i>
                     </div>
                     <div style="text-align:left;">
                         <div style="color:#fff;font-size:16px;font-weight:800;">{{ PC::getValue($p, 'founder', 'name', 'Aashir Khan Jadoon') }}</div>
-                        <div style="color:#ff511a;font-size:12px;font-weight:600;">Founder &amp; CEO</div>
+                        <div style="color:#f1a51e;font-size:12px;font-weight:600;">Founder &amp; CEO</div>
                     </div>
                 </div>
             </div>
@@ -354,7 +354,7 @@
 </section>
 
 {{-- ===== VALUES STRIP ===== --}}
-<section style="background:#ff511a;padding:28px 0;">
+<section style="background:#f1a51e;padding:28px 0;">
     <div class="container">
         <div class="row g-3 text-center text-white">
             @foreach([
@@ -377,12 +377,12 @@
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-7">
-                <p style="color:#ff511a;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Let\'s Grow Together</p>
-                <h3 style="color:#212741;font-size:36px;font-weight:800;line-height:1.3;margin-bottom:16px;">Ready to <em style="font-style:normal;color:#ff511a;">Accelerate</em> Your<br>Digital Success?</h3>
+                <p style="color:#f1a51e;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Let\'s Grow Together</p>
+                <h3 style="color:#212741;font-size:36px;font-weight:800;line-height:1.3;margin-bottom:16px;">Ready to <em style="font-style:normal;color:#f1a51e;">Accelerate</em> Your<br>Digital Success?</h3>
                 <p style="color:#6b7280;font-size:15px;line-height:1.8;max-width:480px;">Our team is ready to build a strategy around your goals and drive measurable growth for your business.</p>
             </div>
             <div class="col-lg-5 text-lg-end">
-                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:10px;background:#ff511a;color:#fff;padding:16px 36px;border-radius:12px;font-size:16px;font-weight:700;text-decoration:none;box-shadow:0 8px 28px rgba(255,81,26,.35);">
+                <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:10px;background:#f1a51e;color:#fff;padding:16px 36px;border-radius:12px;font-size:16px;font-weight:700;text-decoration:none;box-shadow:0 8px 28px rgba(241,165,30,.35);">
                     Get Started Today <i class="fas fa-arrow-right"></i>
                 </a>
             </div>

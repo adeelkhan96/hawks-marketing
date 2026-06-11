@@ -7,14 +7,14 @@
 @section('head')
 <style>
 /* ---- Blog content typography ---- */
-.blog-content h2 { font-size: 22px; font-weight: 800; color: #212741; margin: 36px 0 14px; padding-bottom: 8px; border-bottom: 2px solid rgba(255,81,26,.15); }
+.blog-content h2 { font-size: 22px; font-weight: 800; color: #212741; margin: 36px 0 14px; padding-bottom: 8px; border-bottom: 2px solid rgba(241,165,30,.15); }
 .blog-content h3 { font-size: 18px; font-weight: 700; color: #212741; margin: 28px 0 10px; }
 .blog-content h4 { font-size: 16px; font-weight: 700; color: #212741; margin: 22px 0 8px; }
 .blog-content p  { font-size: 15px; color: #4b5563; line-height: 1.85; margin-bottom: 18px; }
 .blog-content ul, .blog-content ol { margin: 12px 0 20px 20px; padding: 0; }
 .blog-content li { font-size: 15px; color: #4b5563; line-height: 1.8; margin-bottom: 6px; }
-.blog-content blockquote { border-left: 4px solid #ff511a; padding: 14px 20px; background: rgba(255,81,26,.05); border-radius: 0 8px 8px 0; margin: 24px 0; color: #374151; font-style: italic; font-size: 16px; }
-.blog-content a { color: #ff511a; text-decoration: underline; }
+.blog-content blockquote { border-left: 4px solid #f1a51e; padding: 14px 20px; background: rgba(241,165,30,.05); border-radius: 0 8px 8px 0; margin: 24px 0; color: #374151; font-style: italic; font-size: 16px; }
+.blog-content a { color: #f1a51e; text-decoration: underline; }
 .blog-content a:hover { color: #e04010; }
 .blog-content img { max-width: 100%; border-radius: 12px; margin: 20px 0; box-shadow: 0 6px 24px rgba(33,39,65,.12); }
 .blog-content strong { color: #212741; font-weight: 700; }
@@ -23,12 +23,12 @@
 
 /* ---- Sidebar ---- */
 .blog-sidebar-card { background:#fff; border-radius:12px; box-shadow:0 4px 20px rgba(33,39,65,.07); padding:24px; margin-bottom:24px; }
-.blog-sidebar-card h5 { font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:1.5px; color:#212741; margin-bottom:16px; padding-bottom:10px; border-bottom:2px solid #ff511a; }
+.blog-sidebar-card h5 { font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:1.5px; color:#212741; margin-bottom:16px; padding-bottom:10px; border-bottom:2px solid #f1a51e; }
 
 /* ---- Recent post card ---- */
 .recent-post-item { display:flex; gap:12px; align-items:flex-start; padding:10px 0; border-bottom:1px solid #f3f4f6; text-decoration:none; }
 .recent-post-item:last-child { border-bottom:none; }
-.recent-post-item:hover .rpi-title { color:#ff511a; }
+.recent-post-item:hover .rpi-title { color:#f1a51e; }
 .rpi-thumb { width:60px; height:46px; border-radius:6px; object-fit:cover; flex-shrink:0; }
 .rpi-thumb-placeholder { width:60px; height:46px; border-radius:6px; background:linear-gradient(135deg,#212741,#2d3561); flex-shrink:0; display:flex; align-items:center; justify-content:center; }
 .rpi-title { font-size:13px; font-weight:600; color:#212741; line-height:1.4; transition:color .2s; }
@@ -72,7 +72,7 @@
 
           {{-- Meta --}}
           <div class="d-flex flex-wrap align-items-center gap-3 mb-4" style="font-size:13px;color:#9ca3af;">
-            <span style="background:rgba(255,81,26,.1);color:#ff511a;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 12px;border-radius:20px;">Blog</span>
+            <span style="background:rgba(241,165,30,.1);color:#f1a51e;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 12px;border-radius:20px;">Blog</span>
             <span><i class="fas fa-user-circle me-1"></i>{{ $blog->author }}</span>
             <span><i class="fas fa-calendar-alt me-1"></i>{{ $blog->published_at?->format('d M Y') }}</span>
             <span><i class="fas fa-clock me-1"></i>{{ $blog->read_time }}</span>
@@ -81,7 +81,7 @@
           <h1 style="color:#212741;font-size:32px;font-weight:800;line-height:1.3;margin-bottom:24px;">{{ $blog->title }}</h1>
 
           @if($blog->excerpt)
-          <p style="font-size:17px;color:#374151;line-height:1.8;border-left:4px solid #ff511a;padding-left:20px;margin-bottom:32px;font-weight:500;">
+          <p style="font-size:17px;color:#374151;line-height:1.8;border-left:4px solid #f1a51e;padding-left:20px;margin-bottom:32px;font-weight:500;">
             {{ $blog->excerpt }}
           </p>
           @endif
@@ -129,7 +129,7 @@
   <section style="background:#fff;padding:60px 0 80px;">
     <div class="container-fluid" style="max-width:900px;">
       @if($blog->excerpt)
-      <p style="font-size:18px;color:#374151;line-height:1.8;border-left:4px solid #ff511a;padding-left:20px;margin-bottom:40px;font-weight:500;">
+      <p style="font-size:18px;color:#374151;line-height:1.8;border-left:4px solid #f1a51e;padding-left:20px;margin-bottom:40px;font-weight:500;">
         {{ $blog->excerpt }}
       </p>
       @endif
@@ -171,7 +171,7 @@
           @endif
 
           @if($blog->excerpt)
-          <p style="font-size:17px;color:#374151;line-height:1.8;border-left:4px solid #ff511a;padding-left:20px;margin-bottom:32px;font-weight:500;background:#fff;padding:16px 20px;border-radius:0 10px 10px 0;box-shadow:0 2px 8px rgba(33,39,65,.05);">
+          <p style="font-size:17px;color:#374151;line-height:1.8;border-left:4px solid #f1a51e;padding-left:20px;margin-bottom:32px;font-weight:500;background:#fff;padding:16px 20px;border-radius:0 10px 10px 0;box-shadow:0 2px 8px rgba(33,39,65,.05);">
             {{ $blog->excerpt }}
           </p>
           @endif
@@ -190,7 +190,7 @@
           <div class="blog-sidebar-card">
             <h5>About the Author</h5>
             <div style="display:flex;align-items:center;gap:14px;">
-              <div style="width:52px;height:52px;background:linear-gradient(135deg,#212741,#ff511a);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <div style="width:52px;height:52px;background:linear-gradient(135deg,#212741,#f1a51e);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                 <i class="fas fa-user" style="color:#fff;font-size:20px;"></i>
               </div>
               <div>
@@ -229,7 +229,7 @@
             <p style="font-size:13px;color:rgba(255,255,255,.7);line-height:1.65;margin-bottom:16px;">
               Let Hawks Marketing build your digital strategy. Get a free consultation today.
             </p>
-            <a href="{{ route('contact') }}" style="display:block;text-align:center;background:#ff511a;color:#fff;padding:10px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;">
+            <a href="{{ route('contact') }}" style="display:block;text-align:center;background:#f1a51e;color:#fff;padding:10px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;">
               Contact Us <i class="fas fa-arrow-right ms-1"></i>
             </a>
           </div>
@@ -266,7 +266,7 @@
             <div style="padding:20px;">
               <div style="font-size:11px;color:#9ca3af;margin-bottom:8px;">{{ $recent->published_at?->format('d M Y') }}</div>
               <h5 style="font-size:15px;font-weight:700;color:#212741;line-height:1.4;margin-bottom:8px;">{{ Str::limit($recent->title, 70) }}</h5>
-              <span style="color:#ff511a;font-size:13px;font-weight:700;">Read More <i class="fas fa-arrow-right"></i></span>
+              <span style="color:#f1a51e;font-size:13px;font-weight:700;">Read More <i class="fas fa-arrow-right"></i></span>
             </div>
           </div>
         </a>
