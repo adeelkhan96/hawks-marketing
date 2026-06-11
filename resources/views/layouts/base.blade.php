@@ -67,11 +67,11 @@
 
     <!-- Additional CSS Files -->
 <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/templatemo-574-mexant.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/templatemo-574-mexant.css') }}?v=2">
 <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
-    <link rel="stylesheet" href="{{ asset('assets/css/hawks-custom.css') }}?v=6">
+    <link rel="stylesheet" href="{{ asset('assets/css/hawks-custom.css') }}?v=7">
 <!--
 
 TemplateMo 574 Mexant
