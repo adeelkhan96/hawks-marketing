@@ -19,7 +19,8 @@ class AppServiceProvider extends ServiceProvider
     {
         // On shared hosting the web root (public_html) differs from the repo's public/ folder.
         // Setting PUBLIC_HTML_PATH in .env redirects all file uploads to the correct location.
-        if ($path = env('PUBLIC_HTML_PATH')) {
+        // Must use config() not env() here — config:cache bakes in env values but nullifies direct env() calls.
+        if ($path = config('app.public_html_path')) {
             $this->app->bind('path.public', fn () => $path);
         }
     }

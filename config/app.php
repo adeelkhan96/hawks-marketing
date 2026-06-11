@@ -54,6 +54,10 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
+    // On cPanel shared hosting the web root (public_html) differs from the repo's public/ folder.
+    // Setting PUBLIC_HTML_PATH in .env overrides public_path() so file uploads land in the right place.
+    'public_html_path' => env('PUBLIC_HTML_PATH', ''),
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
