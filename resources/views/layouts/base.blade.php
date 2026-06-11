@@ -105,6 +105,15 @@ header nav a.active { color: #f1a51e !important; }
 .div-dec { background-color: #f1a51e !important; }
 .section-heading h6,
 .section-heading span { color: #f1a51e !important; }
+/* hawks-custom.css rules (server file may be cached — override here) */
+.stats-section .stat-item h2 { color: #f1a51e !important; }
+.feature-card { border-left-color: #f1a51e !important; }
+.feature-card i { color: #f1a51e !important; }
+.intro-highlight { border-left-color: #f1a51e !important; }
+.intro-highlight strong { color: #f1a51e !important; }
+.platform-tag { background-color: #f1a51e !important; }
+.tp-stars i, .tp-badge { color: #f1a51e !important; }
+.testimonial-placeholder-card i { color: #f1a51e !important; }
 
 /* --- Home: Services Grid --- */
 .services-grid-section {
