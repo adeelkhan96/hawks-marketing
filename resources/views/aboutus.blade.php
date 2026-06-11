@@ -397,7 +397,7 @@
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-7">
-                <p style="color:#f1a51e;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Let\'s Grow Together</p>
+                <p style="color:#f1a51e;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Let's Grow Together</p>
                 <h3 style="color:#212741;font-size:36px;font-weight:800;line-height:1.3;margin-bottom:16px;">Ready to <em style="font-style:normal;color:#f1a51e;">Accelerate</em> Your<br>Digital Success?</h3>
                 <p style="color:#6b7280;font-size:15px;line-height:1.8;max-width:480px;">Our team is ready to build a strategy around your goals and drive measurable growth for your business.</p>
             </div>
