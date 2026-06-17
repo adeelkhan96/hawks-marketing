@@ -7,6 +7,11 @@ deployment:
     - /bin/cp $REPO/public/.htaccess $PUB/.htaccess
     - /bin/cp -r $REPO/public/assets/. $PUB/assets/
     - /bin/cp -r $REPO/public/vendor/. $PUB/vendor/
+    - /bin/mkdir -p $PUB/assets/images/banners
+    - /bin/mkdir -p $PUB/assets/images/companies
+    - /bin/mkdir -p $PUB/assets/images/testimonials
+    - /bin/mkdir -p $PUB/assets/images/blogs
+    - /bin/mkdir -p $PUB/assets/images/client-stories
     - /usr/local/bin/php $REPO/artisan migrate --force
     - /usr/local/bin/php $REPO/artisan config:cache
     - /usr/local/bin/php $REPO/artisan route:clear
