@@ -206,9 +206,11 @@
       }
     });
 
-    // Intercept form submits
+    // Intercept form submits — skip Livewire forms (AJAX, no full page reload)
     document.addEventListener('submit', function (e) {
-      show(formMessage(e.target));
+      var f = e.target;
+      if (f.hasAttribute('wire:submit') || f.hasAttribute('wire:submit.prevent') || f.closest('[wire\\:id]')) return;
+      show(formMessage(f));
     });
   }());
   </script>
