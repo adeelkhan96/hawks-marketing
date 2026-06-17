@@ -3,12 +3,13 @@
 namespace App\Livewire\Admin;
 
 use App\Models\Company;
+use App\Traits\HandlesFileUploads;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
 class CompanyManager extends Component
 {
-    use WithFileUploads;
+    use WithFileUploads, HandlesFileUploads;
 
     public $companies;
     public $name = '';
@@ -35,24 +36,21 @@ class CompanyManager extends Component
         ]);
 
         $dir = public_path('assets/images/companies');
-        if (!is_dir($dir)) { mkdir($dir, 0775, true); }
 
         if ($this->editId) {
             $company = Company::findOrFail($this->editId);
             $company->name = $this->name;
             if ($this->logo) {
-                if ($company->logo && file_exists(public_path($company->logo))) {
-                    unlink(public_path($company->logo));
-                }
+                $this->deleteUpload($company->logo);
                 $filename = 'company_' . time() . '.' . $this->logo->getClientOriginalExtension();
-                $this->logo->move($dir, $filename);
+                $this->saveUpload($this->logo, $dir, $filename);
                 $company->logo = 'assets/images/companies/' . $filename;
             }
             $company->save();
             $this->message = 'Company updated.';
         } else {
             $filename = 'company_' . time() . '.' . $this->logo->getClientOriginalExtension();
-            $this->logo->move($dir, $filename);
+            $this->saveUpload($this->logo, $dir, $filename);
             Company::create([
                 'name'       => $this->name,
                 'logo'       => 'assets/images/companies/' . $filename,
@@ -124,9 +122,7 @@ class CompanyManager extends Component
     public function delete()
     {
         $c = Company::findOrFail($this->deleteId);
-        if ($c->logo && file_exists(public_path($c->logo))) {
-            unlink(public_path($c->logo));
-        }
+        $this->deleteUpload($c->logo);
         $c->delete();
         $this->deleteId = null;
         $this->message = 'Company removed.';

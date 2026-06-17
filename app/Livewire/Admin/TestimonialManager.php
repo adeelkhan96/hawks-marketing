@@ -3,13 +3,13 @@
 namespace App\Livewire\Admin;
 
 use App\Models\Testimonial;
-use Illuminate\Support\Facades\File;
+use App\Traits\HandlesFileUploads;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
 class TestimonialManager extends Component
 {
-    use WithFileUploads;
+    use WithFileUploads, HandlesFileUploads;
 
     public bool $showForm     = false;
     public ?int $editingId    = null;
@@ -54,9 +54,8 @@ class TestimonialManager extends Component
 
         if ($this->image) {
             $dir = public_path('assets/images/testimonials');
-            File::ensureDirectoryExists($dir);
             $filename = 'testimonial-' . time() . '.' . $this->image->getClientOriginalExtension();
-            $this->image->move($dir, $filename);
+            $this->saveUpload($this->image, $dir, $filename);
             $imagePath = 'assets/images/testimonials/' . $filename;
         }
 
@@ -125,9 +124,7 @@ class TestimonialManager extends Component
     public function delete(int $id): void
     {
         $t = Testimonial::find($id);
-        if ($t && $t->image && file_exists(public_path($t->image))) {
-            unlink(public_path($t->image));
-        }
+        if ($t) $this->deleteUpload($t->image);
         Testimonial::destroy($id);
         $this->confirmDeleteId = null;
         if ($this->editingId === $id) {

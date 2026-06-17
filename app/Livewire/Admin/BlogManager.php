@@ -3,14 +3,14 @@
 namespace App\Livewire\Admin;
 
 use App\Models\Blog;
-use Illuminate\Support\Facades\File;
+use App\Traits\HandlesFileUploads;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
 class BlogManager extends Component
 {
-    use WithFileUploads;
+    use WithFileUploads, HandlesFileUploads;
 
     // UI state
     public string $view   = 'list'; // list | form
@@ -101,13 +101,9 @@ class BlogManager extends Component
 
         if ($this->featuredImage) {
             $dir = public_path('assets/images/blogs');
-            File::ensureDirectoryExists($dir);
-
-            if ($imagePath && file_exists(public_path($imagePath))) {
-                @unlink(public_path($imagePath));
-            }
+            $this->deleteUpload($imagePath);
             $filename  = 'blog_' . time() . '.' . $this->featuredImage->getClientOriginalExtension();
-            $this->featuredImage->move($dir, $filename);
+            $this->saveUpload($this->featuredImage, $dir, $filename);
             $imagePath = 'assets/images/blogs/' . $filename;
         }
 
@@ -152,9 +148,7 @@ class BlogManager extends Component
     public function delete(): void
     {
         $blog = Blog::findOrFail($this->deleteId);
-        if ($blog->featured_image && file_exists(public_path($blog->featured_image))) {
-            @unlink(public_path($blog->featured_image));
-        }
+        $this->deleteUpload($blog->featured_image);
         $blog->delete();
         $this->deleteId = null;
         $this->toast    = 'Blog post deleted.';
@@ -178,9 +172,7 @@ class BlogManager extends Component
 
     public function removeImage(): void
     {
-        if ($this->imagePreview && file_exists(public_path($this->imagePreview))) {
-            @unlink(public_path($this->imagePreview));
-        }
+        $this->deleteUpload($this->imagePreview);
         $this->imagePreview  = null;
         $this->featuredImage = null;
         if ($this->editId) {

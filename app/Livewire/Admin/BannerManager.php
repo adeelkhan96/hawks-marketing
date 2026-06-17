@@ -3,13 +3,13 @@
 namespace App\Livewire\Admin;
 
 use App\Models\BannerSlide;
-use Illuminate\Support\Facades\File;
+use App\Traits\HandlesFileUploads;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
 class BannerManager extends Component
 {
-    use WithFileUploads;
+    use WithFileUploads, HandlesFileUploads;
 
     public $slides;
     public $image;
@@ -38,25 +38,22 @@ class BannerManager extends Component
         ]);
 
         $dir = public_path('assets/images/banners');
-        File::ensureDirectoryExists($dir);
 
         if ($this->editId) {
             $slide = BannerSlide::findOrFail($this->editId);
             $slide->heading = $this->heading;
             $slide->subtext  = $this->subtext;
             if ($this->image) {
-                if ($slide->image && file_exists(public_path($slide->image))) {
-                    @unlink(public_path($slide->image));
-                }
+                $this->deleteUpload($slide->image);
                 $filename = 'banner_' . time() . '.' . $this->image->getClientOriginalExtension();
-                $this->image->move($dir, $filename);
+                $this->saveUpload($this->image, $dir, $filename);
                 $slide->image = 'assets/images/banners/' . $filename;
             }
             $slide->save();
             $this->message = 'Slide updated.';
         } else {
             $filename = 'banner_' . time() . '.' . $this->image->getClientOriginalExtension();
-            $this->image->move($dir, $filename);
+            $this->saveUpload($this->image, $dir, $filename);
             BannerSlide::create([
                 'image'      => 'assets/images/banners/' . $filename,
                 'heading'    => $this->heading ?: null,
@@ -132,9 +129,7 @@ class BannerManager extends Component
     public function delete(): void
     {
         $slide = BannerSlide::findOrFail($this->deleteId);
-        if ($slide->image && file_exists(public_path($slide->image))) {
-            @unlink(public_path($slide->image));
-        }
+        $this->deleteUpload($slide->image);
         $slide->delete();
         $this->deleteId = null;
         $this->message  = 'Slide removed.';

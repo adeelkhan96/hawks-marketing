@@ -3,13 +3,13 @@
 namespace App\Livewire\Admin;
 
 use App\Models\ClientStory;
-use Illuminate\Support\Facades\File;
+use App\Traits\HandlesFileUploads;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
 class ClientStoryManager extends Component
 {
-    use WithFileUploads;
+    use WithFileUploads, HandlesFileUploads;
 
     public bool $showForm        = false;
     public ?int $editingId       = null;
@@ -72,18 +72,16 @@ class ClientStoryManager extends Component
         $logoPath     = $this->existingClientLogo;
 
         if ($this->featured_image) {
-            $dir = public_path('assets/images/client-stories');
-            File::ensureDirectoryExists($dir);
-            $filename     = 'story-' . time() . '.' . $this->featured_image->getClientOriginalExtension();
-            $this->featured_image->move($dir, $filename);
+            $dir      = public_path('assets/images/client-stories');
+            $filename = 'story-' . time() . '.' . $this->featured_image->getClientOriginalExtension();
+            $this->saveUpload($this->featured_image, $dir, $filename);
             $featuredPath = 'assets/images/client-stories/' . $filename;
         }
 
         if ($this->client_logo) {
-            $dir = public_path('assets/images/client-stories/logos');
-            File::ensureDirectoryExists($dir);
+            $dir      = public_path('assets/images/client-stories/logos');
             $filename = 'logo-' . time() . '.' . $this->client_logo->getClientOriginalExtension();
-            $this->client_logo->move($dir, $filename);
+            $this->saveUpload($this->client_logo, $dir, $filename);
             $logoPath = 'assets/images/client-stories/logos/' . $filename;
         }
 
@@ -142,9 +140,7 @@ class ClientStoryManager extends Component
 
     public function removeFeaturedImage(): void
     {
-        if ($this->existingFeaturedImage && file_exists(public_path($this->existingFeaturedImage))) {
-            unlink(public_path($this->existingFeaturedImage));
-        }
+        $this->deleteUpload($this->existingFeaturedImage);
         if ($this->editingId) {
             ClientStory::find($this->editingId)->update(['featured_image' => null]);
         }
@@ -153,9 +149,7 @@ class ClientStoryManager extends Component
 
     public function removeClientLogo(): void
     {
-        if ($this->existingClientLogo && file_exists(public_path($this->existingClientLogo))) {
-            unlink(public_path($this->existingClientLogo));
-        }
+        $this->deleteUpload($this->existingClientLogo);
         if ($this->editingId) {
             ClientStory::find($this->editingId)->update(['client_logo' => null]);
         }
@@ -176,12 +170,8 @@ class ClientStoryManager extends Component
     {
         $s = ClientStory::find($id);
         if ($s) {
-            if ($s->featured_image && file_exists(public_path($s->featured_image))) {
-                unlink(public_path($s->featured_image));
-            }
-            if ($s->client_logo && file_exists(public_path($s->client_logo))) {
-                unlink(public_path($s->client_logo));
-            }
+            $this->deleteUpload($s->featured_image);
+            $this->deleteUpload($s->client_logo);
             $s->delete();
         }
         $this->confirmDeleteId = null;
