@@ -119,7 +119,25 @@ header nav a.active { color: #f1a51e !important; }
 .slide-inner {
   background-size: contain !important;
   background-repeat: no-repeat !important;
-  background-position: center center !important;
+  background-position: center top !important;
+}
+/* Gradient fade at bottom so image transitions smoothly into dark background */
+.slide-inner::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 260px;
+  background: linear-gradient(to bottom, transparent, #212741);
+  z-index: 1;
+  pointer-events: none;
+}
+/* Anchor HTML content (button) to the bottom of the banner */
+.slide-inner .header-text {
+  top: auto !important;
+  bottom: 50px !important;
+  transform: none !important;
+  width: 65% !important;
+  z-index: 10 !important;
 }
 
 /* --- Home: Services Grid --- */
