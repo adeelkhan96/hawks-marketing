@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
         // Setting PUBLIC_HTML_PATH in .env redirects all file uploads to the correct location.
         // Must use config() not env() here — config:cache bakes in env values but nullifies direct env() calls.
         if ($path = config('app.public_html_path')) {
-            $this->app->bind('path.public', fn () => $path);
+            $this->app->instance('path.public', $path);
         }
     }
 
