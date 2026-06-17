@@ -115,6 +115,13 @@ header nav a.active { color: #f1a51e !important; }
 .tp-stars i, .tp-badge { color: #f1a51e !important; }
 .testimonial-placeholder-card i { color: #f1a51e !important; }
 
+/* --- Banner image fit --- */
+.slide-inner {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+}
+
 /* --- Home: Services Grid --- */
 .services-grid-section {
   background: #212741 !important;

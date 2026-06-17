@@ -27,9 +27,13 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="header-text">
-                    <h2>{!! $slide->heading ?: $defaultHeading !!}</h2>
+                    @if($slide->heading)
+                    <h2>{!! $slide->heading !!}</h2>
                     <div class="div-dec"></div>
-                    <p>{{ $slide->subtext ?: $defaultSubtext }}</p>
+                    @endif
+                    @if($slide->subtext)
+                    <p>{{ $slide->subtext }}</p>
+                    @endif
                     <div class="buttons">
                       <div class="orange-button">
                         <a href="{{ route('contact') }}">Contact Us</a>
