@@ -41,8 +41,8 @@ class BannerManager extends Component
 
         if ($this->editId) {
             $slide = BannerSlide::findOrFail($this->editId);
-            $slide->heading = $this->heading;
-            $slide->subtext  = $this->subtext;
+            $slide->heading = $this->heading ?: null;
+            $slide->subtext  = $this->subtext ?: null;
             if ($this->image) {
                 $this->deleteUpload($slide->image);
                 $filename = 'banner_' . time() . '.' . $this->image->getClientOriginalExtension();
