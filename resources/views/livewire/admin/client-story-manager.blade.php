@@ -252,8 +252,14 @@
         </div>
 
         {{-- Save --}}
-        <button type="submit" class="btn w-100" style="background:#f1a51e;color:#fff;font-weight:700;border-radius:10px;padding:13px;font-size:15px;">
-            <i class="fas fa-save me-2"></i>{{ $editingId ? 'Update Story' : 'Save Story' }}
+        <button type="submit" class="btn w-100" style="background:#f1a51e;color:#fff;font-weight:700;border-radius:10px;padding:13px;font-size:15px;"
+                wire:loading.attr="disabled" wire:target="featured_image,client_logo">
+            <span wire:loading wire:target="featured_image,client_logo">
+                <span class="spinner-border spinner-border-sm me-2"></span>Uploading…
+            </span>
+            <span wire:loading.remove wire:target="featured_image,client_logo">
+                <i class="fas fa-save me-2"></i>{{ $editingId ? 'Update Story' : 'Save Story' }}
+            </span>
         </button>
         <button type="button" wire:click="cancel" class="btn btn-outline-secondary w-100 mt-2" style="border-radius:10px;font-size:14px;">
             Cancel

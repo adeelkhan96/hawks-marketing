@@ -168,10 +168,16 @@
             </div>
 
             <div class="d-flex gap-2">
-              <button type="submit" class="btn btn-admin" wire:loading.attr="disabled">
-                <span wire:loading wire:target="save"><i class="fas fa-spinner fa-spin me-1"></i></span>
-                <i wire:loading.remove wire:target="save" class="fas fa-check me-1"></i>
-                {{ $editingId ? 'Update' : 'Add Testimonial' }}
+              <button type="submit" class="btn btn-admin"
+                      wire:loading.attr="disabled" wire:target="image,save">
+                <span wire:loading wire:target="image">
+                  <span class="spinner-border spinner-border-sm me-1"></span>Uploading…
+                </span>
+                <span wire:loading.remove wire:target="image">
+                  <span wire:loading wire:target="save"><i class="fas fa-spinner fa-spin me-1"></i></span>
+                  <i wire:loading.remove wire:target="save" class="fas fa-check me-1"></i>
+                  {{ $editingId ? 'Update' : 'Add Testimonial' }}
+                </span>
               </button>
               <button type="button" wire:click="cancel" class="btn btn-outline-secondary">Cancel</button>
             </div>

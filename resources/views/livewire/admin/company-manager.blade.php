@@ -52,9 +52,15 @@
             @endif
 
             <div class="d-flex gap-2">
-              <button type="submit" class="btn btn-primary flex-grow-1">
-                <i class="fas fa-{{ $editId ? 'save' : 'plus' }} me-1"></i>
-                {{ $editId ? 'Save Changes' : 'Add Company' }}
+              <button type="submit" class="btn btn-primary flex-grow-1"
+                      wire:loading.attr="disabled" wire:target="logo">
+                <span wire:loading wire:target="logo">
+                  <span class="spinner-border spinner-border-sm me-1"></span>Uploading…
+                </span>
+                <span wire:loading.remove wire:target="logo">
+                  <i class="fas fa-{{ $editId ? 'save' : 'plus' }} me-1"></i>
+                  {{ $editId ? 'Save Changes' : 'Add Company' }}
+                </span>
               </button>
               @if($editId)
                 <button type="button" class="btn btn-outline-secondary" wire:click="cancelEdit">Cancel</button>

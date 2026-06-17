@@ -148,9 +148,13 @@
             <i class="fas fa-file me-1"></i> Draft
         </button>
         <button wire:click="save" type="button"
-                class="btn btn-sm fw-semibold" style="background:#f1a51e;color:#fff;border-radius:8px;padding:8px 22px;">
-            <span wire:loading.remove wire:target="save"><i class="fas fa-save me-1"></i> Publish</span>
-            <span wire:loading wire:target="save"><i class="fas fa-spinner fa-spin me-1"></i> Saving…</span>
+                class="btn btn-sm fw-semibold" style="background:#f1a51e;color:#fff;border-radius:8px;padding:8px 22px;"
+                wire:loading.attr="disabled" wire:target="featuredImage,save">
+            <span wire:loading wire:target="featuredImage"><span class="spinner-border spinner-border-sm me-1"></span> Uploading…</span>
+            <span wire:loading.remove wire:target="featuredImage">
+                <span wire:loading.remove wire:target="save"><i class="fas fa-save me-1"></i> Publish</span>
+                <span wire:loading wire:target="save"><i class="fas fa-spinner fa-spin me-1"></i> Saving…</span>
+            </span>
         </button>
     </div>
 </div>

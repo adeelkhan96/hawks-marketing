@@ -58,9 +58,15 @@
             </div>
 
             <div class="d-flex gap-2">
-              <button type="submit" class="btn btn-primary flex-grow-1">
-                <i class="fas fa-{{ $editId ? 'save' : 'plus' }} me-1"></i>
-                {{ $editId ? 'Save Changes' : 'Add Slide' }}
+              <button type="submit" class="btn btn-primary flex-grow-1"
+                      wire:loading.attr="disabled" wire:target="image">
+                <span wire:loading wire:target="image">
+                  <span class="spinner-border spinner-border-sm me-1"></span>Uploading…
+                </span>
+                <span wire:loading.remove wire:target="image">
+                  <i class="fas fa-{{ $editId ? 'save' : 'plus' }} me-1"></i>
+                  {{ $editId ? 'Save Changes' : 'Add Slide' }}
+                </span>
               </button>
               @if($editId)
                 <button type="button" class="btn btn-outline-secondary" wire:click="cancelEdit">Cancel</button>
