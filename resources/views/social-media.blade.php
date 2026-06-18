@@ -1,4 +1,4 @@
-
+﻿
 @extends('layouts.base')
 @section('title','Social Media Management | Hawks Marketing')
 @section('meta-title','Social Media Management | Hawks Marketing')
@@ -162,5 +162,6 @@
   <script src="assets/js/isotope.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/custom.js?v=2"></script>
 @endsection
+

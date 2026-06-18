@@ -1,4 +1,4 @@
-@extends('layouts.base')
+﻿@extends('layouts.base')
 @section('title','Hawks Marketing | Digital Marketing Agency')
 @section('meta-title','Hawks Marketing | Digital Marketing Agency')
 @section('meta-description','Hawks Marketing is a results-driven digital marketing agency specialising in SEO, social media management, content writing, PPC advertising, and custom web development. Grow your brand with us.')
@@ -332,14 +332,14 @@
             </div>
           </div> --}}
           <h2>{{ PageContent::getValue('home', 'about', 'subheading', 'Hawks Marketing - Results-Driven Digital Marketing Agency') }}</h2>
-          <p style="margin-top: 2rem">{{ PageContent::getValue('home', 'about', 'body', 'With proven track record and industry expertise, Hawks Marketing ranks among the premier digital marketing agencies, empowering organizations with goal-oriented digital strategies. Our talented professionals understand your unique vision and develop customized marketing initiatives that deliver quantifiable growth. We blend innovation, insights, and execution to enhance your brand\'s visibility and performance. At Hawks Marketing, your growth is our mission—we succeed when you thrive.') }}</p>
+          <p style="margin-top: 2rem">{{ PageContent::getValue('home', 'about', 'body', 'With proven track record and industry expertise, Hawks Marketing ranks among the premier digital marketing agencies, empowering organizations with goal-oriented digital strategies. Our talented professionals understand your unique vision and develop customized marketing initiatives that deliver quantifiable growth. We blend innovation, insights, and execution to enhance your brand\'s visibility and performance. At Hawks Marketing, your growth is our missionâ€”we succeed when you thrive.') }}</p>
         </div>
         <div class="col-lg-4">
           <div class="right-content">
             <h4>{{ PageContent::getValue('home', 'about', 'right_heading', 'Our Approach') }}</h4>
-            <p><strong>Data-Powered</strong> — {{ PageContent::getValue('home', 'about', 'data_powered', 'Decisions backed by analytics and validated metrics, guaranteeing genuine ROI and continuous expansion.') }}</p>
-            <p><strong>Client-Centered</strong> — {{ PageContent::getValue('home', 'about', 'client_centered', 'Your audience, objectives, and marketplace at the heart of every strategy we craft.') }}</p>
-            <p><strong>Results-Focused</strong> — {{ PageContent::getValue('home', 'about', 'results_focused', 'Every interaction, view, and transaction contributes to tangible business results for your organization.') }}</p>
+            <p><strong>Data-Powered</strong> â€” {{ PageContent::getValue('home', 'about', 'data_powered', 'Decisions backed by analytics and validated metrics, guaranteeing genuine ROI and continuous expansion.') }}</p>
+            <p><strong>Client-Centered</strong> â€” {{ PageContent::getValue('home', 'about', 'client_centered', 'Your audience, objectives, and marketplace at the heart of every strategy we craft.') }}</p>
+            <p><strong>Results-Focused</strong> â€” {{ PageContent::getValue('home', 'about', 'results_focused', 'Every interaction, view, and transaction contributes to tangible business results for your organization.') }}</p>
           </div>
         </div>
       </div>
@@ -436,26 +436,26 @@
 
   @php $testimonials = \App\Models\Testimonial::where('active', true)->orderBy('sort_order')->orderBy('id')->get(); @endphp
   @if($testimonials->isNotEmpty())
-  <section class=”testimonials” id=”testimonials”>
-    <div class=”container”>
-      <div class=”row”>
-        <div class=”col-lg-6 offset-lg-3”>
-          <div class=”section-heading”>
+  <section class=â€testimonialsâ€ id=â€testimonialsâ€>
+    <div class=â€containerâ€>
+      <div class=â€rowâ€>
+        <div class=â€col-lg-6 offset-lg-3â€>
+          <div class=â€section-headingâ€>
             <h6>Testimonials</h6>
             <h4>What Our Clients Say</h4>
           </div>
         </div>
-        <div class=”col-lg-10 offset-lg-1”>
-          <div class=”owl-testimonials owl-carousel” style=”position:relative; z-index:5;”>
+        <div class=â€col-lg-10 offset-lg-1â€>
+          <div class=â€owl-testimonials owl-carouselâ€ style=â€position:relative; z-index:5;â€>
             @foreach($testimonials as $t)
-            <div class=”item”>
-              <i class=”fa fa-quote-left”></i>
-              <p>”{{ $t->message }}”</p>
+            <div class=â€itemâ€>
+              <i class=â€fa fa-quote-leftâ€></i>
+              <p>â€{{ $t->message }}â€</p>
               <h4>{{ $t->name }}</h4>
               <span>{{ $t->position }}</span>
               @if($t->image)
-              <div class=”right-image”>
-                <img src=”{{ asset($t->image) }}” alt=”{{ $t->name }}”>
+              <div class=â€right-imageâ€>
+                <img src=â€{{ asset($t->image) }}â€ alt=â€{{ $t->name }}â€>
               </div>
               @endif
             </div>
@@ -502,7 +502,7 @@
     <script src="{{ asset('assets/js/owl-carousel.js') }}"></script>
     <script src="{{ asset('assets/js/tabs.js') }}"></script>
     <script src="{{ asset('assets/js/swiper.js') }}"></script>
-    <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <script src="{{ asset('assets/js/custom.js?v=2') }}"></script>
     <script>
         var interleaveOffset = 0.5;
         var bannerCount = {{ $bannerCount > 0 ? $bannerCount : 1 }};

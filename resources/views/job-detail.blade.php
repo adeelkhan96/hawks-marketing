@@ -1,4 +1,4 @@
-@extends('layouts.base')
+﻿@extends('layouts.base')
 @section('title', $job->title . ' | Careers | Hawks Marketing')
 @section('meta-title', $job->title . ' | Hawks Marketing')
 @section('meta-description', Str::limit(strip_tags($job->description), 160))
@@ -10,9 +10,9 @@
     <div class="container">
         <nav style="font-size:13px;color:#9ca3af;">
             <a href="{{ route('home') }}" style="color:#6b7280;text-decoration:none;">Home</a>
-            <span class="mx-2">›</span>
+            <span class="mx-2">â€º</span>
             <a href="{{ route('career') }}" style="color:#6b7280;text-decoration:none;">Careers</a>
-            <span class="mx-2">›</span>
+            <span class="mx-2">â€º</span>
             <span style="color:#212741;">{{ $job->title }}</span>
         </nav>
     </div>
@@ -154,7 +154,7 @@
                     <div style="background:linear-gradient(135deg,#212741,#f1a51e20);padding:28px;text-align:center;">
                         <i class="fas fa-paper-plane" style="font-size:36px;color:#f1a51e;margin-bottom:14px;display:block;"></i>
                         <h5 style="color:#212741;font-weight:800;margin-bottom:8px;">Interested?</h5>
-                        <p style="font-size:13px;color:#6b7280;line-height:1.65;margin-bottom:20px;">Submit your application and we'll be in touch within 5–7 business days.</p>
+                        <p style="font-size:13px;color:#6b7280;line-height:1.65;margin-bottom:20px;">Submit your application and we'll be in touch within 5â€“7 business days.</p>
                         <a href="{{ route('career.apply.form', $job->id) }}"
                            style="display:block;background:#f1a51e;color:#fff;padding:13px;border-radius:9px;font-size:14px;font-weight:700;text-decoration:none;">
                             Apply for This Position <i class="fas fa-arrow-right ms-1"></i>
@@ -191,7 +191,7 @@
                                style="flex:1;text-align:center;background:#0a66c2;color:#fff;padding:9px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="https://wa.me/?text={{ urlencode($job->title . ' at Hawks Marketing — ' . url()->current()) }}" target="_blank"
+                            <a href="https://wa.me/?text={{ urlencode($job->title . ' at Hawks Marketing â€” ' . url()->current()) }}" target="_blank"
                                style="flex:1;text-align:center;background:#25d366;color:#fff;padding:9px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
@@ -212,5 +212,6 @@
 @section('js')
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/custom.js?v=2"></script>
 @endsection
+

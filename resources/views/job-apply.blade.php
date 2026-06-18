@@ -1,6 +1,6 @@
-@extends('layouts.base')
-@section('title', 'Apply — ' . $job->title . ' | Hawks Marketing')
-@section('meta-title', 'Apply — ' . $job->title)
+﻿@extends('layouts.base')
+@section('title', 'Apply â€” ' . $job->title . ' | Hawks Marketing')
+@section('meta-title', 'Apply â€” ' . $job->title)
 
 @section('head')
 <style>
@@ -19,11 +19,11 @@
     <div class="container">
         <nav style="font-size:13px;color:#9ca3af;">
             <a href="{{ route('home') }}" style="color:#6b7280;text-decoration:none;">Home</a>
-            <span class="mx-2">›</span>
+            <span class="mx-2">â€º</span>
             <a href="{{ route('career') }}" style="color:#6b7280;text-decoration:none;">Careers</a>
-            <span class="mx-2">›</span>
+            <span class="mx-2">â€º</span>
             <a href="{{ route('career.job', $job->id) }}" style="color:#6b7280;text-decoration:none;">{{ $job->title }}</a>
-            <span class="mx-2">›</span>
+            <span class="mx-2">â€º</span>
             <span style="color:#212741;">Apply</span>
         </nav>
     </div>
@@ -103,10 +103,10 @@
                                     <option value="" disabled {{ old('experience_years') ? '' : 'selected' }}>Select experience</option>
                                     <option value="Fresher / No Experience" {{ old('experience_years') === 'Fresher / No Experience' ? 'selected' : '' }}>Fresher / No Experience</option>
                                     <option value="Less than 1 Year" {{ old('experience_years') === 'Less than 1 Year' ? 'selected' : '' }}>Less than 1 Year</option>
-                                    <option value="1–2 Years" {{ old('experience_years') === '1–2 Years' ? 'selected' : '' }}>1–2 Years</option>
-                                    <option value="2–3 Years" {{ old('experience_years') === '2–3 Years' ? 'selected' : '' }}>2–3 Years</option>
-                                    <option value="3–5 Years" {{ old('experience_years') === '3–5 Years' ? 'selected' : '' }}>3–5 Years</option>
-                                    <option value="5–8 Years" {{ old('experience_years') === '5–8 Years' ? 'selected' : '' }}>5–8 Years</option>
+                                    <option value="1â€“2 Years" {{ old('experience_years') === '1â€“2 Years' ? 'selected' : '' }}>1â€“2 Years</option>
+                                    <option value="2â€“3 Years" {{ old('experience_years') === '2â€“3 Years' ? 'selected' : '' }}>2â€“3 Years</option>
+                                    <option value="3â€“5 Years" {{ old('experience_years') === '3â€“5 Years' ? 'selected' : '' }}>3â€“5 Years</option>
+                                    <option value="5â€“8 Years" {{ old('experience_years') === '5â€“8 Years' ? 'selected' : '' }}>5â€“8 Years</option>
                                     <option value="8+ Years" {{ old('experience_years') === '8+ Years' ? 'selected' : '' }}>8+ Years</option>
                                 </select>
                                 @error('experience_years')<div class="invalid-feedback">{{ $message }}</div>@enderror
@@ -155,7 +155,7 @@
                                onmouseout="this.style.borderColor='#e5e7eb'">
                             <i class="fas fa-cloud-upload-alt d-block mb-2" style="font-size:32px;color:#9ca3af;" id="resume-icon"></i>
                             <span id="resume-text" style="font-size:14px;color:#9ca3af;">Click to upload or drag and drop</span>
-                            <div style="font-size:12px;color:#d1d5db;margin-top:4px;">PDF, DOC, DOCX — max 5 MB</div>
+                            <div style="font-size:12px;color:#d1d5db;margin-top:4px;">PDF, DOC, DOCX â€” max 5 MB</div>
                             <input type="file" name="resume" id="resume-input" accept=".pdf,.doc,.docx" class="d-none @error('resume') is-invalid @enderror"
                                    onchange="handleResumeChange(this)">
                         </label>
@@ -195,7 +195,7 @@
 @section('js')
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/custom.js?v=2"></script>
   <script>
   // Cover letter character counter
   var coverTextarea = document.querySelector('textarea[name="cover_letter"]');
@@ -203,7 +203,7 @@
   if (coverTextarea && counter) {
       function updateCounter() {
           var len = coverTextarea.value.length;
-          counter.textContent = len + ' characters' + (len < 100 ? ' — need at least ' + (100 - len) + ' more' : ' ✓');
+          counter.textContent = len + ' characters' + (len < 100 ? ' â€” need at least ' + (100 - len) + ' more' : ' âœ“');
           counter.style.color = len < 100 ? '#ef4444' : '#10b981';
       }
       coverTextarea.addEventListener('input', updateCounter);
@@ -229,3 +229,4 @@
   }
   </script>
 @endsection
+

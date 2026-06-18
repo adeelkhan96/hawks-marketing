@@ -1,7 +1,7 @@
-@extends('layouts.base')
+﻿@extends('layouts.base')
 @section('title','Graphic Designing | Hawks Marketing')
 @section('meta-title','Graphic Designing | Hawks Marketing')
-@section('meta-description','Professional graphic design services by Hawks Marketing — social media graphics, advertisements, branding materials, and corporate design that communicate your identity clearly.')
+@section('meta-description','Professional graphic design services by Hawks Marketing â€” social media graphics, advertisements, branding materials, and corporate design that communicate your identity clearly.')
 @section('content')
 @php use App\Models\PageContent as PC; $p = 'graphic-designing'; @endphp
 
@@ -17,9 +17,9 @@
         <div class="col-lg-5 mt-4 mt-lg-0">
           <div class="intro-highlight">
             <h5>{{ PC::getValue($p, 'highlight', 'heading', 'Why Hawks Marketing for Design?') }}</h5>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'Brand-Consistent') }}</strong> — {{ PC::getValue($p, 'highlight', 'p1_text', 'Every design aligns with your brand identity to build cohesive visual recognition across all platforms.') }}</p>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Purpose-Driven') }}</strong> — {{ PC::getValue($p, 'highlight', 'p2_text', 'Designs created with clear communication objectives, not just aesthetics.') }}</p>
-            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Fast Turnaround') }}</strong> — {{ PC::getValue($p, 'highlight', 'p3_text', 'Efficient workflows that deliver quality designs within agreed timelines.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'Brand-Consistent') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p1_text', 'Every design aligns with your brand identity to build cohesive visual recognition across all platforms.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Purpose-Driven') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p2_text', 'Designs created with clear communication objectives, not just aesthetics.') }}</p>
+            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Fast Turnaround') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p3_text', 'Efficient workflows that deliver quality designs within agreed timelines.') }}</p>
           </div>
         </div>
       </div>
@@ -39,14 +39,14 @@
           <div class="service-item">
             <i class="fas fa-hashtag"></i>
             <h4>{{ PC::getValue($p, 'services', 's1_title', 'Social Media Graphics') }}</h4>
-            <p>{{ PC::getValue($p, 'services', 's1_desc', 'Scroll-stopping visuals designed for all major social platforms — posts, stories, banners, and ads that drive engagement.') }}</p>
+            <p>{{ PC::getValue($p, 'services', 's1_desc', 'Scroll-stopping visuals designed for all major social platforms â€” posts, stories, banners, and ads that drive engagement.') }}</p>
           </div>
         </div>
         <div class="col-lg-6 col-sm-6">
           <div class="service-item">
             <i class="fas fa-rectangle-ad"></i>
             <h4>{{ PC::getValue($p, 'services', 's2_title', 'Advertisement Design') }}</h4>
-            <p>{{ PC::getValue($p, 'services', 's2_desc', 'High-impact ad creatives for digital and print advertising — designed to capture attention and communicate your message effectively.') }}</p>
+            <p>{{ PC::getValue($p, 'services', 's2_desc', 'High-impact ad creatives for digital and print advertising â€” designed to capture attention and communicate your message effectively.') }}</p>
           </div>
         </div>
         <div class="col-lg-6 col-sm-6">
@@ -88,5 +88,6 @@
 @section('js')
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/custom.js?v=2"></script>
 @endsection
+

@@ -1,8 +1,8 @@
-
+﻿
 @extends('layouts.base')
 @section('title','Content Writing | Hawks Marketing')
 @section('meta-title','Content Writing | Hawks Marketing')
-@section('meta-description','Hawks Marketing delivers compelling, SEO-optimised content — blog posts, web copy, social media content, and more — to engage your audience and improve your search visibility.')
+@section('meta-description','Hawks Marketing delivers compelling, SEO-optimised content â€” blog posts, web copy, social media content, and more â€” to engage your audience and improve your search visibility.')
 @section('content')
 @php use App\Models\PageContent as PC; $p = 'content-writing'; @endphp
 
@@ -18,9 +18,9 @@
         <div class="col-lg-5 mt-4 mt-lg-0">
           <div class="intro-highlight">
             <h5>{{ PC::getValue($p, 'highlight', 'heading', 'What Makes Us Stand Out') }}</h5>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'Creative') }}</strong> — {{ PC::getValue($p, 'highlight', 'p1_text', 'Our experts develop resonant ideas and solutions to enhance your company\'s growth, just like an in-house team.') }}</p>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Coherent') }}</strong> — {{ PC::getValue($p, 'highlight', 'p2_text', 'Our teams work in close coordination while involving our client at each step of the content marketing process.') }}</p>
-            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Cost-efficient') }}</strong> — {{ PC::getValue($p, 'highlight', 'p3_text', 'We deliver affordable content writing services without compromising on quality and excellence.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'Creative') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p1_text', 'Our experts develop resonant ideas and solutions to enhance your company\'s growth, just like an in-house team.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Coherent') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p2_text', 'Our teams work in close coordination while involving our client at each step of the content marketing process.') }}</p>
+            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Cost-efficient') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p3_text', 'We deliver affordable content writing services without compromising on quality and excellence.') }}</p>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@
           <div class="service-item">
             <i class="fas fa-globe"></i>
             <h4>{{ PC::getValue($p, 'services', 's2_title', 'Web Copywriting') }}</h4>
-            <p>{{ PC::getValue($p, 'services', 's2_desc', 'Our skilled team delivers the finest web content writing — engaging copy that captures attention and guides readers to take the intended action.') }}</p>
+            <p>{{ PC::getValue($p, 'services', 's2_desc', 'Our skilled team delivers the finest web content writing â€” engaging copy that captures attention and guides readers to take the intended action.') }}</p>
           </div>
         </div>
         <div class="col-lg-6 col-sm-6 col-md-6">
@@ -169,5 +169,6 @@
   <script src="assets/js/isotope.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/custom.js?v=2"></script>
 @endsection
+

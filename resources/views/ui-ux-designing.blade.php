@@ -1,7 +1,7 @@
-@extends('layouts.base')
+﻿@extends('layouts.base')
 @section('title','UI/UX Designing | Hawks Marketing')
 @section('meta-title','UI/UX Designing | Hawks Marketing')
-@section('meta-description','Hawks Marketing creates intuitive, user-friendly digital experiences — wireframes, prototypes, and final UI designs that improve user engagement and reduce friction.')
+@section('meta-description','Hawks Marketing creates intuitive, user-friendly digital experiences â€” wireframes, prototypes, and final UI designs that improve user engagement and reduce friction.')
 @section('content')
 @php use App\Models\PageContent as PC; $p = 'ui-ux-designing'; @endphp
 
@@ -17,9 +17,9 @@
         <div class="col-lg-5 mt-4 mt-lg-0">
           <div class="intro-highlight">
             <h5>{{ PC::getValue($p, 'highlight', 'heading', 'Why Hawks Marketing for UI/UX?') }}</h5>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'User-Centered') }}</strong> — {{ PC::getValue($p, 'highlight', 'p1_text', 'Every design decision is informed by how real users think, behave, and interact with digital interfaces.') }}</p>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Business-Aligned') }}</strong> — {{ PC::getValue($p, 'highlight', 'p2_text', 'We balance aesthetics with functionality to create experiences that look great and convert well.') }}</p>
-            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Prototype-First') }}</strong> — {{ PC::getValue($p, 'highlight', 'p3_text', 'We validate designs through wireframes and prototypes before final delivery, saving time and cost.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'User-Centered') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p1_text', 'Every design decision is informed by how real users think, behave, and interact with digital interfaces.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Business-Aligned') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p2_text', 'We balance aesthetics with functionality to create experiences that look great and convert well.') }}</p>
+            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Prototype-First') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p3_text', 'We validate designs through wireframes and prototypes before final delivery, saving time and cost.') }}</p>
           </div>
         </div>
       </div>
@@ -88,5 +88,6 @@
 @section('js')
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/custom.js?v=2"></script>
 @endsection
+

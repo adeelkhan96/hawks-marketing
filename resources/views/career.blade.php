@@ -1,4 +1,4 @@
-@extends('layouts.base')
+﻿@extends('layouts.base')
 @section('title','Careers | Hawks Marketing')
 @section('meta-title','Careers | Hawks Marketing')
 @section('meta-description','Join the Hawks Marketing team. Explore open positions at a fast-growing digital marketing agency in Islamabad, Pakistan.')
@@ -46,7 +46,7 @@
             </div>
             <div class="col-lg-5">
                 <div class="row g-3">
-                    @foreach([['fas fa-users','Collaborative Team','We grow together — no silos, no politics'],['fas fa-rocket','Fast Career Growth','High performers move up quickly here'],['fas fa-lightbulb','Learn Every Day','Exposure to diverse clients and industries'],['fas fa-heart','People First Culture','Your wellbeing and growth matter to us']] as $s)
+                    @foreach([['fas fa-users','Collaborative Team','We grow together â€” no silos, no politics'],['fas fa-rocket','Fast Career Growth','High performers move up quickly here'],['fas fa-lightbulb','Learn Every Day','Exposure to diverse clients and industries'],['fas fa-heart','People First Culture','Your wellbeing and growth matter to us']] as $s)
                     <div class="col-6">
                         <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:20px;text-align:center;">
                             <i class="{{ $s[0] }}" style="font-size:24px;color:#f1a51e;margin-bottom:10px;display:block;"></i>
@@ -72,10 +72,10 @@
             @foreach([
                 ['fas fa-chart-line','Measurable Impact','Every campaign you work on drives real results for real businesses. Your work matters here.'],
                 ['fas fa-graduation-cap','Continuous Learning','We invest in courses, certifications, and mentorship to keep you sharp and growing.'],
-                ['fas fa-laptop-house','Hybrid Flexibility','Enjoy the best of both worlds — productive office days and focused work-from-home days.'],
+                ['fas fa-laptop-house','Hybrid Flexibility','Enjoy the best of both worlds â€” productive office days and focused work-from-home days.'],
                 ['fas fa-hand-holding-dollar','Competitive Pay','Performance-based bonuses on top of a competitive base salary and annual increments.'],
                 ['fas fa-users-gear','Great Teammates','Work alongside driven, friendly professionals who push each other to do better work.'],
-                ['fas fa-star','Recognition Culture','Your achievements are celebrated — not ignored. High performers are rewarded.'],
+                ['fas fa-star','Recognition Culture','Your achievements are celebrated â€” not ignored. High performers are rewarded.'],
             ] as $b)
             <div class="col-lg-4 col-md-6">
                 <div class="why-card">
@@ -159,8 +159,8 @@
         <div class="row g-4">
             @foreach([
                 ['Submit Application','Fill in our online form with your CV and cover letter. We review every application personally.'],
-                ['Initial Screening','Our team reviews your profile and reaches out within 5–7 business days if you\'re shortlisted.'],
-                ['Interview Round','A conversation with the hiring manager — we want to know your thinking, not test your memory.'],
+                ['Initial Screening','Our team reviews your profile and reaches out within 5â€“7 business days if you\'re shortlisted.'],
+                ['Interview Round','A conversation with the hiring manager â€” we want to know your thinking, not test your memory.'],
                 ['Offer & Onboarding','Successful candidates receive a formal offer and join a structured onboarding programme.'],
             ] as $i => $step)
             <div class="col-lg-3 col-md-6">
@@ -191,5 +191,6 @@
 @section('js')
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/custom.js?v=2"></script>
 @endsection
+

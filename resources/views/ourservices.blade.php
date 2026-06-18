@@ -1,4 +1,4 @@
-@extends('layouts.base')
+﻿@extends('layouts.base')
 @section('title','Our Services | Hawks Marketing')
 @section('meta-title','Our Services | Hawks Marketing')
 @section('meta-description','Explore Hawks Marketing\'s full suite of services: SEO, social media, PPC, graphic design, UI/UX, web development, app development, branding, content creation, and more.')
@@ -90,7 +90,7 @@
                     Full-Service<br><span style="color:#f1a51e;">Digital Marketing</span><br>Under One Roof
                 </h1>
                 <p style="color:rgba(255,255,255,.72);font-size:16px;line-height:1.8;max-width:480px;margin-bottom:36px;">
-                    From search engine rankings to stunning designs and custom-built websites — we cover every pillar of your digital growth.
+                    From search engine rankings to stunning designs and custom-built websites â€” we cover every pillar of your digital growth.
                 </p>
                 <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:10px;background:#f1a51e;color:#fff;padding:14px 30px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;">
                     Get a Free Consultation <i class="fas fa-arrow-right"></i>
@@ -176,7 +176,7 @@
                     {{ PC::getValue($p, 'designing', 'heading', 'Designing') }}
                 </h2>
                 <p style="font-size:15px;color:rgba(255,255,255,.65);max-width:540px;line-height:1.8;margin:0;">
-                    Visuals that stop the scroll. From logos to full UI systems — we create design that communicates your brand with impact.
+                    Visuals that stop the scroll. From logos to full UI systems â€” we create design that communicates your brand with impact.
                 </p>
             </div>
             <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
@@ -216,7 +216,7 @@
                     {{ PC::getValue($p, 'it', 'heading', 'IT Solutions') }}
                 </h2>
                 <p style="font-size:15px;color:#6b7280;max-width:540px;line-height:1.8;margin:0;">
-                    Robust, scalable web and mobile solutions built to perform — from simple landing pages to complex ecommerce platforms.
+                    Robust, scalable web and mobile solutions built to perform â€” from simple landing pages to complex ecommerce platforms.
                 </p>
             </div>
             <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
@@ -268,7 +268,7 @@
             @foreach([
                 ['fas fa-star', PC::getValue($p,'branding','overview_title','Branding'), PC::getValue($p,'branding','overview_desc','Creating a distinct identity for a business through visual, verbal, and strategic elements. We build cohesive brand assets including logos, colour systems, typography, and messaging that ensure recognition across all platforms.'), route('branding-service')],
                 ['fas fa-chess', PC::getValue($p,'branding','strategy_title','Branding Strategy Services'), PC::getValue($p,'branding','strategy_desc','Data-informed brand strategy development that aligns your positioning, messaging, and identity with your business goals and target audience expectations.'), route('branding-strategy')],
-                ['fas fa-book-open', PC::getValue($p,'branding','manual_title','Brand Manual Document'), PC::getValue($p,'branding','manual_desc','Comprehensive brand guidelines documentation covering logo usage, colour palette, typography, tone of voice, and visual standards — ensuring consistent brand representation across all touchpoints.'), route('brand-manual')],
+                ['fas fa-book-open', PC::getValue($p,'branding','manual_title','Brand Manual Document'), PC::getValue($p,'branding','manual_desc','Comprehensive brand guidelines documentation covering logo usage, colour palette, typography, tone of voice, and visual standards â€” ensuring consistent brand representation across all touchpoints.'), route('brand-manual')],
             ] as $svc)
             <div class="col-lg-4 col-md-6">
                 <a href="{{ $svc[3] }}" class="svc-card-dark d-flex flex-column">
@@ -304,7 +304,7 @@
         </div>
         <div class="row g-4">
             @foreach([
-                ['fas fa-pen-nib', PC::getValue($p,'content','overview_title','Content Creation'), PC::getValue($p,'content','overview_desc','Developing engaging and relevant material to communicate a brand\'s message effectively — posts, captions, articles, and marketing materials across tone, style, and messaging.'), route('content-writing')],
+                ['fas fa-pen-nib', PC::getValue($p,'content','overview_title','Content Creation'), PC::getValue($p,'content','overview_desc','Developing engaging and relevant material to communicate a brand\'s message effectively â€” posts, captions, articles, and marketing materials across tone, style, and messaging.'), route('content-writing')],
                 ['fas fa-calendar-days', PC::getValue($p,'content','smcontent_title','Social Media Content Marketing'), PC::getValue($p,'content','smcontent_desc','Strategic content designed to grow your social media presence, drive engagement, and build a loyal audience across all major platforms.'), route('social-media-content-marketing')],
                 ['fas fa-align-left', PC::getValue($p,'content','writing_title','Website Content Writing'), PC::getValue($p,'content','writing_desc','SEO-optimised, professionally written website copy that communicates your value proposition clearly and compels visitors to take action.'), route('content-writing')],
                 ['fas fa-newspaper', PC::getValue($p,'content','blog_title','Blog Writing'), PC::getValue($p,'content','blog_desc','Well-researched, engaging blog articles that establish your brand as an industry authority, improve SEO rankings, and drive organic traffic to your website.'), route('blog-writing')],
@@ -361,7 +361,7 @@
             <div class="col-lg-7">
                 <p style="color:#f1a51e;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Let's Get Started</p>
                 <h3 style="color:#212741;font-size:36px;font-weight:800;line-height:1.3;margin-bottom:16px;">Ready to <em style="font-style:normal;color:#f1a51e;">Grow</em> Your<br>Business?</h3>
-                <p style="color:#6b7280;font-size:15px;line-height:1.8;max-width:480px;">Tell us your goals and we\'ll build a strategy that delivers. No fluff, no guesswork — just results.</p>
+                <p style="color:#6b7280;font-size:15px;line-height:1.8;max-width:480px;">Tell us your goals and we\'ll build a strategy that delivers. No fluff, no guesswork â€” just results.</p>
             </div>
             <div class="col-lg-5 text-lg-end">
                 <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:10px;background:#f1a51e;color:#fff;padding:16px 36px;border-radius:12px;font-size:16px;font-weight:700;text-decoration:none;box-shadow:0 8px 28px rgba(241,165,30,.35);">
@@ -376,7 +376,7 @@
 @section('js')
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/custom.js?v=2"></script>
   <script>
   // Smooth scroll for category nav pills
   document.querySelectorAll('a[href^="#"]').forEach(function(a) {
@@ -390,3 +390,4 @@
   });
   </script>
 @endsection
+

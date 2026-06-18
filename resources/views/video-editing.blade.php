@@ -1,7 +1,7 @@
-@extends('layouts.base')
+﻿@extends('layouts.base')
 @section('title','Video Editing | Hawks Marketing')
 @section('meta-title','Video Editing | Hawks Marketing')
-@section('meta-description','Professional video editing services by Hawks Marketing — social media reels, brand videos, corporate presentations, and ad creatives that tell your story compellingly.')
+@section('meta-description','Professional video editing services by Hawks Marketing â€” social media reels, brand videos, corporate presentations, and ad creatives that tell your story compellingly.')
 @section('content')
 @php use App\Models\PageContent as PC; $p = 'video-editing'; @endphp
 
@@ -11,14 +11,14 @@
         <div class="col-lg-7">
           <h3>{{ PC::getValue($p, 'intro', 'heading', 'Professional Video Editing That Tells Your Story') }}</h3>
           <p>{{ PC::getValue($p, 'intro', 'para1', 'Video is the most powerful content format for engagement and conversion. Hawks Marketing transform raw footage into polished, compelling videos.') }}</p>
-          <p>{{ PC::getValue($p, 'intro', 'para2', 'We edit for every platform and purpose — from short-form social media reels to long-form brand videos and corporate presentations.') }}</p>
+          <p>{{ PC::getValue($p, 'intro', 'para2', 'We edit for every platform and purpose â€” from short-form social media reels to long-form brand videos and corporate presentations.') }}</p>
         </div>
         <div class="col-lg-5 mt-4 mt-lg-0">
           <div class="intro-highlight">
             <h5>{{ PC::getValue($p, 'highlight', 'heading', 'Why Hawks Marketing for Video?') }}</h5>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'Platform-Optimised') }}</strong> — {{ PC::getValue($p, 'highlight', 'p1_text', 'Edits tailored for Instagram, YouTube, TikTok, LinkedIn, and more with the right formats and aspect ratios.') }}</p>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Brand-Consistent') }}</strong> — {{ PC::getValue($p, 'highlight', 'p2_text', 'Colour grading, fonts, and lower thirds aligned with your brand identity throughout every video.') }}</p>
-            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Fast Delivery') }}</strong> — {{ PC::getValue($p, 'highlight', 'p3_text', 'Efficient editing workflows with clear revision rounds to meet your deadlines.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'Platform-Optimised') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p1_text', 'Edits tailored for Instagram, YouTube, TikTok, LinkedIn, and more with the right formats and aspect ratios.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Brand-Consistent') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p2_text', 'Colour grading, fonts, and lower thirds aligned with your brand identity throughout every video.') }}</p>
+            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Fast Delivery') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p3_text', 'Efficient editing workflows with clear revision rounds to meet your deadlines.') }}</p>
           </div>
         </div>
       </div>
@@ -87,5 +87,6 @@
 @section('js')
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/custom.js?v=2"></script>
 @endsection
+

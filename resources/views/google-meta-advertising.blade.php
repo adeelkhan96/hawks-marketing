@@ -1,7 +1,7 @@
-@extends('layouts.base')
+﻿@extends('layouts.base')
 @section('title','Google & Meta Advertising | Hawks Marketing')
 @section('meta-title','Google & Meta Advertising | Hawks Marketing')
-@section('meta-description','Reach your ideal audience with precision through Hawks Marketing\'s Google and Meta advertising services — Facebook, Instagram, and Google Ads campaigns built to grow your business.')
+@section('meta-description','Reach your ideal audience with precision through Hawks Marketing\'s Google and Meta advertising services â€” Facebook, Instagram, and Google Ads campaigns built to grow your business.')
 @section('content')
 @php use App\Models\PageContent as PC; $p = 'google-meta-advertising'; @endphp
 
@@ -16,9 +16,9 @@
         <div class="col-lg-5 mt-4 mt-lg-0">
           <div class="intro-highlight">
             <h5>{{ PC::getValue($p, 'highlight', 'heading', 'Why Hawks Marketing?') }}</h5>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'Precision Targeting') }}</strong> — {{ PC::getValue($p, 'highlight', 'p1_text', 'We leverage platform data to reach exactly the right demographics, interests, and behaviors.') }}</p>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Cross-Platform Strategy') }}</strong> — {{ PC::getValue($p, 'highlight', 'p2_text', 'Cohesive campaigns across Google and Meta that reinforce each other for maximum impact.') }}</p>
-            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Continuous Optimization') }}</strong> — {{ PC::getValue($p, 'highlight', 'p3_text', 'Real-time monitoring and adjustments to keep your cost-per-result as low as possible.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'Precision Targeting') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p1_text', 'We leverage platform data to reach exactly the right demographics, interests, and behaviors.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Cross-Platform Strategy') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p2_text', 'Cohesive campaigns across Google and Meta that reinforce each other for maximum impact.') }}</p>
+            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Continuous Optimization') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p3_text', 'Real-time monitoring and adjustments to keep your cost-per-result as low as possible.') }}</p>
           </div>
         </div>
       </div>
@@ -87,5 +87,6 @@
 @section('js')
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/custom.js?v=2"></script>
 @endsection
+

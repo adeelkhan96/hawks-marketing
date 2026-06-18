@@ -1,4 +1,4 @@
-
+﻿
 @extends('layouts.base')
 @section('title','Website Development | Hawks Marketing')
 @section('meta-title','Website Development | Hawks Marketing')
@@ -17,10 +17,10 @@
         <div class="col-lg-5 mt-4 mt-lg-0">
           <div class="intro-highlight">
             <h5>{{ PC::getValue($p, 'highlight', 'heading', 'Key Features of Our Websites') }}</h5>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'User-Friendly') }}</strong> — {{ PC::getValue($p, 'highlight', 'p1_text', 'We build websites that are user-friendly while maintaining aesthetic excellence for an impactful online presence.') }}</p>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Responsive') }}</strong> — {{ PC::getValue($p, 'highlight', 'p2_text', 'Our team creates responsive web designs for smooth flow of prospects down the marketing funnel on any device.') }}</p>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Tested') }}</strong> — {{ PC::getValue($p, 'highlight', 'p3_text', 'All website designs are thoroughly tested for each functionality before delivery to our clients.') }}</p>
-            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p4_label', 'SEO Optimized') }}</strong> — {{ PC::getValue($p, 'highlight', 'p4_text', 'All our web designs address the impacting metrics of search algorithms from day one.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'User-Friendly') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p1_text', 'We build websites that are user-friendly while maintaining aesthetic excellence for an impactful online presence.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Responsive') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p2_text', 'Our team creates responsive web designs for smooth flow of prospects down the marketing funnel on any device.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Tested') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p3_text', 'All website designs are thoroughly tested for each functionality before delivery to our clients.') }}</p>
+            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p4_label', 'SEO Optimized') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p4_text', 'All our web designs address the impacting metrics of search algorithms from day one.') }}</p>
           </div>
         </div>
       </div>
@@ -200,5 +200,6 @@
   <script src="assets/js/isotope.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/custom.js?v=2"></script>
 @endsection
+

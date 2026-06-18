@@ -1,8 +1,8 @@
-
+﻿
 @extends('layouts.base')
 @section('title','SEO Services | Hawks Marketing')
 @section('meta-title','SEO Services | Hawks Marketing')
-@section('meta-description','Boost your search rankings with Hawks Marketing\'s expert SEO services — keyword research, on-page optimisation, link building, and technical SEO to drive organic traffic and grow your business.')
+@section('meta-description','Boost your search rankings with Hawks Marketing\'s expert SEO services â€” keyword research, on-page optimisation, link building, and technical SEO to drive organic traffic and grow your business.')
 @section('content')
 @php use App\Models\PageContent as PC; $p = 'seo-services'; @endphp
 
@@ -18,9 +18,9 @@
         <div class="col-lg-5 mt-4 mt-lg-0">
           <div class="intro-highlight">
             <h5>{{ PC::getValue($p, 'highlight', 'heading', 'Why Hawks Marketing for SEO?') }}</h5>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'Affordable') }}</strong> — {{ PC::getValue($p, 'highlight', 'p1_text', 'Cost-effective SEO services that won\'t strain your budget, designed for businesses of all sizes.') }}</p>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Results-driven') }}</strong> — {{ PC::getValue($p, 'highlight', 'p2_text', 'We design optimal solutions for enhancing your business development with results-oriented services.') }}</p>
-            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Transparent') }}</strong> — {{ PC::getValue($p, 'highlight', 'p3_text', 'Our professionals keep clients informed through regular performance analysis reports.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'Affordable') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p1_text', 'Cost-effective SEO services that won\'t strain your budget, designed for businesses of all sizes.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Results-driven') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p2_text', 'We design optimal solutions for enhancing your business development with results-oriented services.') }}</p>
+            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Transparent') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p3_text', 'Our professionals keep clients informed through regular performance analysis reports.') }}</p>
           </div>
         </div>
       </div>
@@ -155,5 +155,6 @@
   <script src="assets/js/isotope.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/custom.js?v=2"></script>
 @endsection
+

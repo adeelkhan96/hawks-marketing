@@ -1,7 +1,7 @@
-@extends('layouts.base')
+﻿@extends('layouts.base')
 @section('title','About Us | Hawks Marketing')
 @section('meta-title','About Us | Hawks Marketing')
-@section('meta-description','Learn about Hawks Marketing — our story, mission, and the team behind your brand\'s digital growth. We combine strategy, creativity, and data to deliver real results.')
+@section('meta-description','Learn about Hawks Marketing â€” our story, mission, and the team behind your brand\'s digital growth. We combine strategy, creativity, and data to deliver real results.')
 @php use App\Models\PageContent as PC; $p = 'about'; @endphp
 
 @section('head')
@@ -414,5 +414,6 @@
 @section('js')
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/custom.js?v=2"></script>
 @endsection
+
