@@ -115,29 +115,42 @@ header nav a.active { color: #f1a51e !important; }
 .tp-stars i, .tp-badge { color: #f1a51e !important; }
 .testimonial-placeholder-card i { color: #f1a51e !important; }
 
-/* --- Banner image fit --- */
-.slide-inner {
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center top !important;
+/* --- Banner: fixed height so cover fills edge-to-edge without 100vh empty space --- */
+.swiper-container {
+  height: 620px !important;
 }
-/* Gradient fade at bottom so image transitions smoothly into dark background */
+.slide-inner {
+  background-size: cover !important;
+  background-position: center center !important;
+}
+/* Gradient fade so the bottom edge blends into the dark section below */
 .slide-inner::after {
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 260px;
+  height: 180px;
   background: linear-gradient(to bottom, transparent, #212741);
   z-index: 1;
   pointer-events: none;
 }
-/* Anchor HTML content (button) to the bottom of the banner */
+/* HTML content (subtext + button) anchored to bottom-left of banner */
 .slide-inner .header-text {
   top: auto !important;
   bottom: 50px !important;
   transform: none !important;
-  width: 65% !important;
+  width: 60% !important;
   z-index: 10 !important;
+}
+/* Mobile: shrink banner height and widen text block */
+@media (max-width: 767px) {
+  .swiper-container { height: 380px !important; }
+  .slide-inner .header-text {
+    width: 90% !important;
+    bottom: 24px !important;
+    left: 16px !important;
+  }
+  .slide-inner .header-text h2 { font-size: 22px !important; line-height: 30px !important; margin-bottom: 12px !important; }
+  .slide-inner .header-text p  { font-size: 13px !important; margin-right: 0 !important; margin-bottom: 16px !important; }
 }
 
 /* --- Home: Services Grid --- */
