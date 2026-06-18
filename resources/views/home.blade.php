@@ -550,6 +550,22 @@
 
       var swiper = new Swiper(".swiper-container", swiperOptions);
 
+      // Override nav background scroll logic — use banner height, not header-text height.
+      // custom.js registers its handler first; this one fires after and corrects the class.
+      (function() {
+        function updateNav() {
+          var scroll    = $(window).scrollTop();
+          var threshold = ($('#top').outerHeight() || 620) - ($('header').outerHeight() || 80);
+          if (scroll < threshold) {
+            $('header').removeClass('background-header');
+          } else {
+            $('header').addClass('background-header');
+          }
+        }
+        $(window).on('scroll.homeNav', updateNav);
+        updateNav(); // initialise on page load
+      })();
+
       // Testimonials carousel
       if ($('.owl-testimonials').length) {
         $('.owl-testimonials').owlCarousel({
