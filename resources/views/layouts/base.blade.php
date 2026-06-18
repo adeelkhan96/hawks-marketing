@@ -157,6 +157,7 @@ header nav a.active { color: #f1a51e !important; }
 .services-grid-section {
   background: #212741 !important;
   padding: 90px 0 !important;
+  margin-top: 0 !important;
 }
 .services-grid-section .section-heading h4 { color: #fff !important; }
 .services-grid-section .section-heading h6 { color: #f1a51e !important; }
