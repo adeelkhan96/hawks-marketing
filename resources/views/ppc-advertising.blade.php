@@ -1,4 +1,4 @@
-﻿@extends('layouts.base')
+@extends('layouts.base')
 @section('title','Pay-Per-Click Advertising (PPC) | Hawks Marketing')
 @section('meta-title','Pay-Per-Click Advertising (PPC) | Hawks Marketing')
 @section('meta-description','Drive targeted traffic and maximise conversions with Hawks Marketing\'s expert PPC advertising services. We design and manage campaigns that deliver real ROI.')
@@ -17,9 +17,9 @@
         <div class="col-lg-5 mt-4 mt-lg-0">
           <div class="intro-highlight">
             <h5>{{ PC::getValue($p, 'highlight', 'heading', 'Why Hawks Marketing for PPC?') }}</h5>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'Data-Driven') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p1_text', 'Every campaign is built on audience insights and performance data, not guesswork.') }}</p>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Budget-Efficient') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p2_text', 'We continuously optimize bids and targeting to get maximum results from your spend.') }}</p>
-            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Transparent Reporting') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p3_text', 'Clear performance reports so you always know exactly what your investment is delivering.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'Data-Driven') }}</strong> — {{ PC::getValue($p, 'highlight', 'p1_text', 'Every campaign is built on audience insights and performance data, not guesswork.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Budget-Efficient') }}</strong> — {{ PC::getValue($p, 'highlight', 'p2_text', 'We continuously optimize bids and targeting to get maximum results from your spend.') }}</p>
+            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Transparent Reporting') }}</strong> — {{ PC::getValue($p, 'highlight', 'p3_text', 'Clear performance reports so you always know exactly what your investment is delivering.') }}</p>
           </div>
         </div>
       </div>
@@ -39,7 +39,7 @@
           <div class="service-item">
             <i class="fas fa-rectangle-ad"></i>
             <h4>{{ PC::getValue($p, 'services', 's1_title', 'Campaign Strategy & Setup') }}</h4>
-            <p>{{ PC::getValue($p, 'services', 's1_desc', 'We build campaigns from the ground up â€” defining audience segments, keyword strategy, ad formats, and budget allocation.') }}</p>
+            <p>{{ PC::getValue($p, 'services', 's1_desc', 'We build campaigns from the ground up — defining audience segments, keyword strategy, ad formats, and budget allocation.') }}</p>
           </div>
         </div>
         <div class="col-lg-6 col-sm-6">
@@ -88,6 +88,6 @@
 @section('js')
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/custom.js?v=2"></script>
+  <script src="assets/js/custom.js?v=3"></script>
 @endsection
 

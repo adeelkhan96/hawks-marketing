@@ -1,4 +1,4 @@
-﻿@extends('layouts.base')
+@extends('layouts.base')
 @section('title','Client Success Stories | Hawks Marketing')
 @section('meta-title','Client Success Stories | Hawks Marketing')
 @section('meta-description','Real results, real businesses. Explore how Hawks Marketing has helped clients grow through digital marketing, SEO, social media, and more.')
@@ -34,7 +34,7 @@
                     Real Results for<br><span style="color:#f1a51e;">Real Businesses</span>
                 </h1>
                 <p style="color:rgba(255,255,255,.72);font-size:16px;line-height:1.8;max-width:520px;margin-bottom:32px;">
-                    We don't just run campaigns â€” we build growth engines. Explore how Hawks Marketing has helped businesses across Pakistan and beyond achieve measurable, lasting results.
+                    We don't just run campaigns — we build growth engines. Explore how Hawks Marketing has helped businesses across Pakistan and beyond achieve measurable, lasting results.
                 </p>
                 <a href="{{ route('contact') }}" style="display:inline-flex;align-items:center;gap:10px;background:#f1a51e;color:#fff;padding:14px 30px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;">
                     Start Your Success Story <i class="fas fa-arrow-right"></i>
@@ -44,7 +44,7 @@
                 <div class="row g-3">
                     @foreach([
                         ['fas fa-chart-line','Proven Growth','Strategies backed by data and delivered with precision'],
-                        ['fas fa-handshake','Long-term Partners','We succeed when our clients succeed â€” no shortcuts'],
+                        ['fas fa-handshake','Long-term Partners','We succeed when our clients succeed — no shortcuts'],
                         ['fas fa-globe','Diverse Industries','From tech startups to established enterprises'],
                         ['fas fa-medal','Measurable ROI','Every rupee tracked, every result documented'],
                     ] as $s)
@@ -191,7 +191,7 @@
 
 @else
 
-{{-- ===== EMPTY STATE â€” GENERAL PAGE ===== --}}
+{{-- ===== EMPTY STATE — GENERAL PAGE ===== --}}
 <section style="background:#f8f9fc;padding:80px 0 100px;">
     <div class="container">
 
@@ -203,10 +203,10 @@
 
         <div class="row g-4 mb-5">
             @foreach([
-                ['fas fa-chart-line','Data-Driven Strategy','Every decision we make is backed by analytics and research â€” not guesswork. We track what works and double down on it.'],
-                ['fas fa-users','Dedicated Team','You get a full team of specialists: SEO experts, content writers, designers, and ad managers â€” all working on your brand.'],
+                ['fas fa-chart-line','Data-Driven Strategy','Every decision we make is backed by analytics and research — not guesswork. We track what works and double down on it.'],
+                ['fas fa-users','Dedicated Team','You get a full team of specialists: SEO experts, content writers, designers, and ad managers — all working on your brand.'],
                 ['fas fa-clock','Fast & Transparent','We move quickly and communicate openly. You always know what we\'re working on and what results it\'s driving.'],
-                ['fas fa-shield-alt','Long-Term Partnership','We\'re not a vendor â€” we\'re a growth partner. We invest in your success because our reputation depends on your results.'],
+                ['fas fa-shield-alt','Long-Term Partnership','We\'re not a vendor — we\'re a growth partner. We invest in your success because our reputation depends on your results.'],
                 ['fas fa-trophy','Proven Playbooks','Strategies refined across dozens of industries, adapted for your specific market and goals.'],
                 ['fas fa-handshake','No Lock-In Contracts','We earn your loyalty every month. Flexible engagements with no surprises.'],
             ] as $card)
@@ -267,7 +267,7 @@
             <div class="col-lg-7">
                 <p style="color:#f1a51e;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px;">Ready to Grow?</p>
                 <h3 style="color:#212741;font-size:34px;font-weight:800;line-height:1.3;margin-bottom:16px;">Let's Write Your<br>Success Story Together</h3>
-                <p style="color:#6b7280;font-size:15px;line-height:1.8;max-width:500px;">From SEO to social media, paid ads to content â€” we build digital marketing strategies that generate real, measurable growth for your business.</p>
+                <p style="color:#6b7280;font-size:15px;line-height:1.8;max-width:500px;">From SEO to social media, paid ads to content — we build digital marketing strategies that generate real, measurable growth for your business.</p>
             </div>
             <div class="col-lg-5">
                 <div style="background:#fff;border-radius:16px;padding:36px;box-shadow:0 8px 32px rgba(33,39,65,.09);">
@@ -290,6 +290,6 @@
 @section('js')
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/custom.js?v=2"></script>
+  <script src="assets/js/custom.js?v=3"></script>
 @endsection
 

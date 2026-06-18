@@ -142,16 +142,21 @@ header nav a.active { color: #f1a51e !important; }
   width: 55% !important;
   z-index: 10 !important;
 }
-/* Mobile: shrink banner height and widen text block */
+/* Mobile: shrink banner height, anchor image left so text start is visible, reduce gap */
 @media (max-width: 767px) {
   .swiper-container { height: 380px !important; }
+  .slide-inner {
+    background-position: left top !important;
+  }
+  .slide-inner::after { height: 80px !important; }
   .slide-inner .header-text {
     width: 90% !important;
-    bottom: 24px !important;
+    bottom: 20px !important;
     left: 16px !important;
   }
-  .slide-inner .header-text h2 { font-size: 22px !important; line-height: 30px !important; margin-bottom: 12px !important; }
-  .slide-inner .header-text p  { font-size: 13px !important; margin-right: 0 !important; margin-bottom: 16px !important; }
+  .slide-inner .header-text h2 { font-size: 22px !important; line-height: 30px !important; margin-bottom: 10px !important; }
+  .slide-inner .header-text p  { font-size: 13px !important; margin-right: 0 !important; margin-bottom: 14px !important; }
+  .services-grid-section { padding: 50px 0 !important; }
 }
 
 /* --- Home: Services Grid --- */

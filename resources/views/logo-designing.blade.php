@@ -1,7 +1,7 @@
-﻿@extends('layouts.base')
+@extends('layouts.base')
 @section('title','Logo Designing | Hawks Marketing')
 @section('meta-title','Logo Designing | Hawks Marketing')
-@section('meta-description','Distinctive, memorable logo designs by Hawks Marketing â€” built to represent your brand across every platform and medium with clarity and impact.')
+@section('meta-description','Distinctive, memorable logo designs by Hawks Marketing — built to represent your brand across every platform and medium with clarity and impact.')
 @section('content')
 @php use App\Models\PageContent as PC; $p = 'logo-designing'; @endphp
 
@@ -16,9 +16,9 @@
         <div class="col-lg-5 mt-4 mt-lg-0">
           <div class="intro-highlight">
             <h5>{{ PC::getValue($p, 'highlight', 'heading', 'Why Hawks Marketing for Logos?') }}</h5>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'Unique & Original') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p1_text', 'Every logo is custom-designed from scratch for your specific brand â€” never templated.') }}</p>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Versatile') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p2_text', 'Delivered in multiple formats (SVG, PNG, PDF) ready for both digital and print use.') }}</p>
-            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Brand-Rooted') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p3_text', 'Designed after understanding your brand values, target audience, and industry.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'Unique & Original') }}</strong> — {{ PC::getValue($p, 'highlight', 'p1_text', 'Every logo is custom-designed from scratch for your specific brand — never templated.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Versatile') }}</strong> — {{ PC::getValue($p, 'highlight', 'p2_text', 'Delivered in multiple formats (SVG, PNG, PDF) ready for both digital and print use.') }}</p>
+            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Brand-Rooted') }}</strong> — {{ PC::getValue($p, 'highlight', 'p3_text', 'Designed after understanding your brand values, target audience, and industry.') }}</p>
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@
           <div class="service-item">
             <i class="fas fa-file-export"></i>
             <h4>{{ PC::getValue($p, 'services', 's4_title', 'Final Delivery') }}</h4>
-            <p>{{ PC::getValue($p, 'services', 's4_desc', 'Complete logo package delivered in all required formats â€” vector files, transparent backgrounds, light and dark variants â€” ready for any application.') }}</p>
+            <p>{{ PC::getValue($p, 'services', 's4_desc', 'Complete logo package delivered in all required formats — vector files, transparent backgrounds, light and dark variants — ready for any application.') }}</p>
           </div>
         </div>
       </div>
@@ -87,6 +87,6 @@
 @section('js')
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/custom.js?v=2"></script>
+  <script src="assets/js/custom.js?v=3"></script>
 @endsection
 

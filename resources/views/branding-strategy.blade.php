@@ -1,7 +1,7 @@
-﻿@extends('layouts.base')
+@extends('layouts.base')
 @section('title','Branding Strategy Services | Hawks Marketing')
 @section('meta-title','Branding Strategy Services | Hawks Marketing')
-@section('meta-description','Data-informed branding strategy by Hawks Marketing â€” brand positioning, messaging frameworks, and market differentiation that align your identity with your business goals.')
+@section('meta-description','Data-informed branding strategy by Hawks Marketing — brand positioning, messaging frameworks, and market differentiation that align your identity with your business goals.')
 @section('content')
 @php use App\Models\PageContent as PC; $p = 'branding-strategy'; @endphp
 
@@ -16,9 +16,9 @@
         <div class="col-lg-5 mt-4 mt-lg-0">
           <div class="intro-highlight">
             <h5>{{ PC::getValue($p, 'highlight', 'heading', 'Why Hawks Marketing for Strategy?') }}</h5>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'Research-Led') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p1_text', 'Strategy built on real market data, competitor analysis, and audience insights.') }}</p>
-            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Differentiating') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p2_text', 'We identify what makes your brand unique and build your positioning around it.') }}</p>
-            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Actionable') }}</strong> â€” {{ PC::getValue($p, 'highlight', 'p3_text', 'Strategies that translate directly into marketing execution, not just documents.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p1_label', 'Research-Led') }}</strong> — {{ PC::getValue($p, 'highlight', 'p1_text', 'Strategy built on real market data, competitor analysis, and audience insights.') }}</p>
+            <p style="margin-bottom:14px;"><strong>{{ PC::getValue($p, 'highlight', 'p2_label', 'Differentiating') }}</strong> — {{ PC::getValue($p, 'highlight', 'p2_text', 'We identify what makes your brand unique and build your positioning around it.') }}</p>
+            <p style="margin-bottom:0;"><strong>{{ PC::getValue($p, 'highlight', 'p3_label', 'Actionable') }}</strong> — {{ PC::getValue($p, 'highlight', 'p3_text', 'Strategies that translate directly into marketing execution, not just documents.') }}</p>
           </div>
         </div>
       </div>
@@ -38,7 +38,7 @@
           <div class="service-item">
             <i class="fas fa-crosshairs"></i>
             <h4>{{ PC::getValue($p, 'services', 's1_title', 'Brand Positioning') }}</h4>
-            <p>{{ PC::getValue($p, 'services', 's1_desc', 'We define a clear, compelling position for your brand in the market â€” identifying your unique value proposition and ensuring it resonates with your target audience.') }}</p>
+            <p>{{ PC::getValue($p, 'services', 's1_desc', 'We define a clear, compelling position for your brand in the market — identifying your unique value proposition and ensuring it resonates with your target audience.') }}</p>
           </div>
         </div>
         <div class="col-lg-6 col-sm-6">
@@ -59,7 +59,7 @@
           <div class="service-item">
             <i class="fas fa-users"></i>
             <h4>{{ PC::getValue($p, 'services', 's4_title', 'Audience Profiling') }}</h4>
-            <p>{{ PC::getValue($p, 'services', 's4_desc', 'Detailed audience persona development based on demographics, behavior, and psychographics â€” so your brand strategy is built around the people who matter most.') }}</p>
+            <p>{{ PC::getValue($p, 'services', 's4_desc', 'Detailed audience persona development based on demographics, behavior, and psychographics — so your brand strategy is built around the people who matter most.') }}</p>
           </div>
         </div>
       </div>
@@ -87,6 +87,6 @@
 @section('js')
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/custom.js?v=2"></script>
+  <script src="assets/js/custom.js?v=3"></script>
 @endsection
 

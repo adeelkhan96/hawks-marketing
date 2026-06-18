@@ -1,4 +1,4 @@
-﻿@extends('layouts.base')
+@extends('layouts.base')
 @section('title','Blog | Hawks Marketing')
 @section('meta-title','Blog | Hawks Marketing')
 @section('meta-description','Insights, strategies, and tips from the Hawks Marketing team on SEO, social media, branding, content marketing, and business growth.')
@@ -19,7 +19,7 @@
           Insights &amp; Strategies for <span style="color:#f1a51e;">Digital Growth</span>
         </h1>
         <p style="color:rgba(255,255,255,.7);font-size:16px;line-height:1.7;max-width:520px;">
-          Expert tips on SEO, social media marketing, branding, and business growth â€” straight from the Hawks Marketing team.
+          Expert tips on SEO, social media marketing, branding, and business growth — straight from the Hawks Marketing team.
         </p>
       </div>
     </div>
@@ -142,6 +142,6 @@
 @section('js')
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/custom.js?v=2"></script>
+  <script src="assets/js/custom.js?v=3"></script>
 @endsection
 

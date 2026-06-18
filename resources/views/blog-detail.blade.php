@@ -1,4 +1,4 @@
-﻿@extends('layouts.base')
+@extends('layouts.base')
 @section('title', ($blog->meta_title ?: $blog->title) . ' | Hawks Marketing')
 @section('meta-title', $blog->meta_title ?: $blog->title)
 @section('meta-description', $blog->meta_description ?: $blog->excerpt ?: '')
@@ -46,9 +46,9 @@
     <div class="container">
       <nav style="font-size:13px;color:#9ca3af;">
         <a href="{{ route('home') }}" style="color:#6b7280;text-decoration:none;">Home</a>
-        <span class="mx-2">â€º</span>
+        <span class="mx-2">›</span>
         <a href="{{ route('blogs') }}" style="color:#6b7280;text-decoration:none;">Blog</a>
-        <span class="mx-2">â€º</span>
+        <span class="mx-2">›</span>
         <span style="color:#212741;">{{ Str::limit($blog->title, 50) }}</span>
       </nav>
     </div>
@@ -111,7 +111,7 @@
         <div class="col-lg-10">
           <nav style="font-size:13px;color:rgba(255,255,255,.6);margin-bottom:20px;">
             <a href="{{ route('home') }}" style="color:rgba(255,255,255,.6);text-decoration:none;">Home</a>
-            <span class="mx-2">â€º</span>
+            <span class="mx-2">›</span>
             <a href="{{ route('blogs') }}" style="color:rgba(255,255,255,.6);text-decoration:none;">Blog</a>
           </nav>
           <h1 style="color:#fff;font-size:38px;font-weight:800;line-height:1.25;margin-bottom:16px;">{{ $blog->title }}</h1>
@@ -146,7 +146,7 @@
     <div class="container">
       <nav style="font-size:13px;color:rgba(255,255,255,.5);margin-bottom:16px;">
         <a href="{{ route('home') }}" style="color:rgba(255,255,255,.5);text-decoration:none;">Home</a>
-        <span class="mx-2">â€º</span>
+        <span class="mx-2">›</span>
         <a href="{{ route('blogs') }}" style="color:rgba(255,255,255,.5);text-decoration:none;">Blog</a>
       </nav>
       <h1 style="color:#fff;font-size:32px;font-weight:800;line-height:1.3;max-width:700px;margin-bottom:16px;">{{ $blog->title }}</h1>
@@ -282,6 +282,6 @@
 @section('js')
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/custom.js?v=2"></script>
+  <script src="assets/js/custom.js?v=3"></script>
 @endsection
 
