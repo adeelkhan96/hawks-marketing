@@ -121,7 +121,7 @@ header nav a.active { color: #f1a51e !important; }
 }
 .slide-inner {
   background-size: cover !important;
-  background-position: center center !important;
+  background-position: top center !important;
 }
 /* Gradient fade so the bottom edge blends into the dark section below */
 .slide-inner::after {

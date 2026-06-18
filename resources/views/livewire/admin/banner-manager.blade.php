@@ -23,7 +23,7 @@
                 <span class="text-danger">{{ $editId ? '' : '*' }}</span>
               </label>
               <input type="file" class="form-control" wire:model="image" accept="image/jpeg,image/png,image/webp">
-              <div class="form-text">Recommended: 1920 × 700 px &nbsp;|&nbsp; JPG, PNG or WebP &nbsp;|&nbsp; Max 4 MB</div>
+              <div class="form-text">Recommended: <strong>1920 × 700 px</strong> (wide &amp; short). Taller images like 16:9 will be cropped. Keep text in the upper-center area. &nbsp;|&nbsp; JPG, PNG or WebP &nbsp;|&nbsp; Max 4 MB</div>
               @error('image')<div class="text-danger small mt-1">{{ $message }}</div>@enderror
             </div>
 
