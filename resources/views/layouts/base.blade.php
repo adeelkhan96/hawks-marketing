@@ -137,8 +137,9 @@ header nav a.active { color: #f1a51e !important; }
 .slide-inner .header-text {
   top: auto !important;
   bottom: 50px !important;
+  left: 60px !important;
   transform: none !important;
-  width: 60% !important;
+  width: 55% !important;
   z-index: 10 !important;
 }
 /* Mobile: shrink banner height and widen text block */

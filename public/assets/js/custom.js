@@ -4,7 +4,8 @@
 
 	$(window).scroll(function() {
 	  var scroll = $(window).scrollTop();
-	  var box = $('.header-text').height();
+	  var banner = $('#top');
+	  var box = banner.length ? banner.outerHeight() : $('.header-text').height();
 	  var header = $('header').height();
 
 	  if (scroll >= box - header) {
